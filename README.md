@@ -8,7 +8,7 @@ This repo contains a basic script that downloads the current firmware for the Ho
 
 1. Downloads the firmware zip file from the HooToo download site (ZIP)
 2. Unzips that into the actual update file, which is a stub of sh and initrdup.gz (UPDATE)
-3. Splits the UPDATE file into start-script.sh and initrdup.gz
+3. Splits the UPDATE file into start_script.sh and initrdup.gz
 4. Gunzips initrdup.gz into initrdup
 5. Creates ./mount and...
 6. Mounts initrdup into ./mount
