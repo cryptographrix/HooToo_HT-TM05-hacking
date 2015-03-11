@@ -1,6 +1,6 @@
-# cryptographrix/HooToo_HT-TM05-hacking
+## cryptographrix/HooToo_HT-TM05-hacking
 
-## Summary
+### Summary
 
 This repo contains a basic script that downloads the current firmware for the HooToo HT-TM05 portable router and lets you access and modify everything.
 
@@ -13,13 +13,13 @@ This repo contains a basic script that downloads the current firmware for the Ho
 5. Creates ./mount and...
 6. Mounts initrdup into ./mount
 
-## QnA
+### QnA
 
-### Who cares?
+#### Who cares?
 
 Anyone that bought one of these useful portable linux systems and wants to do more with - or customize - it.
 
-### What can you do from here?
+#### What can you do from here?
 
 Anything you want - eventually you'll need to reverse the process:
 
@@ -28,11 +28,11 @@ Anything you want - eventually you'll need to reverse the process:
 3. cat start-script.sh initrdup.gz > fw_...
 4. zip fw into HooToo....
 
-### And just who are you?....
+#### And just who are you?....
 
 My name is Michael Renz and I just write random stuff like this...
 
-### Hi, this is HooToo and we'd like you to censor/remove/change....
+#### Hi, this is HooToo and we'd like you to censor/remove/change....
 
 Email me here: [cryptographrix@gmail.com](mailto:cryptographrix@gmail.com?subject=[HooToo hacking] Just who the hell do you think you are??!?!??)
 
