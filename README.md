@@ -22,6 +22,7 @@ Anyone that bought one of these useful portable linux systems and wants to do mo
 ### What can you do from here?
 
 Anything you want - eventually you'll need to reverse the process:
+
 1. sync and unmount initrdup
 2. gzip initrdup
 3. cat start-script.sh initrdup.gz > fw_...
