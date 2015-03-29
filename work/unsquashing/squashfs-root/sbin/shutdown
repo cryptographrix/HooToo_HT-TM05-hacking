@@ -1,0 +1,38 @@
+#!/bin/sh
+# Select
+case "$1" in
+  r)
+	pioctl status 2
+	sync
+	sleep 3
+        sync
+	sleep 1
+	/sbin/reboot -f
+        ;;
+  h)
+	pioctl status 2
+	/etc/init.d/etcsync
+	sync
+	swapoff
+	hdparm -a /dev/sda
+	/sbin/poweroff
+        ;;
+  F)
+	pioctl status 2
+	sync
+	/sbin/reboot -f
+	;;
+  L)
+	pioctl status 2
+        if [ -e /etc/init.d/service ];then
+                /etc/init.d/service stop
+        fi
+	sync
+        sync
+	;;
+  *)
+        echo $"Usage: $0 {r --reboot|h --shutdown|F --force reboot|L --close all server}"
+        exit 1
+esac
+
+exit $?

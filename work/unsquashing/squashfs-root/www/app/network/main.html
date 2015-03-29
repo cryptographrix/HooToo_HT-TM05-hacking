@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1; minimum-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+	<script type="text/javascript" src="../../script/config.js" js="none"></script>
+</head>
+<body>
+<div class="MHeader">
+	<div class="MHeader_l">
+		<a href="javascript:void(history.back());" class="MHeader_back"><span Lge="Prompt_back"></span></a>
+	</div>
+	<div class="MHeader_r">
+		<a href="javascript:void($.vhref('main.html'));" class="MHeader_btn2"></a>
+	</div>
+	<b class="MHeader_txt1"><span Lge="Settings_Network"></span></b>
+</div>
+<div class="MContent"><div class="MMCenter">
+	<a class="iItem_L1" href="host.html"><span class="iItem_L1_x" Lge="Setting_HostName"></span></a>
+	<a class="iItem_L1" href="wifi.html"><span class="iItem_L1_x" Lge="Setting_Network_WiFiLAN"></span></a>
+	<a class="iItem_L1" id="wifi_5g" style="display:none" href="wifi_5g.html"><span class="iItem_L1_x" Lge="Setting_Network_WiFi5G"></span></a>
+	<a class="iItem_L1" href="dhcp.html"><span class="iItem_L1_x" Lge="Setting_Network_DHCPServer"></span></a>
+	<a class="iItem_L1" href="internet.html"><span class="iItem_L1_x" Lge="Setting_Network_Internet"></span></a>
+	<a class="iItem_L1" id="wps" style="display:none" href="wps.html"><span class="iItem_L1_x">WPS</span></a>	
+	<a class="iItem_L1" id="3g" style="display:none" href="3g.html"><span Lge="Setting_Network_Internet_3G_Setting" class="iItem_L1_x">3G Settings</span></a>	
+	<script type="text/javascript">
+			if($.config.has5G){$("wifi_5g").style.display = "block";}
+			if($.config.hasWPS){$("wps").style.display = "block";}
+			//if($.config.has3G){$("3g").style.display = "block";}	
+	</script>
+
+</div></div>
+</body>
+</html>

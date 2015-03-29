@@ -1,0 +1,10 @@
+netmonitor:S11netmonitor:netmonitor.sh
+telnetd:S28teld:teld.sh
+smbd:S32smbd:smb.sh
+ftpd:S33ftpd:ftp.sh
+serverdev:S74serverdev:serverdev.sh
+fileserv:S75fileserv:fileserv.sh
+nasclient:S77nasclient:nasclient.sh
+ioos:S80webd:web
+upnpd:S82upnpd:upnpd.sh
+xl:S97xl:xl.sh

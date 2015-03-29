@@ -1,0 +1,2 @@
+SUBSYSTEM=="reset_button",  ACTION=="add", RUN+="/etc/udev/script/reset.sh"
+SUBSYSTEM=="power_button",  ACTION=="add", RUN+="/etc/udev/script/power.sh"

@@ -1,0 +1,61 @@
+#!/bin/sh
+
+RCDPATH="/etc/rc.d/rc1.d"
+CLINAME="transmission-remote"
+
+services_start() {
+        # open service
+        for i in $RCDPATH/S* ; do
+                if [ "$i" == "$RCDPATH/S01network" ] ;then
+                        continue
+                fi
+                if [ "$i" == "$RCDPATH/S08portmap" ];then
+                        continue
+                fi
+                if [ "$i" == "$RCDPATH/S34ntp" ];then
+                        continue
+                fi
+                if [ "$i" == "$RCDPATH/S40smartd" ];then
+                        continue
+                fi
+                if [ "$i" == "$RCDPATH/S99local" ];then
+                        continue
+                fi
+                $i start
+        done
+}
+
+services_stop() {
+        # Stop XL tasks
+	if [ -f /var/run/xl.pid ]; then
+        	rm /var/run/xl.pid > /dev/null 2>&1
+        	local PID=`ps axj | grep xl -m 1 | awk '{print $2}'`
+        	kill -s 1 $PID > /dev/null 2>&1
+        	sleep 1
+	fi
+	# Stop PT tasks
+	if [ -f /var/run/transmission-daemon.pid ]; then
+		/usr/sbin/$CLINAME -tall --stop
+	fi
+}
+
+# Select
+case "$1" in
+        start)
+                services_start
+                ;;
+        stop)
+                services_stop
+                ;;
+	poweroff)
+		services_stop
+		;;
+        restart)
+                services_stop
+		service_start
+                ;;
+        *)
+                echo $"Usage: $0 {start|stop|poweroff|restart}"
+                exit 1
+esac
+

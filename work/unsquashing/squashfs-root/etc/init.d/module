@@ -1,0 +1,74 @@
+#!/bin/sh
+MODPATH=/lib/modules/
+# function
+load_usb_modules() {
+        # check module
+        if [ ! -e $MODPATH/iovst_usb_storage.ko ];then
+                return 1
+        fi
+        # load
+        if [ -e /dev/hdc ];then
+                moduleline="iovst_usb_storage.ko file=/dev/hda,/dev/hdc"
+        else
+                moduleline="iovst_usb_storage.ko file=/dev/hda"
+        fi
+        modulename="iovst_usb_storage"
+        flag=`lsmod | grep $modulename | wc -l`
+        if [ $flag -ne 0 ];then
+                /sbin/rmmod $modulename
+        fi
+        /sbin/insmod $MODPATH/$moduleline
+
+        return 0
+}
+load_ufsd_modules() {
+        # check module
+        if [ ! -e $MODPATH/ufsd.ko ];then
+                return 1
+        fi
+        # load
+        moduleline="ufsd.ko"
+        modulename="ufsd"
+        flag=`lsmod | grep $modulename | wc -l`
+        if [ $flag -ne 0 ];then
+                /sbin/rmmod $modulename
+        fi
+        /sbin/insmod $MODPATH/$moduleline
+
+        return 0
+}
+load_net_modules(){
+        # check module
+        if [ ! -e $MODPATH/star_nic_module.ko ];then
+                return 1
+        fi
+        # load
+        moduleline="star_nic_module.ko"
+        modulename="star_nic_module"
+        flag=`lsmod | grep $modulename | wc -l`
+        if [ $flag -ne 0 ];then
+                /sbin/rmmod $modulename
+        fi
+        /sbin/insmod $MODPATH/$moduleline
+
+        return 0
+}
+#######################################################
+# load module 
+# Select        
+case "$1" in
+  	ufsd)
+        	load_ufsd_modules
+        ;;
+  	usb)
+        	load_usb_modules
+        ;;
+ 	net)
+		load_net_modules
+	;;
+  	*)
+        	echo $"Usage: $0 {module name}"
+        	exit 1
+	;;
+esac
+exit 0

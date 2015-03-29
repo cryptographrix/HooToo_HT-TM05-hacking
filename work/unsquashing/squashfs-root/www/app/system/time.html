@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1; minimum-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+	<script type="text/javascript" src="../../script/config.js"></script>
+</head>
+<body>
+<div class="MHeader">
+	<div class="MHeader_l">
+		<a href="javascript:void(history.back());" class="MHeader_back"><span lge="Prompt_back"></span></a>
+	</div>
+	<div class="MHeader_r">
+		<a href="javascript:void($.vhref('main.html'));" class="MHeader_btn2"></a>
+	</div>
+	<b class="MHeader_txt1"><span lge="System_Time"></span></b>
+</div>
+<div class="MContent"><div class="MMCenter MSystemTime">
+	<div class="iBox_C2">
+		<div class="line">
+			<div class="iItem_k2">
+				<span lge="System_Time_Zone"></span>
+			</div>
+			<div class="iIpt3">
+				<div class="iIpt3_l"></div>
+				<div class="iIpt3_rd"></div>
+				<div class="iIpt3_cd">
+					<input type="text" readonly="readonly" class="ipt_v" id="zone" />
+				</div>
+			</div>
+		</div>
+		<div class="iItem_line1"></div>
+		<div class="line">
+			<div class="iItem_P3_swicth1">
+				<div class="iSwitch_1-0" id="daylight"></div>
+				<!-- 开启时，把样式设置为 MSwitch_1 -->
+				<span Lge="System_Time_Daylight"></span>
+			</div>
+		</div>
+		<div class="iItem_line1"></div>
+		<div class="line">
+			<div class="iItem_P3_swicth1">
+				<!-- 开启时，把样式设置为 MSwitch_1 -->
+				<div class="iSwitch_1-0" id="tsync"></div>
+				<span lge="System_Time_Sync" ></span>
+			</div>
+		</div>
+		<div id="intervalWrap" style="display:none">
+			<div class="iItem_line1"></div>
+			<div class="line">
+			     <a href="javascript:void(0);" id="tsync_net" hidefocus="true" class="iBtn3">
+						<b class="iBtn3_l"></b>
+						<b class="iBtn3_r"></b>
+				    	<span lge="System_Time_SyscNet"></span>
+			    </a>
+				<div class="iItem_k2">
+					<span lge="System_Time_Frequency"></span>
+                </div>
+				</div>
+				<div class="line">
+				<div class="iIpt3">
+					<div class="iIpt3_l"></div>
+					<div class="iIpt3_rd"></div>
+					<div class="iIpt3_cd">
+						<input type="text" readonly="readonly" class="ipt_v" id="interval" />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="MSystemNoIpt" id="tsync_tt">
+			<div class="iItem_line1"></div>
+			<div class="line">
+				<div class="iItem_k2">
+					<span lge="System_Time_Date"></span>
+				</div>
+				<div class="MSystemTime_L">
+					<div class="MSystemTime_t">
+						<input type="text" maxlength="4" id="year" readonly="readonly" />
+						<span lge="Date_Year"></span>
+					</div>
+					<div class="MSystemTime_t">
+						<input type="text" maxlength="2" id="month" readonly="readonly" />
+						<span lge="Date_Month"></span>
+					</div>
+					<div class="MSystemTime_t">
+						<input type="text" maxlength="2" id="day" readonly="readonly" />
+						<span lge="Date_Date"></span>
+					</div>
+				</div>
+			</div>
+			<div class="iItem_line1"></div>
+			<div class="line">
+				<div class="iItem_k2">
+					<span lge="System_Time_Time"></span>
+				</div>
+				<div class="MSystemTime_L">
+					<div class="MSystemTime_t">
+						<input type="text" maxlength="2" id="hour" readonly="readonly" />
+						<span lge="Date_Hour"></span>
+					</div>
+					<div class="MSystemTime_t">
+						<input type="text" maxlength="2" id="minute" readonly="readonly" />
+						<span lge="Date_Minute"></span>
+					</div>
+					<div class="MSystemTime_t">
+						<input type="text" maxlength="2" id="second" readonly="readonly" />
+						<span lge="Date_Second"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<a href="javascript:void(0);" id="submit" hidefocus="true" class="iBtn1">
+		<b class="iBtn1_l"></b>
+		<b class="iBtn1_r"></b>
+		<span class="iBtn1_c" Lge="Prompt_save_value"></span>
+	</a>
+</div></div>
+</body>
+</html>

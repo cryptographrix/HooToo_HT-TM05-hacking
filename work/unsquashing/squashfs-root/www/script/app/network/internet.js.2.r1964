@@ -1,0 +1,660 @@
+﻿/**
+* Created with JetBrains PhpStorm.
+* User: poppy
+* Date: 12-12-18
+* Time: 下午5:32
+* To change this template use File | Settings | File Templates.
+*/
+var isWizard = document.location.pathname.indexOf("/app/wizard/")>=0;
+var wizardStr = isWizard?"&delay=1":"";
+
+//保存的模式
+var iMode;
+function empty(){}
+
+//主要开关
+var iS0 = $.query("#[S0_1,S0_2,S0_3]").on("vclick", function () {
+	if (iS0.viewed) {
+		iS0.viewed.className = "iRadio_2";
+		$(iS0.viewed.id + "c").style.display = "none";
+	}
+	iS0.viewed = this;
+	this.className = "iRadio_2 iRadio_elect";
+	$(this.id + "c").style.display = "block";
+	$.systemPadResize();
+	$("submit").style = "";
+	iS0["get" + this.id]();
+	autoswitch();
+	return false;
+}).$;
+
+iS0.getS0_1 = function () {
+	getAp(true);
+	iS0.getS0_1 = empty;
+};
+iS0.getS0_2 = function () {
+	getWan();
+	iS0.getS0_2 = empty;
+};
+iS0.getS0_3 = function () {
+	$("submit").style = isWizard ? "" : "display:none";
+	get3G();
+	iS0.getS0_3 = empty;
+};
+
+var iS1 = $.query("#[S1_0,S1_1]").on("vclick", function () {
+	if (iS1.viewed) {
+		iS1.viewed.className = "iRadio_1";
+		$(iS1.viewed.id + "c").style.display = "none";
+	}
+	iS1.viewed = this;
+	this.className = "iRadio_1 iRadio_elect";
+	$(this.id + "c").style.display = "block";
+	$.systemPadResize();
+	return false;
+});
+
+var iS2 = $.query("#[S2_0,S2_1,S2_2]").on("vclick", function () {
+	if (iS2.viewed) {
+		iS2.viewed.className = "iRadio_1";
+		$(iS2.viewed.id + "c").style.display = "none";
+	}
+	iS2.viewed = this;
+	this.className = "iRadio_1 iRadio_elect";
+	$(this.id + "c").style.display = "block";
+	$.systemPadResize();
+	iS2["get" + this.id]();
+	return false;
+});
+iS2.getS2_0 = empty;
+iS2.getS2_1 = empty;
+iS2.getS2_2 = function () {
+	$.Ajax.get("/protocol.csp?fname=net&opt=wifi_wan_pppoe&function=get&encode=1" + wizardStr, function () {
+		if (this.error == null) {
+			var x = $.xjson(this.responseXML, "wifi_wan_pppoe", true);
+			$("s2_2_user").value = decodeURIComponent(x.user) || "";
+			$("s2_2_passwd").value = decodeURIComponent(x.passwd) || "";
+			$("s2_2_servername").value = decodeURIComponent(x.servername) || "";
+			$("s2_2_DNS1").value = x.DNS1 || "";
+			$("s2_2_DNS2").value = x.DNS2 || "";	
+		}
+	});
+	iS2.getS2_2 = empty;
+};
+$.dom.on($("ap_rescan"),"vclick",function(){
+	getAp(true);
+	});
+$.dom.on($("SSIDs"), "vclick", function () {
+	var v = $.dom.getEvent().target.getAttribute("v");
+	if(v == "hide"){
+		$.vhref("network/hide.html");
+		return ;
+	}
+	if(v){
+		$.query("#SSIDs > div").attr("className", "iRadio_1");
+		$("SSID_"+v).className = "iRadio_1 iRadio_elect";
+	}
+	this.v = v;
+	$("s1_0_passwd").value = iAps[v].passwd;
+	//ap_静态ip
+	if(iAps[v].dhcp == 0){
+		$("s1_0_ip").value = iAps[v].ipaddr || "";
+		$("s1_0_mask").value = iAps[v].netmask || "";
+		$("s1_0_gateway").value = iAps[v].gate_way || "";
+		$("s1_0_DNS1").value = iAps[v].DNS_1 || "";
+		$("s1_0_DNS2").value = iAps[v].DNS_1 || "";
+	//dhcp
+	}else{
+		iAp.dhcp = 1;
+		$("S1_0c").style.display = "none";
+	}
+	var dh = iAps[v].dhcp || 1;
+	$.dom.on($("S1_" + dh), "vclick");
+	return false;
+});
+//获取网络是否联通
+function getInterNet(successLge,errorLge){
+	$.msg.openLoad();
+	setTimeout(function(){
+		$.Ajax.get("/protocol.csp?fname=net&opt=led_status&function=get",function(){
+		$.msg.closeLoad();
+		var msg;
+		var x = $.xjson(this.responseXML,"led_status",true);
+			if(x.internet == 0){
+				msg = successLge;
+			}else{
+				msg = errorLge;
+			}
+		msg ?　$.msg.alert(msg) : "";
+	});
+	},1000*15);
+}
+//获取无线网络
+var iAps, iAp = {};
+function getAp(s) {
+	//获取AP
+	//这里获取列表与AP列表建议分开，毕竟获取ap列表比较慢
+	$.msg.openLoad();
+	$.Ajax.get("/protocol.csp?fname=net&opt=wifi_client&function=get&encode=1" + wizardStr, function () {
+		$.msg.closeLoad();
+		//返回前清空密码
+		$("s1_0_passwd").value = "";
+		if (this.error) {
+			return;
+		}
+		var aps = iAps = $.xjson(this.responseXML, "ap"),d = $("SSIDs"),len = 0;
+		//解码
+		for(var n in iAps){
+			aps[n].SSID = iAps[n].SSID = decodeURIComponent(iAps[n].SSID);
+			aps[n].passwd = iAps[n].passwd = decodeURIComponent(iAps[n].passwd);
+		}
+		for(var i=0;i<aps.length;i++){
+			if(aps[i]["default"] == 1){
+				 aps.unshift(aps.splice(i,1)[0]);
+			}
+			else if(aps[i].SSID == ""){
+				aps.splice(i,1);
+			}
+		}
+		var HideSSID;
+		if($.config.hasHideSSID){
+			HideSSID = ['<div class="iRadio_1" v="hide" style="font-weight:bold;">'+ $.lge.get("Setting_Network_Hide") +'...</div>'];
+		}
+		d.innerHTML = $.forEach(aps, function (v, i) {
+			v.passwd = (v.passwd || "").trim();
+			if(aps[i]["default"] == 1) {
+				iAp.num = i;
+				for(var n in v) {
+					iAp[n] = v[n];
+				}
+			}
+			if(v.SSID.trim()){
+				len += 1;
+				return  v["default"] ==1 ? '<div class="iRadio_1 iRadio_elect" id="SSID_' + i + '" v="' + i + '">' + v.SSID + '</div><span class=iItem_line1 style=display:block></span>':'<div class="iRadio_1" id="SSID_' + i + '" v="' + i + '">' + v.SSID + '</div><span class=iItem_line1 style=display:block></span>';
+			}
+			return "";
+		}, []).concat(HideSSID).join("");
+		
+		d.style.marginTop = "0px";
+		d.parentNode.style.overflow = "hidden";
+		d.parentNode.style.height = len>6?"200px":"auto";
+		$.reScrollPlate(d);
+		$.systemPadResize();
+		if (s) {
+			if (iAp.SSID) {
+				$("s1_0_passwd").value = decodeURIComponent(iAp.passwd);
+				$.dom.on($("SSID_" + iAp.num), "vclick");
+				$("s1_0_ip").value = iAp.ip || "";
+				$("s1_0_mask").value = iAp.mask || "";
+				$("s1_0_gateway").value = iAp.gateway || "";
+				$("s1_0_DNS1").value = iAp.DNS1 || "";
+				$("s1_0_DNS2").value = iAp.DNS2 || "";
+			}
+			else {
+				iAp.dhcp = 1;
+			}
+			$.dom.on($("S1_" + iAp.dhcp), "vclick");
+		}
+	});
+}
+
+//获取有线网络设置
+var iWan = {};
+function getWan() {
+	$.Ajax.get("/protocol.csp?fname=net&opt=wifi_wan&function=get&encode=1" + wizardStr, function (flg, v) {
+		if(this.error) {
+			this.showError();
+			return;
+		}
+		iWan = $.xjson(this.responseXML, "wifi_wan", true);
+		//填充 动态 静态 IP
+		$.dom.on(iS2[iWan.mode], "vclick");
+		if(iWan.ip){
+			$("s2_2_ip").value = iWan.ip || "";
+		}
+		if(iWan.mask){
+			$("s2_2_mask").value = iWan.mask || "";
+		}
+		if(iWan.gateway){
+			$("s2_2_gateway").value = iWan.gateway || "";
+		}
+
+		if (iWan.mode == "0") {
+			//静态设置
+			$("s2_0_ip").value = iWan.ip || "";
+			$("s2_0_mask").value = iWan.mask || "";
+			$("s2_0_gateway").value = iWan.gateway || "";
+			$("s2_0_DNS1").value = iWan.DNS1 || "";
+			$("s2_0_DNS2").value = iWan.DNS2 || "";
+		}
+		else if (iWan.mode == "1") {
+			//动态IP
+			$("s2_1_ip").value = iWan.ip || "";
+			$("s2_1_mask").value = iWan.mask || "";
+			$("s2_1_gateway").value = iWan.gateway || "";
+			$("s2_1_DNS1").value = iWan.DNS1 || "";
+			$("s2_1_DNS2").value = iWan.DNS2 || "";
+		}
+		else if (iWan.mode == "2") {
+			//PPPoE
+			$("s2_2_user").value = decodeURIComponent(iWan.user) || "";
+			$("s2_2_passwd").value = decodeURIComponent(iWan.passwd) || "";
+			$("s2_2_servername").value = decodeURIComponent(iWan.servername) || "";
+			$("s2_2_DNS1").value = iWan.DNS1 || "";
+			$("s2_2_DNS2").value = iWan.DNS2 || "";
+			iS2.getS2_2 = empty;
+		}
+	});
+}
+
+function checkIPError(dom, lge, isEmpty, reg) {
+	var v = dom.value.trim();
+	if (isEmpty && v == "") {
+		return v;
+	}
+	if(v == ""){
+		$.msg.alert(["::" + lge, "::Setting_DDNS_NotEmpty"]);
+		return null;
+	}
+	if (!(reg || /^(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$/).test(v)) {
+		$.msg.alert(["::" + lge, "::Setting_Network_DHCPServer_error"]);
+		return null;
+	}
+	return v;
+}
+
+function successGo(wd) {
+	if(wd){
+		//向导
+		if(saveChange){
+			$.msg.closeLoad();
+		}
+
+		//向导下一步
+		$.wizard.next(true);
+	}
+	else {
+		if(saveChange){
+			//发送wifi生效协议
+				$.msg.openLoad();
+			$.Ajax.post("/protocol.csp?fname=net&opt=wifi_active&function=set" + saveChange, function () {
+				$.msg.closeLoad();
+				if(saveChange == "&active=wifi_client"){
+					getWiFiStatus(domS,1);
+				}
+				if(this.error) {
+					this.showError();
+				}else{
+					//验证PPPoE是否联通
+					if(iWan.mode == 2){	
+						getInterNet($.lge.get("Setting_Network_Internet_M2_Status_0"),$.lge.get("Setting_Network_Internet_M2_Status_1"));
+					}else{
+						getWan();
+					}
+						
+				}
+			});
+		}
+	}
+}
+
+function saveSuccess(i, wd) {
+	if(i == iMode){
+		successGo(wd);
+	}
+	else {
+		if(saveChange == ""){
+			$.msg.openLoad();
+		}
+		saveChange += "&active=wifi_phymode";
+		$.Ajax.post("/protocol.csp?fname=net&opt=wifi_phymode&function=set" + wizardStr, function () {
+			$.msg.closeLoad();
+			if(this.error){
+				this.showError();
+			}
+			else{
+				iMode = i;
+				successGo(wd);
+			}
+		}, "mode=" + i);
+	}
+}
+var domS;
+function saveWifi(wd) {
+	var pm = {};
+	var m = iAps[$("SSIDs").v];
+	if(m == null){
+		return ;
+	}
+	pm.SSID = m.SSID;
+	pm.mac = m.mac;
+	pm.passwd = $("s1_0_passwd").value.trim();
+	pm.dhcp = $("S1_0").className == "iRadio_1 iRadio_elect" ? 0 : 1;
+	if(pm.dhcp == 0){
+		if((pm.ip = checkIPError($("s1_0_ip"), "Setting_Network_Internet_ip")) == null) {
+			return;
+		}
+		if((pm.mask = checkIPError($("s1_0_mask"), "Setting_Network_Internet_mask", null, !/^(254|252|248|240|224|192|128|0)\.0\.0\.0|255\.(254|252|248|240|224|192|128|0)\.0\.0|255\.255\.(254|252|248|240|224|192|128|0)\.0|255\.255\.255\.(254|252|248|240|224|192|128|0)$/)) == null) {
+			return;
+		}
+		if((pm.gateway = checkIPError($("s1_0_gateway"), "Setting_Network_Internet_gateway")) == null) {
+			return;
+		}
+		if((pm.DNS1 = checkIPError($("s1_0_DNS1"), "Setting_Network_Internet_primary", true)) == null) {
+			return;
+		}
+		if((pm.DNS2 = checkIPError($("s1_0_DNS2"), "Setting_Network_Internet_second", true)) == null) {
+			return;
+		}
+	}
+	var need;
+	for(var n in pm) {
+		//alert(n + "::" + pm[n] + "::" + iAp[n]);
+		//编码
+		//pm[n] = encodeURIComponent(pm[n]);
+		if (pm[n] != (iAp[n] || "")) {
+			need = true;
+			break;
+		}
+	}
+	//alert(need);
+	if(need == null) {
+		saveSuccess(3, wd);
+		return;
+	}
+	if(saveChange == "") {
+		$.msg.openLoad();
+	}
+	saveChange += "&active=wifi_client";
+	getWiFiStatus($("SSIDs").v);
+	$.Ajax.post("/protocol.csp?fname=net&opt=wifi_client&encode=1&function=set" + wizardStr, function (){
+		$.msg.closeLoad();
+		if(this.error) {
+			this.showError();
+		}
+		else {
+			iAp = pm;
+			saveSuccess(3, wd);
+			domS = $("SSIDs").v;
+		}
+	}, pm);
+}
+//重新获取状态
+function getWiFiStatus(v,str){
+	var t,d,status,dom = $("SSID_" + v);
+	dom.className = "iRadio_1 iRadio_wait";
+	if(str){
+		//防止多次进入
+		clearInterval(t);
+		clearTimeout(d);
+	//成功：iRadio_1 iRadio_elect  
+	//失败：iRadio_error 
+	//等待：iRadio_wait
+		//每2秒获取一次状态
+		t = setInterval(function(){
+			$.Ajax.get("/protocol.csp?fname=net&opt=wifi_linkstatus&function=get&t=" + new Date().getTime(),function(){
+				status = $.xjson(this.responseXML, "status", true);
+				if(status == 1){
+					dom.className = "iRadio_1 iRadio_elect";
+					dom.title = $.lge.get("Setting_DDNS_Success");
+					clearTimeout(d);
+					clearInterval(t);
+				}
+			});
+		},2000);
+		//15秒后清除计时器
+		d = setTimeout(function(){
+			clearInterval(t);
+			clearTimeout(d);
+			if(status != 1){
+				dom.className = "iRadio_1 iRadio_error";
+				dom.title = $.lge.get("Setting_DDNS_Fail");
+			}
+		},1000*15);
+	}
+}
+function saveWan(wd) {
+	var pm = {},need;
+	if(iS2.viewed == null){
+		return ;
+	}
+//
+//	if($("S2_0").className == "iRadio_1 iRadio_elect"){ m = 0; }
+//	else if($("S2_1").className == "iRadio_1 iRadio_elect"){ m = 1; }
+//	else if($("S2_2").className == "iRadio_1 iRadio_elect"){ m = 2; }
+	pm.mode = iS2.viewed.id.replace(/^S2_/,"");
+	if(pm.mode == 2){
+		//pppoe
+		var user = $("s2_2_user");
+		pm.user = user.value.trim();
+		if(pm.user == "") {
+			return;
+		}
+		var passwd = $("s2_2_passwd");
+		pm.passwd = passwd.value.trim();
+		if(pm.passwd == "") {
+			return;
+		}
+		pm.servername = $("s2_2_servername").value.trim();
+
+		if((pm.DNS1 = checkIPError($("s2_2_DNS1"), "Setting_Network_Internet_primary", true)) == null) {
+			return;
+		}
+		if((pm.DNS2 = checkIPError($("s2_2_DNS2"), "Setting_Network_Internet_second", true)) == null) {
+			return;
+		}
+	}
+	else{
+		if(pm.mode == 0){
+			if((pm.ip = checkIPError($("s2_0_ip"), "Setting_Network_Internet_ip")) == null) {
+				return;
+			}
+			if((pm.mask = checkIPError($("s2_0_mask"), "Setting_Network_Internet_mask", null, !/^(254|252|248|240|224|192|128|0)\.0\.0\.0|255\.(254|252|248|240|224|192|128|0)\.0\.0|255\.255\.(254|252|248|240|224|192|128|0)\.0|255\.255\.255\.(254|252|248|240|224|192|128|0)$/)) == null) {
+				return;
+			}
+			if((pm.gateway = checkIPError($("s2_0_gateway"), "Setting_Network_Internet_gateway")) == null) {
+				return;
+			}
+			if((pm.DNS1 = checkIPError($("s2_0_DNS1"), "Setting_Network_Internet_primary")) == null) {
+				return;
+			}
+			if((pm.DNS2 = checkIPError($("s2_0_DNS2"), "Setting_Network_Internet_second", true)) == null) {
+				return;
+			}
+		}
+	}
+
+	for(var n in pm){
+		//alert(pm[n] + "::" + iWan[n] || "");
+		//编码
+	//	pm[n] = encodeURIComponent(pm[n]);
+		if(pm[n] != (iWan[n] || "")){
+			need = true;
+			break;
+		}
+	}
+	if(need == null){
+		saveSuccess(1, wd);
+		return;
+	}
+	if(saveChange == ""){
+		$.msg.openLoad();
+	}
+	saveChange += "&active=wifi_wan";
+	$.Ajax.post("/protocol.csp?fname=net&opt=wifi_wan&encode=1&function=set" + wizardStr, function () {
+		$.msg.closeLoad();
+		if(this.error){
+			this.showError();
+		}
+		else {
+			iWan = pm;
+			saveSuccess(1, wd);
+		}
+	}, pm);
+}
+
+var saveChange = "";
+function save(wd) {
+	saveChange = "";
+	if ($("S0_1").className == "iRadio_2 iRadio_elect") {
+		saveWifi(wd);
+	}
+	else if ($("S0_2").className == "iRadio_2 iRadio_elect") {
+		saveWan(wd);
+	}else if($("S0_3").className == "iRadio_2 iRadio_elect"){
+		save3G(wd);
+		}
+}
+
+//保存
+$.vsubmit("submit", function () {
+	save(isWizard);
+	//getWan();
+	return false;
+});
+
+$.dom.setScroll($("SSIDs"),$("SSIDs_rs"));
+//3G
+var i3G = {};
+function get3G(fn){
+	//获取3g
+	$.Ajax.post("/protocol.csp?fname=net&opt=wifi_3g&function=get&encode=1" + wizardStr,function(){
+		//flg = 1;v = Dc.XML('<?xml version="1.0" ?><root><net><wifi_3g><status>1</status><network_mode>E1916</network_mode><company>Vtion</company><mode>0</mode><apn></apn><user></user><passwd></passwd><number></number><auth></auth><net></net><cmd_port></cmd_port><data_port></data_port><errno>0</errno></wifi_3g></net></root>');
+		if(this.error){
+				this.showError();
+		}else{
+			i3G = $.xjson(this.responseXML,"wifi_3g",true);
+			//$("3g-apn").value = decodeURIComponent(i3G.apn) || "";
+			//$("3g-pin").value = decodeURIComponent(i3G.pin) || "";
+			//$("3g-number").value = decodeURIComponent(i3G.number) || "";
+			//$("3g-user").value = decodeURIComponent(i3G.user) || "";
+			//$("3g-passwd").value = decodeURIComponent(i3G.passwd) || "";
+		}
+		$("3g-status").innerHTML = $.lge.get("Setting_Network_Internet_3G_Status_" + (i3G.status=="1"?"1":"0"));
+		fn && fn();
+	});
+}
+
+function save3G(wd){
+	
+	 successGo(wd);
+	//去掉3g保存
+	return false;
+	
+	var pm = {};
+	pm.apn = $("3g-apn").value.trim();
+	pm.pin = $("3g-pin").value.trim();
+	pm.number =  $("3g-number").value.trim();
+	pm.user = $("3g-user").value.trim();
+	pm.passwd = $("3g-passwd").value.trim();
+
+	var flag = false;
+	for(var n in pm){
+		//编码
+		//pm[n] = encodeURIComponent(pm[n]);
+		if(pm[n] != (i3G[n] || "")){
+			flag = true;
+			break;
+		}
+	}
+	if(flag){
+		//保持3g
+		$.msg.openLoad();
+		$.Ajax.post("/protocol.csp?fname=net&opt=wifi_3g&encode=1&function=set" + wizardStr,function(){
+			if(this.error){
+				this.showError();
+			}else{
+				successGo(wd);	 
+			}
+		$.msg.closeLoad();
+		},pm);
+	}
+	else{
+		successGo(wd);
+	}
+}
+
+function setNo3G(){
+	switch(iMode){
+		case 1:
+			setMode("wan");
+			break;
+		case 3:
+			setMode("wifi");
+			break;
+	}
+}
+
+if($.config.hasRJ45){
+	$("S0_2").style.display = "block";
+	//$.config.hasPPPoE = true;
+	if ($.config.hasPPPoE) {
+		$("S2_2").style.display = "block";
+	}
+
+	//获取模式
+	$.Ajax.get("/protocol.csp?fname=net&opt=wifi_phymode&function=get" + wizardStr, function () {
+		//flg = 1;v = Dc.XML('<?xml version="1.0" ?><root><net><wifi_phymode><mode>2</mode><errno>0</errno></wifi_phymode></net></root>');
+		if (this.error) {
+			this.showError();
+			return;
+		}
+		switch ($.xjson(this.responseXML, "wifi_phymode", true).mode) {
+			case "1": //有线
+				iMode = 1;
+				$.dom.on(iS0.S0_2, "vclick");
+				break;
+			case "2"://3G
+			if($.config.has3G){
+				$("S0_3").style.display = "block";
+				get3G(function(){
+				//if(i3G.status == "1"){
+				$.query("#[S0_1,S0_2]").on("vclick", function (){});
+				$("S0_1").style.color="#cccccc";
+				$("S0_2").style.color="#cccccc";
+				$("S0_3").className="iRadio_2 iRadio_elect";
+				$("S0_3c").style.display = "block";
+			//	}	
+			//	else{
+		//		iS0.getS0_3 = empty;
+		//		$.query("#[S0_3]").on("vclick", function (){});
+		//		$("S0_3").style.color="#cccccc";
+		//}
+		});
+	}
+	else{
+		iS0.getS0_3 = empty;
+		$.query("#[S0_3]").on("vclick", function (){});
+		$("S0_3").style.color="#cccccc";
+	} 
+				iMode = 2;
+				$.dom.on(iS0.S0_3, "vclick");	
+				break;
+			case "3": //无线
+				iMode = 3;
+				$.dom.on(iS0.S0_1, "vclick");
+				break;
+		}
+	});
+}
+else {
+	//无线
+	iMode = 3;
+	$.dom.on(iS0.S0_1, "vclick");
+}
+//获取是否有自动切换网络功能
+autoswitch = function(){
+	autoswitch = function(){};
+	$.Ajax.get("/protocol.csp?fname=service&opt=autoswitch&function=get",function(){
+	if(!this.error){
+	    v =  $.xjson(this.responseXML,"autoswitch",true);
+	   if(v.enable == 1){
+			$("S0_1").style.color = "#CCCCCC";
+			$("S0_2").style.color = "#CCCCCC";
+			$.query("#[S0_1,S0_2]").on("vclick", function () {
+				return false;
+			});
+	   }
+	}	
+	});
+};

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1; minimum-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+	<script type="text/javascript" src="../../script/config.js" js="none"></script>
+</head>
+<body>
+<div class="MHeader">
+	<div class="MHeader_l">
+		<a href="javascript:void(history.back());" class="MHeader_back"><span Lge="Prompt_back"></span></a>
+	</div>
+	<div class="MHeader_r">
+		<a href="javascript:void($.vhref('main.html'));" class="MHeader_btn2"></a>
+	</div>
+	<b class="MHeader_txt1"><span Lge="Setting_Nav_Services"></span></b>
+</div>
+<div class="MContent"><div class="MMCenter">
+	<a class="iItem_L1" id="win" href="win.html"><span class="iItem_L1_x" Lge="Service_Win"></span></a>
+	<a class="iItem_L1" id="dlna" href="dlna.html"><span class="iItem_L1_x" Lge="Service_DLNA"></span></a>
+    <a class="iItem_L1" id="thunder" href="thunder.html"><span class="iItem_L1_x" Lge="Service_Thunder"></span></a>
+    <a class="iItem_L1" id="ext" href="ext.html"><span class="iItem_L1_x" Lge="Service_Ext"></span></a>
+		<script type="text/javascript">
+		  if(!$.config.hasThunder) $("thunder").style.display = "none";
+		  if(!$.config.hasExt) $("ext").style.display = "none";
+		  if(!$.config.hasDLNA) $("dlna").style.display = "none";
+    	</script>
+</div></div>
+</body>
+</html>

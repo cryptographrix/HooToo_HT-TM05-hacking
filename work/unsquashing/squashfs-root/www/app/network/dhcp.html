@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1; minimum-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+	<script type="text/javascript" src="../../script/config.js"></script>
+</head>
+<body>
+<!-- 这个是dhcp设置界面 -->
+<div style="display: block;" id="dhcpform">
+	<div class="MHeader">
+		<div class="MHeader_l">
+			<a href="javascript:void(history.back());" class="MHeader_back"><span lge="Prompt_back"></span></a>
+		</div>
+		<div class="MHeader_r">
+			<a href="javascript:void($.vhref('main.html'));" class="MHeader_btn2"></a>
+		</div>
+		<b class="MHeader_txt1"><span lge="Setting_Network_DHCPServer"></span></b>
+	</div>
+	<div class="MContent"><div class="MNetwork MNetwork">
+  <span style="display:none">@charset "gb2312";<!--此处针对IE6如果有中文注释，可能样式不显示情况--></span>
+		<div class="iBox_C2">
+			<div class="iItem_P3">
+				<div class="iItem_P3_swicth1">
+					<div class="iSwitch_1-0" id="enable"></div>
+					<!-- 开启时，把样式设置为 MSwitch_1 -->
+					<span Lge="Setting_Network_DHCPServer"></span>
+				</div>
+			</div>
+			<!-- 开启时，把下面的div的属性设置为 block -->
+			<div style="display: block;" class="MNetworkIPT" id="dhcpsetting">
+				<div class="iItem_k2">
+					<span lge="Setting_Network_DHCPServer_start"></span>
+				</div>
+				<div class="iIpt3">
+					<div class="iIpt3_l"></div>
+					<div class="iIpt3_r"></div>
+					<div class="iIpt3_c">
+						<input type="text" class="ipt_v" id="start" />
+					</div>
+				</div>
+				<div class="iItem_k2">
+					<span lge="Setting_Network_DHCPServer_end"></span>
+				</div>
+				<div class="iIpt3">
+					<div class="iIpt3_l"></div>
+					<div class="iIpt3_r"></div>
+					<div class="iIpt3_c">
+						<input type="text" class="ipt_v" id="end" />
+					</div>
+				</div>
+				<div class="iItem_k2">
+					<span lge="Setting_Network_DHCPServer_gateway"></span>
+				</div>
+				<div class="iIpt3_0">
+					<div class="iIpt3_l"></div>
+					<div class="iIpt3_r"></div>
+					<div class="iIpt3_c">
+						<input  readonly="readonly" type="text" class="ipt_v" id="gateway" onblur="javascript:void(dhcpchange())"/>
+					</div>
+				</div>
+				<div class="iItem_k2">
+					<span lge="Setting_Network_DHCPServer_primary"></span>
+				</div>
+				<div class="iIpt3">
+					<div class="iIpt3_l"></div>
+					<div class="iIpt3_r"></div>
+					<div class="iIpt3_c">
+						<input type="text" class="ipt_v" id="DNS1" />
+					</div>
+				</div>
+				<div class="iItem_k2">
+					<span lge="Setting_Network_DHCPServer_second"></span>
+				</div>
+				<div class="iIpt3">
+					<div class="iIpt3_l"></div>
+					<div class="iIpt3_r"></div>
+					<div class="iIpt3_c">
+						<input type="text" class="ipt_v" id="DNS2" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="MNetworkBtn2">
+			<a href="javascript:void(0)" id="list" hidefocus="true" class="iBtn1" style=" margin-right: 2px;">
+				<b class="iBtn1_l"></b>
+				<b class="iBtn1_r"></b>
+				<span class="iBtn1_c" Lge="Setting_Network_DHCPServer_list"></span>
+			</a>
+			<a href="javascript:void(0)" id="submit" hidefocus="true" class="iBtn1">
+				<b class="iBtn1_l"></b>
+				<b class="iBtn1_r"></b>
+				<span class="iBtn1_c" Lge="Prompt_save_value"></span>
+			</a>
+		</div>
+	</div></div>
+</div>
+<div style="display: none;" id="client">
+	<div class="MHeader">
+		<div class="MHeader_l">
+			<!-- 返回，将上一个标签显示 -->
+			<a href="javascript:void(0);" class="MHeader_back" id="back"><span lge="Prompt_back"></span>
+			</a>
+		</div>
+		<div class="MHeader_r">
+			<a href="javascript:void($.vhref('main.html'));" class="MHeader_btn2"></a>
+		</div>
+		<b class="MHeader_txt1"><span lge="Setting_Network_DHCPServer_list"></span></b>
+	</div>
+	<div class="MContent"><div class="MNetworkClient"></div>
+		<div class="iBox_C3">
+
+			<table cellpadding="0" cellspacing="0" border="0">
+				<thead align="center" valign="middle">
+					<tr>
+						<td class="MNetworkDHCP_client">
+							<b><span lge="Setting_Network_DHCPServer_client"></span></b>
+						</td>
+						<td class="MNetworkDHCP_mac">
+							<b><span lge="Setting_Network_DHCPServer_mac"></span></b>
+						</td>
+						<td class="MNetworkDHCP_ip">
+							<b><span lge="Setting_Network_DHCPServer_ip"></span></b>
+						</td>
+						<td class="MNetworkDHCP_time">
+							<b><span lge="Setting_Network_DHCPServer_time"></span></b>
+						</td>
+					</tr>
+				</thead>
+				<tbody align="center" valign="middle" id="clientlist"></tbody>
+			</table>
+	
+	</div></div>
+</div>
+</body>
+</html>

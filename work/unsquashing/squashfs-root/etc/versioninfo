@@ -1,0 +1,12 @@
+rootfs=845
+autochange=845
+autologin=845
+dlna=845
+ioos/ioos=4925
+shareuser=845
+staticdns=845
+upnpcontrol=845
+web/redweb5.05=2434
+uboot=7620/bootloader-mt7620N-DDR2-64M-2014-05-07-05-34.bin
+kernel=7620/kernel-mt7620N-hdd-i2c-PI629-64M-2014-07-11-10-44
+ko=tuxera-file-systems-3014.4.29.4-mt7620n-test-2014-06-17-15-00.tgz

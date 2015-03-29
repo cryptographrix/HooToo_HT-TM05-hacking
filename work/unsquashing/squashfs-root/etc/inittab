@@ -1,0 +1,4 @@
+::wait:/etc/rc.d/rc
+::sysinit:/etc/initsh
+::shutdown:/sbin/shutdown h
+::respawn:/sbin/getty 57600 ttyS1

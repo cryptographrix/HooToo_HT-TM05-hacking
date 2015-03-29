@@ -1,0 +1,13 @@
+[global]
+	workgroup = WORKGROUP
+	server string = NetDisk
+	netbios name = power7-test1
+	security = user
+	smb passwd file=/etc/samba/smbpasswd
+	guest account = nobody
+	log level = 0
+	log file = /usr/local/samba/var/log.smbd
+	max log size = 1000
+	local master = no
+	dns proxy = no
+	use sendfile = yes

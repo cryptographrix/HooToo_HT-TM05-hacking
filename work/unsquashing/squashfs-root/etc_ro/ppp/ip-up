@@ -1,0 +1,16 @@
+#!/bin/sh
+# place the commands to run after the pppd dial up successfully.
+while read line;do
+	pd=`echo $line | grep nameserver |awk -F ' ' '{printf $2}'`
+	if [ -n $pd ]; then
+		break
+	fi
+done < /etc/resolv.conf
+
+if [ -n $pd ]; then
+	locknet "config-staticdns.sh $pd"
+fi
+#tst_nameserver
+#killall -kill udhcpd
+#udhcpd /etc/udhcpd.conf
+/etc/init.d/upnpd.sh restart

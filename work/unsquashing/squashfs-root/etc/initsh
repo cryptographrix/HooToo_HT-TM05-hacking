@@ -1,0 +1,69 @@
+#!/bin/sh
+#########################################################
+# Copyright (C) by IOVST
+# Descriptor: 
+#     the system init shell
+#########################################################
+export PATH=/bin:/sbin:/usr/bin:/usr/sbin
+# include 
+. /etc/init.d/vstfunc
+
+# Set STARTUP=1 flag
+touch /tmp/stfirst
+echo "STARTUP=1" > /tmp/startupflag
+
+# Mount disk /etc
+/usr/sbin/etc_tools c > /dev/null 2>&1
+if [ $? -eq 1 ]; then
+        cp -arf /etc /boot/tmp/ > /dev/null 2>&1
+        /usr/sbin/etc_tools > /dev/null 2>&1
+else
+        /usr/sbin/etc_tools b > /dev/null 2>&1
+        if [ -f /boot/tmp/etc.tar.gz ]; then
+	        gunzip /boot/tmp/etc.tar.gz
+	        tar xvf /boot/tmp/etc.tar -C /boot/tmp > /dev/null 2>&1
+		if [ ! -e /boot/tmp/etc ]; then
+#			ETCFLAG=1
+        		cp -arf /etc /boot/tmp/ > /dev/null 2>&1
+        		/usr/sbin/etc_tools > /dev/null 2>&1
+		fi
+        else
+            cp -arf /etc /boot/tmp/ > /dev/null 2>&1
+            /usr/sbin/etc_tools > /dev/null 2>&1
+        fi
+fi
+mount --bind /boot/tmp/etc /etc > /dev/null 2>&1
+
+if [ -f /boot/tmp/etc.tar.gz ]; then
+	    touch /tmp/newver
+            restore_etc
+            #/etc/init.d/etcsync
+fi
+echo 1 > /proc/sys/vm/drop_caches
+mkdir /tmp/newfunction
+#/etc/init.d/udev & > /dev/null 2>&1
+    
+if [ -f /etc/telnetflag ]; then
+    	sed -i "s|:/root:/sbin/nologin|:/root:/bin/sh|" /etc/passwd
+	#cp -f /etc/telnetpasswd /etc/passwd
+	#cp -f /etc/telnetshadow /etc/shadow
+fi
+
+#init disk
+#/etc/initdisk
+#building etc env
+#restore etc from disk
+#/etc/hosts /tmp/upnpd
+/etc/initargs
+#init time zone
+/etc/inittime
+if [ -f /etc/sysctl.conf ]; then
+	sysctl -p
+fi
+#init net
+/etc/initnet
+
+/usr/sbin/pioctl wifi 3
+/usr/sbin/pioctl wifi 3
+/usr/sbin/pioctl wifi 0
+exit 0

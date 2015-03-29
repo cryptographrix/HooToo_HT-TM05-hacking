@@ -1,0 +1,86 @@
+#!/bin/sh
+#########################################################
+# Copyright (C) by IOVST
+# Descriptor: 
+#     the system init shell
+#########################################################
+export PATH=/bin:/sbin:/usr/bin:/usr/sbin
+# include 
+. /etc/init.d/vstfunc
+
+# mount disk
+echo "init diskmount"
+
+#Mount the USB disk
+wait_dev() {
+        while read major minor device other;do
+                if [ "$device" = "sda1" ];then
+                        return 1
+                fi
+        done < /proc/diskstats
+ 
+        return 0
+}
+
+try_num=0
+while [ $try_num -lt 75 ]; do
+       wait_dev
+       if [ $? -eq 0 ]; then
+#               echo "Waiting sda1, try again $trynum"
+               let try_num=try_num+1
+               usleep 200000
+       else
+               break
+       fi
+done
+
+#Check if the /tmp/diskpartinfo is empty
+wait_part() {
+	/usr/sbin/diskck  > /dev/null 2>&1
+	sync
+	PARTINFO=`cat /tmp/diskpartinfo`
+#	echo "PARTINFO=$PARTINFO"
+	if [ "$PARTINFO" = "" ]; then
+		return 0
+	else
+		return 1
+	fi
+}
+try_num=0
+while [ $try_num -lt 75 ]; do
+       wait_part
+       if [ $? -eq 0 ]; then
+#               echo "Waiting sda1, try again $trynum"
+               let try_num=try_num+1
+               usleep 200000
+       else    
+               break
+       fi      
+done 
+
+#echo "Erase GPT information"
+if [ $? -eq 0 ]; then
+        usr/sbin/disk_clear_gpt_info #add by zhangwei 20120905
+fi
+
+if [ -f lib/modules/2.6.21/kernel/drivers/tuxera/tntfs.ko ]; then
+	insmod lib/modules/2.6.21/kernel/drivers/tuxera/tntfs.ko
+fi
+if [ -f lib/modules/2.6.21/kernel/drivers/tuxera/texfat.ko ]; then
+	insmod lib/modules/2.6.21/kernel/drivers/tuxera/texfat.ko
+fi
+if [ -f lib/modules/2.6.21/kernel/drivers/tuxera/thfsplus.ko ]; then
+	insmod lib/modules/2.6.21/kernel/drivers/tuxera/thfsplus.ko
+fi
+if [ -f lib/modules/2.6.21/kernel/drivers/tuxera/thfsplus.ko ]; then
+	insmod lib/modules/2.6.21/kernel/drivers/tuxera/tfat.ko
+fi
+
+echo 1 > /proc/sys/vm/drop_caches
+#led_wink_stop
+/etc/init.d/diskmount
+#led_wink_start
+##########################################################
+echo 1 > /proc/sys/vm/drop_caches
+
+exit 0

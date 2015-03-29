@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ui_type="noPadUI">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1; minimum-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+	<script type="text/javascript" src="script/config.js"></script>
+</head>
+<body>
+<div style="display: none;" id="bbbdy">
+	<div class="MHeader">
+		<b id="loginTitle" class="MHeader_txt1"></b>
+	</div>
+	<div class="MContent">
+		<div class="MEntry">
+			<div class="MEntry_img"></div>
+			<div class="MEntry_box">
+				<div class="iIpt1">
+					<div class="iIpt1_l ipt_account"></div>
+					<div class="iIpt1_rd"></div>
+					<span class="iIpt1_tip" Lge="Login_User_Name"></span>
+					<div class="iIpt1_c">
+						<input type="text" class="ipt_v" id="account" readonly="readonly" />
+					</div>
+				</div>
+				<div class="iIpt1">
+					<div class="iIpt1_l ipt_password"></div>
+					<div class="iIpt1_r"></div>
+					<span class="iIpt1_tip" Lge="Login_User_Password"></span>
+					<div class="iIpt1_c">
+						<input type="password" id="password" />
+					</div>
+				</div>
+				<div class="iIpt1">
+					<div class="iIpt1_l ipt_language" id="language_icon"></div>
+					<div class="iIpt1_rd"></div>
+					<span class="iIpt1_tip" Lge="Login_Language"></span>
+					<div class="iIpt1_c">
+						<input type="text" class="ipt_v" id="language" readonly="readonly"/>
+					</div>
+				</div>
+			</div>
+			<div class="MEntry_btns">
+				<a href="javascript:void(0)" id="submit" hidefocus="true" class="iBtn1">
+					<b class="iBtn1_l"></b>
+					<b class="iBtn1_r"></b>
+					<span class="iBtn1_c" Lge="Login_Enter"></span>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="ddderr">您使用的是不支持js的浏览器，无法浏览网页，请使用支持js的浏览器</div>
+<script type="text/javascript">
+	document.body.removeChild(document.getElementById("ddderr"));
+	document.getElementById("bbbdy").style.display = "";
+</script>
+</body>
+</html>

@@ -1,0 +1,1817 @@
+[2000/01/01 00:36:06, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UCS-2LE to UTF-8 not supported
+[2000/01/01 00:36:06, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from UCS-2LE to ASCII
+[2000/01/01 00:36:06, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UCS-2LE not supported
+[2000/01/01 00:36:06, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to UCS-2LE
+[2000/01/01 00:36:06, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to ASCII not supported
+[2000/01/01 00:36:06, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2000/01/01 00:36:06, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to CP850 not supported
+[2000/01/01 00:36:06, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2000/01/01 00:36:06, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UTF8 not supported
+[2000/01/01 00:36:06, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2000/01/01 00:36:06, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from ASCII to UTF-8 not supported
+[2000/01/01 00:36:06, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2000/01/01 00:36:06, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from CP850 to UTF-8 not supported
+[2000/01/01 00:36:06, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2000/01/01 00:36:06, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF8 to UTF-8 not supported
+[2000/01/01 00:36:06, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2000/01/01 00:00:17, 0] lib/interface.c:load_interfaces(195)
+  ERROR: Could not determine network interfaces, you must use a interfaces config line
+[2000/01/01 00:01:12, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UCS-2LE to UTF-8 not supported
+[2000/01/01 00:01:12, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from UCS-2LE to ASCII
+[2000/01/01 00:01:12, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UCS-2LE not supported
+[2000/01/01 00:01:12, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to UCS-2LE
+[2000/01/01 00:01:12, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to ASCII not supported
+[2000/01/01 00:01:12, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2000/01/01 00:01:12, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to CP850 not supported
+[2000/01/01 00:01:12, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2000/01/01 00:01:12, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UTF8 not supported
+[2000/01/01 00:01:12, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2000/01/01 00:01:12, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from ASCII to UTF-8 not supported
+[2000/01/01 00:01:12, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2000/01/01 00:01:12, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from CP850 to UTF-8 not supported
+[2000/01/01 00:01:12, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2000/01/01 00:01:12, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF8 to UTF-8 not supported
+[2000/01/01 00:01:12, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2000/01/01 00:04:21, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UCS-2LE to UTF-8 not supported
+[2000/01/01 00:04:21, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from UCS-2LE to ASCII
+[2000/01/01 00:04:21, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UCS-2LE not supported
+[2000/01/01 00:04:21, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to UCS-2LE
+[2000/01/01 00:04:21, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to ASCII not supported
+[2000/01/01 00:04:21, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2000/01/01 00:04:21, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to CP850 not supported
+[2000/01/01 00:04:21, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2000/01/01 00:04:21, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UTF8 not supported
+[2000/01/01 00:04:21, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2000/01/01 00:04:21, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from ASCII to UTF-8 not supported
+[2000/01/01 00:04:21, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2000/01/01 00:04:21, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from CP850 to UTF-8 not supported
+[2000/01/01 00:04:21, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2000/01/01 00:04:21, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF8 to UTF-8 not supported
+[2000/01/01 00:04:21, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/03/30 18:48:33, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UCS-2LE to UTF-8 not supported
+[2012/03/30 18:48:33, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from UCS-2LE to ASCII
+[2012/03/30 18:48:33, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UCS-2LE not supported
+[2012/03/30 18:48:33, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to UCS-2LE
+[2012/03/30 18:48:33, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to ASCII not supported
+[2012/03/30 18:48:33, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/03/30 18:48:33, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to CP850 not supported
+[2012/03/30 18:48:33, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/03/30 18:48:33, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UTF8 not supported
+[2012/03/30 18:48:33, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/03/30 18:48:33, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from ASCII to UTF-8 not supported
+[2012/03/30 18:48:33, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/03/30 18:48:33, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from CP850 to UTF-8 not supported
+[2012/03/30 18:48:33, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/03/30 18:48:33, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF8 to UTF-8 not supported
+[2012/03/30 18:48:33, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2000/01/01 00:00:17, 0] lib/interface.c:load_interfaces(195)
+  ERROR: Could not determine network interfaces, you must use a interfaces config line
+[2000/01/01 00:00:17, 0] lib/interface.c:load_interfaces(195)
+  ERROR: Could not determine network interfaces, you must use a interfaces config line
+[2012/03/30 18:57:38, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UCS-2LE to UTF-8 not supported
+[2012/03/30 18:57:38, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from UCS-2LE to ASCII
+[2012/03/30 18:57:38, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UCS-2LE not supported
+[2012/03/30 18:57:38, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to UCS-2LE
+[2012/03/30 18:57:38, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to ASCII not supported
+[2012/03/30 18:57:38, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/03/30 18:57:38, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to CP850 not supported
+[2012/03/30 18:57:38, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/03/30 18:57:38, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UTF8 not supported
+[2012/03/30 18:57:38, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/03/30 18:57:38, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from ASCII to UTF-8 not supported
+[2012/03/30 18:57:38, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/03/30 18:57:38, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from CP850 to UTF-8 not supported
+[2012/03/30 18:57:38, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/03/30 18:57:38, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF8 to UTF-8 not supported
+[2012/03/30 18:57:38, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/03/30 19:20:16, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UCS-2LE to UTF-8 not supported
+[2012/03/30 19:20:16, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from UCS-2LE to ASCII
+[2012/03/30 19:20:16, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UCS-2LE not supported
+[2012/03/30 19:20:16, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to UCS-2LE
+[2012/03/30 19:20:16, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to ASCII not supported
+[2012/03/30 19:20:16, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/03/30 19:20:16, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to CP850 not supported
+[2012/03/30 19:20:16, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/03/30 19:20:16, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UTF8 not supported
+[2012/03/30 19:20:16, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/03/30 19:20:16, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from ASCII to UTF-8 not supported
+[2012/03/30 19:20:16, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/03/30 19:20:16, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from CP850 to UTF-8 not supported
+[2012/03/30 19:20:16, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/03/30 19:20:16, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF8 to UTF-8 not supported
+[2012/03/30 19:20:16, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2000/01/01 00:00:17, 0] lib/interface.c:load_interfaces(195)
+  ERROR: Could not determine network interfaces, you must use a interfaces config line
+[2012/04/06 08:54:19, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UCS-2LE to UTF-8 not supported
+[2012/04/06 08:54:19, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from UCS-2LE to ASCII
+[2012/04/06 08:54:19, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UCS-2LE not supported
+[2012/04/06 08:54:19, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to UCS-2LE
+[2012/04/06 08:54:19, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to ASCII not supported
+[2012/04/06 08:54:19, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/06 08:54:19, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to CP850 not supported
+[2012/04/06 08:54:19, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/06 08:54:19, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UTF8 not supported
+[2012/04/06 08:54:19, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/06 08:54:19, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from ASCII to UTF-8 not supported
+[2012/04/06 08:54:19, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/06 08:54:19, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from CP850 to UTF-8 not supported
+[2012/04/06 08:54:19, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/06 08:54:19, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF8 to UTF-8 not supported
+[2012/04/06 08:54:19, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2000/01/01 00:00:21, 0] lib/interface.c:load_interfaces(195)
+  ERROR: Could not determine network interfaces, you must use a interfaces config line
+[2012/04/06 09:16:16, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UCS-2LE to UTF-8 not supported
+[2012/04/06 09:16:16, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from UCS-2LE to ASCII
+[2012/04/06 09:16:16, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UCS-2LE not supported
+[2012/04/06 09:16:16, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to UCS-2LE
+[2012/04/06 09:16:16, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to ASCII not supported
+[2012/04/06 09:16:16, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/06 09:16:16, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to CP850 not supported
+[2012/04/06 09:16:16, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/06 09:16:16, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UTF8 not supported
+[2012/04/06 09:16:16, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/06 09:16:16, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from ASCII to UTF-8 not supported
+[2012/04/06 09:16:16, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/06 09:16:16, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from CP850 to UTF-8 not supported
+[2012/04/06 09:16:16, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/06 09:16:16, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF8 to UTF-8 not supported
+[2012/04/06 09:16:16, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2000/01/01 00:00:21, 0] lib/interface.c:load_interfaces(195)
+  ERROR: Could not determine network interfaces, you must use a interfaces config line
+[2000/01/01 00:00:17, 0] lib/interface.c:load_interfaces(195)
+  ERROR: Could not determine network interfaces, you must use a interfaces config line
+[2012/04/06 10:57:55, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/06 10:57:56, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/06 10:57:56, 0] lib/util_sock.c:write_socket_data(411)
+  write_socket_data: write failure. Error = Connection reset by peer
+[2012/04/06 10:57:56, 0] lib/util_sock.c:write_socket(436)
+  write_socket: Error writing 4 bytes to socket 22: ERRNO = Connection reset by peer
+[2012/04/06 10:57:56, 0] lib/util_sock.c:send_smb(628)
+  Error writing 4 bytes to client. -1. (Connection reset by peer)
+[2012/04/06 10:58:05, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UCS-2LE to UTF-8 not supported
+[2012/04/06 10:58:05, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from UCS-2LE to ASCII
+[2012/04/06 10:58:05, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UCS-2LE not supported
+[2012/04/06 10:58:05, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to UCS-2LE
+[2012/04/06 10:58:05, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to ASCII not supported
+[2012/04/06 10:58:05, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/06 10:58:05, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to CP850 not supported
+[2012/04/06 10:58:05, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/06 10:58:05, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UTF8 not supported
+[2012/04/06 10:58:05, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/06 10:58:05, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from ASCII to UTF-8 not supported
+[2012/04/06 10:58:05, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/06 10:58:05, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from CP850 to UTF-8 not supported
+[2012/04/06 10:58:05, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/06 10:58:05, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF8 to UTF-8 not supported
+[2012/04/06 10:58:05, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/06 10:58:31, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/06 10:58:31, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/06 10:58:31, 0] lib/util_sock.c:write_socket_data(411)
+  write_socket_data: write failure. Error = Connection reset by peer
+[2012/04/06 10:58:31, 0] lib/util_sock.c:write_socket(436)
+  write_socket: Error writing 4 bytes to socket 22: ERRNO = Connection reset by peer
+[2012/04/06 10:58:31, 0] lib/util_sock.c:send_smb(628)
+  Error writing 4 bytes to client. -1. (Connection reset by peer)
+[2012/04/06 10:59:52, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UCS-2LE to UTF-8 not supported
+[2012/04/06 10:59:52, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from UCS-2LE to ASCII
+[2012/04/06 10:59:52, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UCS-2LE not supported
+[2012/04/06 10:59:52, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to UCS-2LE
+[2012/04/06 10:59:52, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to ASCII not supported
+[2012/04/06 10:59:52, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/06 10:59:52, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to CP850 not supported
+[2012/04/06 10:59:52, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/06 10:59:52, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UTF8 not supported
+[2012/04/06 10:59:52, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/06 10:59:52, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from ASCII to UTF-8 not supported
+[2012/04/06 10:59:52, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/06 10:59:52, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from CP850 to UTF-8 not supported
+[2012/04/06 10:59:52, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/06 10:59:52, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF8 to UTF-8 not supported
+[2012/04/06 10:59:52, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/06 11:00:21, 0] smbd/service.c:make_connection(771)
+  china-740c3c69a (192.168.1.106) couldn't find service .svn
+[2000/01/01 00:00:21, 0] lib/interface.c:load_interfaces(195)
+  ERROR: Could not determine network interfaces, you must use a interfaces config line
+[2012/04/09 07:44:44, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UCS-2LE to UTF-8 not supported
+[2012/04/09 07:44:44, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from UCS-2LE to ASCII
+[2012/04/09 07:44:44, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UCS-2LE not supported
+[2012/04/09 07:44:44, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to UCS-2LE
+[2012/04/09 07:44:44, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to ASCII not supported
+[2012/04/09 07:44:44, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/09 07:44:44, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to CP850 not supported
+[2012/04/09 07:44:44, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/09 07:44:44, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UTF8 not supported
+[2012/04/09 07:44:44, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/09 07:44:44, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from ASCII to UTF-8 not supported
+[2012/04/09 07:44:44, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/09 07:44:44, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from CP850 to UTF-8 not supported
+[2012/04/09 07:44:44, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/09 07:44:44, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF8 to UTF-8 not supported
+[2012/04/09 07:44:44, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2000/01/01 00:00:17, 0] lib/interface.c:load_interfaces(195)
+  ERROR: Could not determine network interfaces, you must use a interfaces config line
+[2012/04/09 07:49:35, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UCS-2LE to UTF-8 not supported
+[2012/04/09 07:49:35, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from UCS-2LE to ASCII
+[2012/04/09 07:49:35, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UCS-2LE not supported
+[2012/04/09 07:49:35, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to UCS-2LE
+[2012/04/09 07:49:35, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to ASCII not supported
+[2012/04/09 07:49:35, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/09 07:49:35, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to CP850 not supported
+[2012/04/09 07:49:35, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/09 07:49:35, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UTF8 not supported
+[2012/04/09 07:49:35, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/09 07:49:35, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from ASCII to UTF-8 not supported
+[2012/04/09 07:49:35, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/09 07:49:35, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from CP850 to UTF-8 not supported
+[2012/04/09 07:49:35, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/09 07:49:35, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF8 to UTF-8 not supported
+[2012/04/09 07:49:35, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/09 07:49:36, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UCS-2LE to UTF-8 not supported
+[2012/04/09 07:49:36, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from UCS-2LE to ASCII
+[2012/04/09 07:49:36, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UCS-2LE not supported
+[2012/04/09 07:49:36, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to UCS-2LE
+[2012/04/09 07:49:36, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to ASCII not supported
+[2012/04/09 07:49:36, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/09 07:49:36, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to CP850 not supported
+[2012/04/09 07:49:36, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/09 07:49:36, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UTF8 not supported
+[2012/04/09 07:49:36, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/09 07:49:36, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from ASCII to UTF-8 not supported
+[2012/04/09 07:49:36, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/09 07:49:36, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from CP850 to UTF-8 not supported
+[2012/04/09 07:49:36, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/09 07:49:36, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF8 to UTF-8 not supported
+[2012/04/09 07:49:36, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/09 07:52:02, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UCS-2LE to UTF-8 not supported
+[2012/04/09 07:52:02, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from UCS-2LE to ASCII
+[2012/04/09 07:52:02, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UCS-2LE not supported
+[2012/04/09 07:52:02, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to UCS-2LE
+[2012/04/09 07:52:02, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to ASCII not supported
+[2012/04/09 07:52:02, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/09 07:52:02, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to CP850 not supported
+[2012/04/09 07:52:02, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/09 07:52:02, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UTF8 not supported
+[2012/04/09 07:52:02, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/09 07:52:02, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from ASCII to UTF-8 not supported
+[2012/04/09 07:52:02, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/09 07:52:02, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from CP850 to UTF-8 not supported
+[2012/04/09 07:52:02, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/09 07:52:02, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF8 to UTF-8 not supported
+[2012/04/09 07:52:02, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/09 07:52:03, 0] rpc_parse/parse_prs.c:prs_grow(239)
+  prs_grow: Buffer overflow - unable to expand buffer by 2 bytes.
+[2012/04/09 07:52:03, 0] rpc_server/srv_spoolss.c:api_spoolss_addprinterex(885)
+  spoolss_io_q_addprinterex: unable to unmarshall SPOOL_Q_ADDPRINTEREX.
+[2012/04/09 07:52:03, 0] rpc_server/srv_pipe.c:api_rpcTNP(1531)
+  api_rpcTNP: spoolss: SPOOLSS_ADDPRINTEREX failed.
+[2012/04/09 07:52:13, 0] lib/util_sock.c:read_socket_data(365)
+  read_socket_data: recv failure for 4. Error = Connection reset by peer
+[2000/01/01 00:00:17, 0] lib/interface.c:load_interfaces(195)
+  ERROR: Could not determine network interfaces, you must use a interfaces config line
+[2012/04/09 08:06:11, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/09 08:06:13, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/09 08:06:13, 0] lib/util_sock.c:write_socket_data(411)
+  write_socket_data: write failure. Error = Connection reset by peer
+[2012/04/09 08:06:13, 0] lib/util_sock.c:write_socket(436)
+  write_socket: Error writing 4 bytes to socket 22: ERRNO = Connection reset by peer
+[2012/04/09 08:06:13, 0] lib/util_sock.c:send_smb(628)
+  Error writing 4 bytes to client. -1. (Connection reset by peer)
+[2000/01/01 00:00:16, 0] lib/interface.c:load_interfaces(195)
+  ERROR: Could not determine network interfaces, you must use a interfaces config line
+[2012/04/09 08:24:08, 0] rpc_parse/parse_prs.c:prs_grow(239)
+  prs_grow: Buffer overflow - unable to expand buffer by 2 bytes.
+[2012/04/09 08:24:08, 0] rpc_server/srv_spoolss.c:api_spoolss_addprinterex(885)
+  spoolss_io_q_addprinterex: unable to unmarshall SPOOL_Q_ADDPRINTEREX.
+[2012/04/09 08:24:08, 0] rpc_server/srv_pipe.c:api_rpcTNP(1531)
+  api_rpcTNP: spoolss: SPOOLSS_ADDPRINTEREX failed.
+[2012/04/09 08:24:19, 0] lib/util_sock.c:read_socket_data(365)
+  read_socket_data: recv failure for 4. Error = Connection reset by peer
+[2012/04/09 08:38:12, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/09 08:38:12, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/09 08:38:12, 0] lib/util_sock.c:write_socket_data(411)
+  write_socket_data: write failure. Error = Connection reset by peer
+[2012/04/09 08:38:12, 0] lib/util_sock.c:write_socket(436)
+  write_socket: Error writing 4 bytes to socket 5: ERRNO = Connection reset by peer
+[2012/04/09 08:38:12, 0] lib/util_sock.c:send_smb(628)
+  Error writing 4 bytes to client. -1. (Connection reset by peer)
+[2012/04/09 08:56:25, 0] rpc_parse/parse_prs.c:prs_grow(239)
+  prs_grow: Buffer overflow - unable to expand buffer by 2 bytes.
+[2012/04/09 08:56:25, 0] rpc_server/srv_spoolss.c:api_spoolss_addprinterex(885)
+  spoolss_io_q_addprinterex: unable to unmarshall SPOOL_Q_ADDPRINTEREX.
+[2012/04/09 08:56:25, 0] rpc_server/srv_pipe.c:api_rpcTNP(1531)
+  api_rpcTNP: spoolss: SPOOLSS_ADDPRINTEREX failed.
+[2012/04/09 08:56:37, 0] lib/util_sock.c:read_socket_data(365)
+  read_socket_data: recv failure for 4. Error = Connection reset by peer
+[2012/04/09 09:10:21, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/09 09:10:21, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/09 09:10:21, 0] lib/util_sock.c:write_socket_data(411)
+  write_socket_data: write failure. Error = Connection reset by peer
+[2012/04/09 09:10:21, 0] lib/util_sock.c:write_socket(436)
+  write_socket: Error writing 4 bytes to socket 5: ERRNO = Connection reset by peer
+[2012/04/09 09:10:21, 0] lib/util_sock.c:send_smb(628)
+  Error writing 4 bytes to client. -1. (Connection reset by peer)
+[2012/04/09 09:55:49, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UCS-2LE to UTF-8 not supported
+[2012/04/09 09:55:49, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from UCS-2LE to ASCII
+[2012/04/09 09:55:49, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UCS-2LE not supported
+[2012/04/09 09:55:49, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to UCS-2LE
+[2012/04/09 09:55:49, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to ASCII not supported
+[2012/04/09 09:55:49, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/09 09:55:49, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to CP850 not supported
+[2012/04/09 09:55:49, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/09 09:55:49, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UTF8 not supported
+[2012/04/09 09:55:49, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/09 09:55:49, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from ASCII to UTF-8 not supported
+[2012/04/09 09:55:49, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/09 09:55:49, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from CP850 to UTF-8 not supported
+[2012/04/09 09:55:49, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/09 09:55:49, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF8 to UTF-8 not supported
+[2012/04/09 09:55:49, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/09 09:56:16, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/09 09:56:16, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/09 09:56:16, 0] lib/util_sock.c:write_socket_data(411)
+  write_socket_data: write failure. Error = Connection reset by peer
+[2012/04/09 09:56:16, 0] lib/util_sock.c:write_socket(436)
+  write_socket: Error writing 4 bytes to socket 5: ERRNO = Connection reset by peer
+[2012/04/09 09:56:16, 0] lib/util_sock.c:send_smb(628)
+  Error writing 4 bytes to client. -1. (Connection reset by peer)
+[2012/04/09 09:56:16, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UCS-2LE to UTF-8 not supported
+[2012/04/09 09:56:16, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from UCS-2LE to ASCII
+[2012/04/09 09:56:16, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UCS-2LE not supported
+[2012/04/09 09:56:16, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to UCS-2LE
+[2012/04/09 09:56:16, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to ASCII not supported
+[2012/04/09 09:56:16, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/09 09:56:16, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to CP850 not supported
+[2012/04/09 09:56:16, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/09 09:56:16, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UTF8 not supported
+[2012/04/09 09:56:16, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/09 09:56:16, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from ASCII to UTF-8 not supported
+[2012/04/09 09:56:16, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/09 09:56:16, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from CP850 to UTF-8 not supported
+[2012/04/09 09:56:16, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/09 09:56:16, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF8 to UTF-8 not supported
+[2012/04/09 09:56:16, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/09 10:00:45, 0] rpc_parse/parse_prs.c:prs_grow(239)
+  prs_grow: Buffer overflow - unable to expand buffer by 2 bytes.
+[2012/04/09 10:00:45, 0] rpc_server/srv_spoolss.c:api_spoolss_addprinterex(885)
+  spoolss_io_q_addprinterex: unable to unmarshall SPOOL_Q_ADDPRINTEREX.
+[2012/04/09 10:00:45, 0] rpc_server/srv_pipe.c:api_rpcTNP(1531)
+  api_rpcTNP: spoolss: SPOOLSS_ADDPRINTEREX failed.
+[2012/04/09 10:01:01, 0] lib/util_sock.c:read_socket_data(365)
+  read_socket_data: recv failure for 4. Error = Connection reset by peer
+[2000/01/01 00:00:16, 0] lib/interface.c:load_interfaces(195)
+  ERROR: Could not determine network interfaces, you must use a interfaces config line
+[2012/04/09 10:33:02, 0] rpc_parse/parse_prs.c:prs_grow(239)
+  prs_grow: Buffer overflow - unable to expand buffer by 2 bytes.
+[2012/04/09 10:33:02, 0] rpc_server/srv_spoolss.c:api_spoolss_addprinterex(885)
+  spoolss_io_q_addprinterex: unable to unmarshall SPOOL_Q_ADDPRINTEREX.
+[2012/04/09 10:33:02, 0] rpc_server/srv_pipe.c:api_rpcTNP(1531)
+  api_rpcTNP: spoolss: SPOOLSS_ADDPRINTEREX failed.
+[2012/04/09 10:33:13, 0] lib/util_sock.c:read_socket_data(365)
+  read_socket_data: recv failure for 4. Error = Connection reset by peer
+[2000/01/01 00:00:18, 0] lib/interface.c:load_interfaces(195)
+  ERROR: Could not determine network interfaces, you must use a interfaces config line
+[2000/01/01 00:00:54, 0] lib/pidfile.c:pidfile_create(84)
+  ERROR: smbd is already running. File /var/locks/smbd.pid exists and process id 3719 is running.
+[2012/04/09 11:05:43, 0] rpc_parse/parse_prs.c:prs_grow(239)
+  prs_grow: Buffer overflow - unable to expand buffer by 2 bytes.
+[2012/04/09 11:05:43, 0] rpc_server/srv_spoolss.c:api_spoolss_addprinterex(885)
+  spoolss_io_q_addprinterex: unable to unmarshall SPOOL_Q_ADDPRINTEREX.
+[2012/04/09 11:05:43, 0] rpc_server/srv_pipe.c:api_rpcTNP(1531)
+  api_rpcTNP: spoolss: SPOOLSS_ADDPRINTEREX failed.
+[2012/04/09 11:05:55, 0] lib/util_sock.c:read_socket_data(365)
+  read_socket_data: recv failure for 4. Error = Connection reset by peer
+[2012/04/10 11:09:10, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UCS-2LE to UTF-8 not supported
+[2012/04/10 11:09:10, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from UCS-2LE to ASCII
+[2012/04/10 11:09:10, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UCS-2LE not supported
+[2012/04/10 11:09:10, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to UCS-2LE
+[2012/04/10 11:09:10, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to ASCII not supported
+[2012/04/10 11:09:10, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/10 11:09:10, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to CP850 not supported
+[2012/04/10 11:09:10, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/10 11:09:10, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UTF8 not supported
+[2012/04/10 11:09:10, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/10 11:09:10, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from ASCII to UTF-8 not supported
+[2012/04/10 11:09:10, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/10 11:09:10, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from CP850 to UTF-8 not supported
+[2012/04/10 11:09:10, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/10 11:09:10, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF8 to UTF-8 not supported
+[2012/04/10 11:09:10, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/11 02:25:33, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UCS-2LE to UTF-8 not supported
+[2012/04/11 02:25:33, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from UCS-2LE to ASCII
+[2012/04/11 02:25:33, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UCS-2LE not supported
+[2012/04/11 02:25:33, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to UCS-2LE
+[2012/04/11 02:25:33, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to ASCII not supported
+[2012/04/11 02:25:33, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/11 02:25:33, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to CP850 not supported
+[2012/04/11 02:25:33, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/11 02:25:33, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UTF8 not supported
+[2012/04/11 02:25:33, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/11 02:25:33, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from ASCII to UTF-8 not supported
+[2012/04/11 02:25:33, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/11 02:25:33, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from CP850 to UTF-8 not supported
+[2012/04/11 02:25:33, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/11 02:25:33, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF8 to UTF-8 not supported
+[2012/04/11 02:25:33, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/11 04:09:27, 0] lib/util_sock.c:read_socket_data(365)
+  read_socket_data: recv failure for 4. Error = Connection reset by peer
+[2012/04/11 08:38:38, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UCS-2LE to UTF-8 not supported
+[2012/04/11 08:38:38, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from UCS-2LE to ASCII
+[2012/04/11 08:38:38, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UCS-2LE not supported
+[2012/04/11 08:38:38, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to UCS-2LE
+[2012/04/11 08:38:38, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to ASCII not supported
+[2012/04/11 08:38:38, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/11 08:38:38, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to CP850 not supported
+[2012/04/11 08:38:38, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/11 08:38:38, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UTF8 not supported
+[2012/04/11 08:38:38, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/11 08:38:38, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from ASCII to UTF-8 not supported
+[2012/04/11 08:38:38, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/11 08:38:38, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from CP850 to UTF-8 not supported
+[2012/04/11 08:38:38, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/11 08:38:38, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF8 to UTF-8 not supported
+[2012/04/11 08:38:38, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/11 12:31:31, 0] passdb/secrets.c:secrets_init(67)
+  Failed to open /home/wangsn/root/localapp/install/samba_install/private/secrets.tdb
+[2012/04/11 12:31:31, 0] lib/pidfile.c:pidfile_create(100)
+  ERROR: can't open /home/wangsn/root/localapp/install/samba_install/var/locks/smbd.pid: Error was No such file or directory
+[2012/04/11 12:31:59, 0] passdb/secrets.c:secrets_init(67)
+  Failed to open /home/wangsn/root/localapp/install/samba_install/private/secrets.tdb
+[2012/04/11 12:31:59, 0] lib/pidfile.c:pidfile_create(100)
+  ERROR: can't open /home/wangsn/root/localapp/install/samba_install/var/locks/smbd.pid: Error was No such file or directory
+[2012/04/12 02:24:49, 0] passdb/secrets.c:secrets_init(67)
+  Failed to open /home/wangsn/root/localapp/install/samba_install/private/secrets.tdb
+[2012/04/12 02:24:49, 0] lib/pidfile.c:pidfile_create(100)
+  ERROR: can't open /home/wangsn/root/localapp/install/samba_install/var/locks/smbd.pid: Error was No such file or directory
+[2012/04/12 06:37:55, 0] passdb/secrets.c:secrets_init(67)
+  Failed to open /home/wangsn/root/localapp/install/samba_install/private/secrets.tdb
+[2012/04/12 06:37:55, 0] lib/pidfile.c:pidfile_create(100)
+  ERROR: can't open /home/wangsn/root/localapp/install/samba_install/var/locks/smbd.pid: Error was No such file or directory
+[2012/04/12 06:38:52, 0] passdb/secrets.c:secrets_init(67)
+  Failed to open /home/wangsn/root/localapp/install/samba_install/private/secrets.tdb
+[2012/04/12 06:38:52, 0] lib/pidfile.c:pidfile_create(100)
+  ERROR: can't open /home/wangsn/root/localapp/install/samba_install/var/locks/smbd.pid: Error was No such file or directory
+[2000/01/01 00:00:25, 0] passdb/secrets.c:secrets_init(67)
+  Failed to open /home/wangsn/root/localapp/install/samba_install/private/secrets.tdb
+[2000/01/01 00:00:25, 0] lib/pidfile.c:pidfile_create(100)
+  ERROR: can't open /home/wangsn/root/localapp/install/samba_install/var/locks/smbd.pid: Error was No such file or directory
+[2012/04/12 06:42:05, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UCS-2LE to UTF-8 not supported
+[2012/04/12 06:42:05, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from UCS-2LE to ASCII
+[2012/04/12 06:42:05, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UCS-2LE not supported
+[2012/04/12 06:42:05, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to UCS-2LE
+[2012/04/12 06:42:05, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to ASCII not supported
+[2012/04/12 06:42:05, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/12 06:42:05, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to CP850 not supported
+[2012/04/12 06:42:05, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/12 06:42:05, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UTF8 not supported
+[2012/04/12 06:42:05, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/12 06:42:05, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from ASCII to UTF-8 not supported
+[2012/04/12 06:42:05, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/12 06:42:05, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from CP850 to UTF-8 not supported
+[2012/04/12 06:42:05, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/12 06:42:05, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF8 to UTF-8 not supported
+[2012/04/12 06:42:05, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/12 06:44:18, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UCS-2LE to UTF-8 not supported
+[2012/04/12 06:44:18, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from UCS-2LE to ASCII
+[2012/04/12 06:44:18, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UCS-2LE not supported
+[2012/04/12 06:44:18, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to UCS-2LE
+[2012/04/12 06:44:18, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to ASCII not supported
+[2012/04/12 06:44:18, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/12 06:44:18, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to CP850 not supported
+[2012/04/12 06:44:18, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/12 06:44:18, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UTF8 not supported
+[2012/04/12 06:44:18, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/12 06:44:18, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from ASCII to UTF-8 not supported
+[2012/04/12 06:44:18, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/12 06:44:18, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from CP850 to UTF-8 not supported
+[2012/04/12 06:44:18, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/12 06:44:18, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF8 to UTF-8 not supported
+[2012/04/12 06:44:18, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/12 07:25:55, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UCS-2LE to UTF-8 not supported
+[2012/04/12 07:25:55, 0] lib/charcnv.c:init_iconv(142)
+  init_($∆$$Äáè    Ñ!Á$0Éôè    	¯      ºèH ¢'à £'! @ !(` @Çôè    	¯      ºè @     $@ ¢Ø8 ¢è    @    0 ¢è4 £è    %C M@    0 ¢è4 £è      # %d   0 ¢Ø4 £Ø@ ¢è    P @    $ ¢è    ¸Yå$ §è$ÄÖè    Ñ!•$0 ¶è4 ßè	¯      ºè @    $ £è $xb¨â     ( ¢è, £è    %C 
+ @    $ ¢è$ÄÅè    Ä$!$   ƒ    t@‰      $ ¢è$ÄÅè    Ñ$!$   ƒ    t@‰H ¢'! @ 0Çôè    	¯      ºè @    $ £è $xb¨e     ( ¢è, £è    %C 
+ @    $ ¢è$ÄÅè    à$!$   ƒ    t@‰˙      $ ¢è$ÄÅè    å$!$   ƒ    t@‰Ò      $ ¢è    ¯Yå$ §è$ÄÖè    Ñ!•$0 ¶è4 ßè	¯      ºè @    $ £è $xb¨:     ( ¢è, £è    %C 
+ @    $ ¢è$ÄÅè    Ä$!$   ƒ    t@‰      $ ¢è$ÄÅè    Ñ$!$   ƒ    t@‰H ¢'! @ 0Çôè    	¯      ºè @    $ £è $xb¨     ( ¢è, £è    %C 
+ @    $ ¢è$ÄÅè    ê$!$   ƒ    t@‰      $ ¢è$ÄÅè    å$!$   ƒ    t@‰láôè    	¯      ºè @    $ £è $xb¨Ù      ( ¢è, £è    %C 
+ @    $ ¢è$ÄÅè    à$!$   ƒ    t@‰      $ ¢è$ÄÅè    î$!$   ƒ    t@‰–¢'! @ !(  $8Ñôè    	¯      ºèÿ¢'! @ $ÄÖè    ¨•$$ÄÜè    ($∆$$Äáè    Ñ!Á$0Éôènv(134)
+  init_iconv: Conversion from UTF-8 to UCS-2LE not supported
+[2012/04/12 07:33:13, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to UCS-2LE
+[2012/04/12 07:33:13, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to ASCII not supported
+[2012/04/12 07:33:13, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/12 07:33:13, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to CP850 not supported
+[2012/04/12 07:33:13, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/12 07:33:13, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UTF8 not supported
+[2012/04/12 07:33:13, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/12 07:33:13, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from ASCII to UTF-8 not nv(134)
+  init_iconv: Conversion from UTF-8 to UCS-2LE not supported
+[2012/04/12 07:33:13, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to UCS-2LE
+[2012/04/12 07:33:13, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to ASCII not supported
+[2012/04/12 07:33:13, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/12 07:33:13, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to CP850 not supported
+[2012/04/12 07:33:13, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/12 07:33:13, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UTF8 not supported
+[2012/04/12 07:33:13, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/12 07:33:13, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from ASCII to UTF-8 not supported
+[2012/04/12 07:33:13, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/12 07:33:13, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from CP850 to UTF-8 not supported
+[2012/04/12 07:33:13, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/12 07:33:13, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF8 to UTF-8 not supported
+[2012/04/12 07:33:13, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/12 07:56:32, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UCS-2LE to UTF-8 not supported
+[2012/04/12 07:56:32, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from UCS-2LE to ASCII
+[2012/04/12 07:56:32, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UCS-2LE not supported
+[2012/04/12 07:56:32, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to UCS-2LE
+[2012/04/12 07:56:32, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to ASCII not supported
+[2012/04/12 07:56:32, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/12 07:56:32, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to CP850 not supported
+[2012/04/12 07:56:32, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/12 07:56:32, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UTF8 not supported
+[2012/04/12 07:56:32, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/12 07:56:32, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from ASCII to UTF-8 not supported
+[2012/04/12 07:56:32, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/12 07:56:32, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from CP850 to UTF-8 not supported
+[2012/04/12 07:56:32, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/12 07:56:32, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF8 to UTF-8 not supported
+[2012/04/12 07:56:32, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/12 08:06:46, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UCS-2LE to UTF-8 not supported
+[2012/04/12 08:06:46, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from UCS-2LE to ASCII
+[2012/04/12 08:06:46, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UCS-2LE not supported
+[2012/04/12 08:06:46, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to UCS-2LE
+[2012/04/12 08:06:46, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to ASCII not supported
+[2012/04/12 08:06:46, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/12 08:06:46, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to CP850 not supported
+[2012/04/12 08:06:46, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/12 08:06:46, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UTF8 not supported
+[2012/04/12 08:06:46, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/12 08:06:46, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from ASCII to UTF-8 not supported
+[2012/04/12 08:06:46, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/12 08:06:46, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from CP850 to UTF-8 not supported
+[2012/04/12 08:06:46, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/12 08:06:46, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF8 to UTF-8 not supported
+[2012/04/12 08:06:46, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/12 08:10:24, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UCS-2LE to UTF-8 not supported
+[2012/04/12 08:10:24, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from UCS-2LE to ASCII
+[2012/04/12 08:10:24, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UCS-2LE not supported
+[2012/04/12 08:10:24, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to UCS-2LE
+[2012/04/12 08:10:24, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to ASCII not supported
+[2012/04/12 08:10:24, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/12 08:10:24, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to CP850 not supported
+[2012/04/12 08:10:24, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/12 08:10:24, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UTF8 not supported
+[2012/04/12 08:10:24, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/12 08:10:24, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from ASCII to UTF-8 not supported
+[2012/04/12 08:10:24, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/12 08:10:24, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from CP850 to UTF-8 not supported
+[2012/04/12 08:10:24, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/12 08:10:24, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF8 to UTF-8 not supported
+[2012/04/12 08:10:24, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/12 08:22:19, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UCS-2LE to UTF-8 not supported
+[2012/04/12 08:22:19, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from UCS-2LE to ASCII
+[2012/04/12 08:22:19, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UCS-2LE not supported
+[2012/04/12 08:22:19, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to UCS-2LE
+[2012/04/12 08:22:19, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to ASCII not supported
+[2012/04/12 08:22:19, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/12 08:22:19, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to CP850 not supported
+[2012/04/12 08:22:19, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/12 08:22:19, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UTF8 not supported
+[2012/04/12 08:22:19, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/12 08:22:19, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from ASCII to UTF-8 not supported
+[2012/04/12 08:22:19, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/12 08:22:19, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from CP850 to UTF-8 not supported
+[2012/04/12 08:22:19, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/12 08:22:19, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF8 to UTF-8 not supported
+[2012/04/12 08:22:19, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/12 13:35:08, 0] lib/util_sock.c:read_socket_data(365)
+  read_socket_data: recv failure for 4. Error = Connection reset by peer
+[2012/04/13 01:56:49, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/13 01:56:49, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/13 01:56:49, 0] lib/util_sock.c:write_socket_data(411)
+  write_socket_data: write failure. Error = Connection reset by peer
+[2012/04/13 01:56:49, 0] lib/util_sock.c:write_socket(436)
+  write_socket: Error writing 4 bytes to socket 22: ERRNO = Connection reset by peer
+[2012/04/13 01:56:49, 0] lib/util_sock.c:send_smb(628)
+  Error writing 4 bytes to client. -1. (Connection reset by peer)
+[2012/04/13 02:28:50, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/13 02:28:50, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/13 02:28:50, 0] lib/util_sock.c:write_socket_data(411)
+  write_socket_data: write failure. Error = Connection reset by peer
+[2012/04/13 02:28:50, 0] lib/util_sock.c:write_socket(436)
+  write_socket: Error writing 4 bytes to socket 5: ERRNO = Connection reset by peer
+[2012/04/13 02:28:50, 0] lib/util_sock.c:send_smb(628)
+  Error writing 4 bytes to client. -1. (Connection reset by peer)
+[2012/04/13 02:46:59, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/13 02:46:59, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/13 02:46:59, 0] lib/util_sock.c:write_socket_data(411)
+  write_socket_data: write failure. Error = Connection reset by peer
+[2012/04/13 02:46:59, 0] lib/util_sock.c:write_socket(436)
+  write_socket: Error writing 4 bytes to socket 22: ERRNO = Connection reset by peer
+[2012/04/13 02:46:59, 0] lib/util_sock.c:send_smb(628)
+  Error writing 4 bytes to client. -1. (Connection reset by peer)
+[2012/04/13 02:47:06, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UCS-2LE to UTF-8 not supported
+[2012/04/13 02:47:06, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from UCS-2LE to ASCII
+[2012/04/13 02:47:06, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UCS-2LE not supported
+[2012/04/13 02:47:06, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to UCS-2LE
+[2012/04/13 02:47:06, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to ASCII not supported
+[2012/04/13 02:47:06, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/13 02:47:06, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to CP850 not supported
+[2012/04/13 02:47:06, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/13 02:47:06, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UTF8 not supported
+[2012/04/13 02:47:06, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/13 02:47:06, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from ASCII to UTF-8 not supported
+[2012/04/13 02:47:06, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/13 02:47:06, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from CP850 to UTF-8 not supported
+[2012/04/13 02:47:06, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/13 02:47:06, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF8 to UTF-8 not supported
+[2012/04/13 02:47:06, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/13 02:47:25, 0] smbd/service.c:make_connection(771)
+  china-740c3c69a (192.168.1.106) couldn't find service .svn
+[2012/04/13 02:47:25, 0] smbd/service.c:make_connection(771)
+  china-740c3c69a (192.168.1.106) couldn't find service .svn
+[2012/04/13 03:00:50, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/13 03:00:50, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/13 03:00:50, 0] lib/util_sock.c:write_socket_data(411)
+  write_socket_data: write failure. Error = Connection reset by peer
+[2012/04/13 03:00:50, 0] lib/util_sock.c:write_socket(436)
+  write_socket: Error writing 4 bytes to socket 5: ERRNO = Connection reset by peer
+[2012/04/13 03:00:50, 0] lib/util_sock.c:send_smb(628)
+  Error writing 4 bytes to client. -1. (Connection reset by peer)
+[2012/04/13 03:32:50, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/13 03:32:50, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/13 03:32:50, 0] lib/util_sock.c:write_socket_data(411)
+  write_socket_data: write failure. Error = Connection reset by peer
+[2012/04/13 03:32:50, 0] lib/util_sock.c:write_socket(436)
+  write_socket: Error writing 4 bytes to socket 22: ERRNO = Connection reset by peer
+[2012/04/13 03:32:50, 0] lib/util_sock.c:send_smb(628)
+  Error writing 4 bytes to client. -1. (Connection reset by peer)
+[2012/04/13 04:04:50, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/13 04:04:50, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/13 04:04:50, 0] lib/util_sock.c:write_socket_data(411)
+  write_socket_data: write failure. Error = Connection reset by peer
+[2012/04/13 04:04:50, 0] lib/util_sock.c:write_socket(436)
+  write_socket: Error writing 4 bytes to socket 5: ERRNO = Connection reset by peer
+[2012/04/13 04:04:50, 0] lib/util_sock.c:send_smb(628)
+  Error writing 4 bytes to client. -1. (Connection reset by peer)
+[2012/04/13 04:36:50, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/13 04:36:50, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/13 04:36:50, 0] lib/util_sock.c:write_socket_data(411)
+  write_socket_data: write failure. Error = Connection reset by peer
+[2012/04/13 04:36:50, 0] lib/util_sock.c:write_socket(436)
+  write_socket: Error writing 4 bytes to socket 22: ERRNO = Connection reset by peer
+[2012/04/13 04:36:50, 0] lib/util_sock.c:send_smb(628)
+  Error writing 4 bytes to client. -1. (Connection reset by peer)
+[2012/04/13 05:08:51, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/13 05:08:51, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/13 05:08:51, 0] lib/util_sock.c:write_socket_data(411)
+  write_socket_data: write failure. Error = Connection reset by peer
+[2012/04/13 05:08:51, 0] lib/util_sock.c:write_socket(436)
+  write_socket: Error writing 4 bytes to socket 5: ERRNO = Connection reset by peer
+[2012/04/13 05:08:51, 0] lib/util_sock.c:send_smb(628)
+  Error writing 4 bytes to client. -1. (Connection reset by peer)
+[2012/04/13 05:40:51, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/13 05:40:51, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/13 05:40:51, 0] lib/util_sock.c:write_socket_data(411)
+  write_socket_data: write failure. Error = Connection reset by peer
+[2012/04/13 05:40:51, 0] lib/util_sock.c:write_socket(436)
+  write_socket: Error writing 4 bytes to socket 22: ERRNO = Connection reset by peer
+[2012/04/13 05:40:51, 0] lib/util_sock.c:send_smb(628)
+  Error writing 4 bytes to client. -1. (Connection reset by peer)
+[2012/04/13 06:44:52, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/13 06:44:52, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/13 06:44:52, 0] lib/util_sock.c:write_socket_data(411)
+  write_socket_data: write failure. Error = Connection reset by peer
+[2012/04/13 06:44:52, 0] lib/util_sock.c:write_socket(436)
+  write_socket: Error writing 4 bytes to socket 22: ERRNO = Connection reset by peer
+[2012/04/13 06:44:52, 0] lib/util_sock.c:send_smb(628)
+  Error writing 4 bytes to client. -1. (Connection reset by peer)
+[2012/04/13 07:48:57, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/13 07:48:57, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/13 07:48:57, 0] lib/util_sock.c:write_socket_data(411)
+  write_socket_data: write failure. Error = Connection reset by peer
+[2012/04/13 07:48:57, 0] lib/util_sock.c:write_socket(436)
+  write_socket: Error writing 4 bytes to socket 5: ERRNO = Connection reset by peer
+[2012/04/13 07:48:57, 0] lib/util_sock.c:send_smb(628)
+  Error writing 4 bytes to client. -1. (Connection reset by peer)
+[2012/04/13 08:20:57, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/13 08:20:57, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/13 08:20:57, 0] lib/util_sock.c:write_socket_data(411)
+  write_socket_data: write failure. Error = Connection reset by peer
+[2012/04/13 08:20:57, 0] lib/util_sock.c:write_socket(436)
+  write_socket: Error writing 4 bytes to socket 22: ERRNO = Connection reset by peer
+[2012/04/13 08:20:57, 0] lib/util_sock.c:send_smb(628)
+  Error writing 4 bytes to client. -1. (Connection reset by peer)
+[2012/04/13 08:52:57, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/13 08:52:57, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/13 08:52:57, 0] lib/util_sock.c:write_socket_data(411)
+  write_socket_data: write failure. Error = Connection reset by peer
+[2012/04/13 08:52:57, 0] lib/util_sock.c:write_socket(436)
+  write_socket: Error writing 4 bytes to socket 5: ERRNO = Connection reset by peer
+[2012/04/13 08:52:57, 0] lib/util_sock.c:send_smb(628)
+  Error writing 4 bytes to client. -1. (Connection reset by peer)
+[2012/04/13 09:24:57, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/13 09:24:57, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/13 09:24:57, 0] lib/util_sock.c:write_socket_data(411)
+  write_socket_data: write failure. Error = Connection reset by peer
+[2012/04/13 09:24:57, 0] lib/util_sock.c:write_socket(436)
+  write_socket: Error writing 4 bytes to socket 22: ERRNO = Connection reset by peer
+[2012/04/13 09:24:57, 0] lib/util_sock.c:send_smb(628)
+  Error writing 4 bytes to client. -1. (Connection reset by peer)
+[2012/04/16 02:02:10, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UCS-2LE to UTF-8 not supported
+[2012/04/16 02:02:10, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from UCS-2LE to ASCII
+[2012/04/16 02:02:10, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UCS-2LE not supported
+[2012/04/16 02:02:10, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to UCS-2LE
+[2012/04/16 02:02:10, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to ASCII not supported
+[2012/04/16 02:02:10, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 02:02:10, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to CP850 not supported
+[2012/04/16 02:02:10, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 02:02:10, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UTF8 not supported
+[2012/04/16 02:02:10, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 02:02:10, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from ASCII to UTF-8 not supported
+[2012/04/16 02:02:10, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 02:02:10, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from CP850 to UTF-8 not supported
+[2012/04/16 02:02:10, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 02:02:10, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF8 to UTF-8 not supported
+[2012/04/16 02:02:10, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 02:03:14, 0] smbd/service.c:make_connection(771)
+  china-740c3c69a (192.168.1.106) couldn't find service .svn
+[2012/04/16 02:03:14, 0] smbd/service.c:make_connection(771)
+  china-740c3c69a (192.168.1.106) couldn't find service .svn
+[2012/04/16 02:03:49, 0] smbd/service.c:make_connection(771)
+  china-740c3c69a (192.168.1.106) couldn't find service .svn
+[2012/04/16 02:04:15, 0] smbd/service.c:make_connection(771)
+  china-740c3c69a (192.168.1.106) couldn't find service .svn
+[2012/04/16 02:06:29, 0] rpc_parse/parse_prs.c:prs_grow(239)
+  prs_grow: Buffer overflow - unable to expand buffer by 2 bytes.
+[2012/04/16 02:06:29, 0] rpc_server/srv_spoolss.c:api_spoolss_addprinterex(885)
+  spoolss_io_q_addprinterex: unable to unmarshall SPOOL_Q_ADDPRINTEREX.
+[2012/04/16 02:06:29, 0] rpc_server/srv_pipe.c:api_rpcTNP(1531)
+  api_rpcTNP: spoolss: SPOOLSS_ADDPRINTEREX failed.
+[2012/04/16 02:06:43, 0] lib/util_sock.c:read_socket_data(365)
+  read_socket_data: recv failure for 4. Error = Connection reset by peer
+[2012/04/16 02:09:52, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/16 02:09:52, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/16 02:09:52, 0] lib/util_sock.c:write_socket_data(411)
+  write_socket_data: write failure. Error = Connection reset by peer
+[2012/04/16 02:09:52, 0] lib/util_sock.c:write_socket(436)
+  write_socket: Error writing 4 bytes to socket 22: ERRNO = Connection reset by peer
+[2012/04/16 02:09:52, 0] lib/util_sock.c:send_smb(628)
+  Error writing 4 bytes to client. -1. (Connection reset by peer)
+[2012/04/16 02:20:02, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UCS-2LE to UTF-8 not supported
+[2012/04/16 02:20:02, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from UCS-2LE to ASCII
+[2012/04/16 02:20:02, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UCS-2LE not supported
+[2012/04/16 02:20:02, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to UCS-2LE
+[2012/04/16 02:20:02, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to ASCII not supported
+[2012/04/16 02:20:02, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 02:20:02, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to CP850 not supported
+[2012/04/16 02:20:02, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 02:20:02, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UTF8 not supported
+[2012/04/16 02:20:02, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 02:20:02, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from ASCII to UTF-8 not supported
+[2012/04/16 02:20:02, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 02:20:02, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from CP850 to UTF-8 not supported
+[2012/04/16 02:20:02, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 02:20:02, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF8 to UTF-8 not supported
+[2012/04/16 02:20:02, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 02:38:33, 0] rpc_parse/parse_prs.c:prs_grow(239)
+  prs_grow: Buffer overflow - unable to expand buffer by 2 bytes.
+[2012/04/16 02:38:33, 0] rpc_server/srv_spoolss.c:api_spoolss_addprinterex(885)
+  spoolss_io_q_addprinterex: unable to unmarshall SPOOL_Q_ADDPRINTEREX.
+[2012/04/16 02:38:33, 0] rpc_server/srv_pipe.c:api_rpcTNP(1531)
+  api_rpcTNP: spoolss: SPOOLSS_ADDPRINTEREX failed.
+[2012/04/16 02:38:49, 0] lib/util_sock.c:read_socket_data(365)
+  read_socket_data: recv failure for 4. Error = Connection reset by peer
+[2012/04/16 02:40:17, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UCS-2LE to UTF-8 not supported
+[2012/04/16 02:40:17, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from UCS-2LE to ASCII
+[2012/04/16 02:40:17, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UCS-2LE not supported
+[2012/04/16 02:40:17, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to UCS-2LE
+[2012/04/16 02:40:17, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to ASCII not supported
+[2012/04/16 02:40:17, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 02:40:17, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to CP850 not supported
+[2012/04/16 02:40:17, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 02:40:17, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UTF8 not supported
+[2012/04/16 02:40:17, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 02:40:17, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from ASCII to UTF-8 not supported
+[2012/04/16 02:40:17, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 02:40:17, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from CP850 to UTF-8 not supported
+[2012/04/16 02:40:17, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 02:40:17, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF8 to UTF-8 not supported
+[2012/04/16 02:40:17, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 02:49:57, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UCS-2LE to UTF-8 not supported
+[2012/04/16 02:49:57, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from UCS-2LE to ASCII
+[2012/04/16 02:49:57, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UCS-2LE not supported
+[2012/04/16 02:49:57, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to UCS-2LE
+[2012/04/16 02:49:57, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to ASCII not supported
+[2012/04/16 02:49:57, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 02:49:57, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to CP850 not supported
+[2012/04/16 02:49:57, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 02:49:57, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UTF8 not supported
+[2012/04/16 02:49:57, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 02:49:57, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from ASCII to UTF-8 not supported
+[2012/04/16 02:49:57, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 02:49:57, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from CP850 to UTF-8 not supported
+[2012/04/16 02:49:57, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 02:49:57, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF8 to UTF-8 not supported
+[2012/04/16 02:49:57, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 02:52:10, 0] smbd/service.c:make_connection(771)
+  china-740c3c69a (192.168.1.106) couldn't find service .svn
+[2012/04/16 02:52:10, 0] smbd/service.c:make_connection(771)
+  china-740c3c69a (192.168.1.106) couldn't find service .svn
+[2012/04/16 02:52:14, 0] smbd/service.c:make_connection(771)
+  china-740c3c69a (192.168.1.106) couldn't find service .svn
+[2012/04/16 03:06:20, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UCS-2LE to UTF-8 not supported
+[2012/04/16 03:06:20, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from UCS-2LE to ASCII
+[2012/04/16 03:06:20, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UCS-2LE not supported
+[2012/04/16 03:06:20, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to UCS-2LE
+[2012/04/16 03:06:20, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to ASCII not supported
+[2012/04/16 03:06:20, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 03:06:20, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to CP850 not supported
+[2012/04/16 03:06:20, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 03:06:20, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UTF8 not supported
+[2012/04/16 03:06:20, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 03:06:20, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from ASCII to UTF-8 not supported
+[2012/04/16 03:06:20, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 03:06:20, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from CP850 to UTF-8 not supported
+[2012/04/16 03:06:20, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 03:06:20, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF8 to UTF-8 not supported
+[2012/04/16 03:06:20, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 03:10:16, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UCS-2LE to UTF-8 not supported
+[2012/04/16 03:10:16, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from UCS-2LE to ASCII
+[2012/04/16 03:10:16, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UCS-2LE not supported
+[2012/04/16 03:10:16, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to UCS-2LE
+[2012/04/16 03:10:16, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to ASCII not supported
+[2012/04/16 03:10:16, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 03:10:16, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to CP850 not supported
+[2012/04/16 03:10:16, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 03:10:16, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UTF8 not supported
+[2012/04/16 03:10:16, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 03:10:16, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from ASCII to UTF-8 not supported
+[2012/04/16 03:10:16, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 03:10:16, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from CP850 to UTF-8 not supported
+[2012/04/16 03:10:16, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 03:10:16, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF8 to UTF-8 not supported
+[2012/04/16 03:10:16, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 03:10:48, 0] rpc_parse/parse_prs.c:prs_grow(239)
+  prs_grow: Buffer overflow - unable to expand buffer by 2 bytes.
+[2012/04/16 03:10:48, 0] rpc_server/srv_spoolss.c:api_spoolss_addprinterex(885)
+  spoolss_io_q_addprinterex: unable to unmarshall SPOOL_Q_ADDPRINTEREX.
+[2012/04/16 03:10:48, 0] rpc_server/srv_pipe.c:api_rpcTNP(1531)
+  api_rpcTNP: spoolss: SPOOLSS_ADDPRINTEREX failed.
+[2012/04/16 03:11:01, 0] lib/util_sock.c:read_socket_data(365)
+  read_socket_data: recv failure for 4. Error = Connection reset by peer
+[2012/04/16 03:14:13, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/16 03:14:13, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/16 03:14:13, 0] lib/util_sock.c:write_socket_data(411)
+  write_socket_data: write failure. Error = Connection reset by peer
+[2012/04/16 03:14:13, 0] lib/util_sock.c:write_socket(436)
+  write_socket: Error writing 4 bytes to socket 22: ERRNO = Connection reset by peer
+[2012/04/16 03:14:13, 0] lib/util_sock.c:send_smb(628)
+  Error writing 4 bytes to client. -1. (Connection reset by peer)
+[2012/04/16 03:14:34, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UCS-2LE to UTF-8 not supported
+[2012/04/16 03:14:34, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from UCS-2LE to ASCII
+[2012/04/16 03:14:34, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UCS-2LE not supported
+[2012/04/16 03:14:34, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to UCS-2LE
+[2012/04/16 03:14:34, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to ASCII not supported
+[2012/04/16 03:14:34, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 03:14:34, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to CP850 not supported
+[2012/04/16 03:14:34, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 03:14:34, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UTF8 not supported
+[2012/04/16 03:14:34, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 03:14:34, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from ASCII to UTF-8 not supported
+[2012/04/16 03:14:34, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 03:14:34, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from CP850 to UTF-8 not supported
+[2012/04/16 03:14:34, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 03:14:34, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF8 to UTF-8 not supported
+[2012/04/16 03:14:34, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 03:46:15, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/16 03:46:15, 0] lib/util_sock.c:write_socket_data(411)
+  write_socket_data: write failure. Error = Connection reset by peer
+[2012/04/16 03:46:15, 0] lib/util_sock.c:write_socket(436)
+  write_socket: Error writing 4 bytes to socket 22: ERRNO = Connection reset by peer
+[2012/04/16 03:46:15, 0] lib/util_sock.c:send_smb(628)
+  Error writing 4 bytes to client. -1. (Connection reset by peer)
+[2012/04/16 04:15:31, 0] rpc_parse/parse_prs.c:prs_grow(239)
+  prs_grow: Buffer overflow - unable to expand buffer by 2 bytes.
+[2012/04/16 04:15:31, 0] rpc_server/srv_spoolss.c:api_spoolss_addprinterex(885)
+  spoolss_io_q_addprinterex: unable to unmarshall SPOOL_Q_ADDPRINTEREX.
+[2012/04/16 04:15:31, 0] rpc_server/srv_pipe.c:api_rpcTNP(1531)
+  api_rpcTNP: spoolss: SPOOLSS_ADDPRINTEREX failed.
+[2012/04/16 04:15:43, 0] lib/util_sock.c:read_socket_data(365)
+  read_socket_data: recv failure for 4. Error = Connection reset by peer
+[2012/04/16 04:18:17, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/16 04:18:17, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/16 04:18:17, 0] lib/util_sock.c:write_socket_data(411)
+  write_socket_data: write failure. Error = Connection reset by peer
+[2012/04/16 04:18:17, 0] lib/util_sock.c:write_socket(436)
+  write_socket: Error writing 4 bytes to socket 22: ERRNO = Connection reset by peer
+[2012/04/16 04:18:17, 0] lib/util_sock.c:send_smb(628)
+  Error writing 4 bytes to client. -1. (Connection reset by peer)
+[2012/04/16 04:50:43, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/16 04:50:43, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/16 04:50:43, 0] lib/util_sock.c:write_socket_data(411)
+  write_socket_data: write failure. Error = Connection reset by peer
+[2012/04/16 04:50:43, 0] lib/util_sock.c:write_socket(436)
+  write_socket: Error writing 4 bytes to socket 22: ERRNO = Connection reset by peer
+[2012/04/16 04:50:43, 0] lib/util_sock.c:send_smb(628)
+  Error writing 4 bytes to client. -1. (Connection reset by peer)
+[2012/04/16 05:19:55, 0] rpc_parse/parse_prs.c:prs_grow(239)
+  prs_grow: Buffer overflow - unable to expand buffer by 2 bytes.
+[2012/04/16 05:19:55, 0] rpc_server/srv_spoolss.c:api_spoolss_addprinterex(885)
+  spoolss_io_q_addprinterex: unable to unmarshall SPOOL_Q_ADDPRINTEREX.
+[2012/04/16 05:19:55, 0] rpc_server/srv_pipe.c:api_rpcTNP(1531)
+  api_rpcTNP: spoolss: SPOOLSS_ADDPRINTEREX failed.
+[2012/04/16 05:20:07, 0] lib/util_sock.c:read_socket_data(365)
+  read_socket_data: recv failure for 4. Error = Connection reset by peer
+[2012/04/16 05:22:35, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/16 05:22:35, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/16 05:22:35, 0] lib/util_sock.c:write_socket_data(411)
+  write_socket_data: write failure. Error = Connection reset by peer
+[2012/04/16 05:22:35, 0] lib/util_sock.c:write_socket(436)
+  write_socket: Error writing 4 bytes to socket 22: ERRNO = Connection reset by peer
+[2012/04/16 05:22:35, 0] lib/util_sock.c:send_smb(628)
+  Error writing 4 bytes to client. -1. (Connection reset by peer)
+[2012/04/16 05:28:44, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UCS-2LE to UTF-8 not supported
+[2012/04/16 05:28:44, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from UCS-2LE to ASCII
+[2012/04/16 05:28:44, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UCS-2LE not supported
+[2012/04/16 05:28:44, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to UCS-2LE
+[2012/04/16 05:28:44, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to ASCII not supported
+[2012/04/16 05:28:44, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 05:28:44, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to CP850 not supported
+[2012/04/16 05:28:44, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 05:28:44, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF-8 to UTF8 not supported
+[2012/04/16 05:28:44, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 05:28:44, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from ASCII to UTF-8 not supported
+[2012/04/16 05:28:44, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 05:28:44, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from CP850 to UTF-8 not supported
+[2012/04/16 05:28:44, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 05:28:44, 0] lib/charcnv.c:init_iconv(134)
+  init_iconv: Conversion from UTF8 to UTF-8 not supported
+[2012/04/16 05:28:44, 0] lib/charcnv.c:init_iconv(142)
+  init_iconv: Attempting to replace with conversion from ASCII to ASCII
+[2012/04/16 05:54:33, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/16 05:54:33, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/16 05:54:33, 0] lib/util_sock.c:write_socket_data(411)
+  write_socket_data: write failure. Error = Connection reset by peer
+[2012/04/16 05:54:33, 0] lib/util_sock.c:write_socket(436)
+  write_socket: Error writing 4 bytes to socket 5: ERRNO = Connection reset by peer
+[2012/04/16 05:54:33, 0] lib/util_sock.c:send_smb(628)
+  Error writing 4 bytes to client. -1. (Connection reset by peer)
+[2012/04/16 06:26:36, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/16 06:26:36, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/16 06:26:36, 0] lib/util_sock.c:write_socket_data(411)
+  write_socket_data: write failure. Error = Connection reset by peer
+[2012/04/16 06:26:36, 0] lib/util_sock.c:write_socket(436)
+  write_socket: Error writing 4 bytes to socket 5: ERRNO = Connection reset by peer
+[2012/04/16 06:26:36, 0] lib/util_sock.c:send_smb(628)
+  Error writing 4 bytes to client. -1. (Connection reset by peer)
+[2012/04/16 06:58:38, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/16 06:58:38, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/16 06:58:38, 0] lib/util_sock.c:write_socket_data(411)
+  write_socket_data: write failure. Error = Connection reset by peer
+[2012/04/16 06:58:38, 0] lib/util_sock.c:write_socket(436)
+  write_socket: Error writing 4 bytes to socket 5: ERRNO = Connection reset by peer
+[2012/04/16 06:58:38, 0] lib/util_sock.c:send_smb(628)
+  Error writing 4 bytes to client. -1. (Connection reset by peer)
+[2012/04/16 07:30:45, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/16 07:30:45, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/16 07:30:45, 0] lib/util_sock.c:write_socket_data(411)
+  write_socket_data: write failure. Error = Connection reset by peer
+[2012/04/16 07:30:45, 0] lib/util_sock.c:write_socket(436)
+  write_socket: Error writing 4 bytes to socket 5: ERRNO = Connection reset by peer
+[2012/04/16 07:30:45, 0] lib/util_sock.c:send_smb(628)
+  Error writing 4 bytes to client. -1. (Connection reset by peer)
+[2012/04/16 08:02:47, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/16 08:02:47, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/16 08:02:47, 0] lib/util_sock.c:write_socket_data(411)
+  write_socket_data: write failure. Error = Connection reset by peer
+[2012/04/16 08:02:47, 0] lib/util_sock.c:write_socket(436)
+  write_socket: Error writing 4 bytes to socket 5: ERRNO = Connection reset by peer
+[2012/04/16 08:02:47, 0] lib/util_sock.c:send_smb(628)
+  Error writing 4 bytes to client. -1. (Connection reset by peer)
+[2012/04/16 08:34:52, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/16 08:34:52, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/16 08:34:52, 0] lib/util_sock.c:write_socket_data(411)
+  write_socket_data: write failure. Error = Connection reset by peer
+[2012/04/16 08:34:52, 0] lib/util_sock.c:write_socket(436)
+  write_socket: Error writing 4 bytes to socket 5: ERRNO = Connection reset by peer
+[2012/04/16 08:34:52, 0] lib/util_sock.c:send_smb(628)
+  Error writing 4 bytes to client. -1. (Connection reset by peer)
+[2000/01/01 00:00:21, 0] lib/interface.c:load_interfaces(195)
+  ERROR: Could not determine network interfaces, you must use a interfaces config line
+[2000/01/01 00:00:21, 0] lib/interface.c:load_interfaces(195)
+  ERROR: Could not determine network interfaces, you must use a interfaces config line
+[2000/01/01 00:00:21, 0] lib/interface.c:load_interfaces(195)
+  ERROR: Could not determine network interfaces, you must use a interfaces config line
+[2000/01/01 00:00:21, 0] lib/interface.c:load_interfaces(195)
+  ERROR: Could not determine network interfaces, you must use a interfaces config line
+[2012/04/20 02:13:17, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/20 02:13:18, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/20 02:13:18, 0] lib/util_sock.c:write_socket_data(411)
+  write_socket_data: write failure. Error = Connection reset by peer
+[2012/04/20 02:13:18, 0] lib/util_sock.c:write_socket(436)
+  write_socket: Error writing 4 bytes to socket 22: ERRNO = Connection reset by peer
+[2012/04/20 02:13:18, 0] lib/util_sock.c:send_smb(628)
+  Error writing 4 bytes to client. -1. (Connection reset by peer)
+[2012/04/20 02:22:15, 0] rpc_parse/parse_prs.c:prs_grow(239)
+  prs_grow: Buffer overflow - unable to expand buffer by 2 bytes.
+[2012/04/20 02:22:15, 0] rpc_server/srv_spoolss.c:api_spoolss_addprinterex(885)
+  spoolss_io_q_addprinterex: unable to unmarshall SPOOL_Q_ADDPRINTEREX.
+[2012/04/20 02:22:15, 0] rpc_server/srv_pipe.c:api_rpcTNP(1531)
+  api_rpcTNP: spoolss: SPOOLSS_ADDPRINTEREX failed.
+[2012/04/20 02:22:30, 0] lib/util_sock.c:read_socket_data(365)
+  read_socket_data: recv failure for 4. Error = Connection reset by peer
+[2012/04/20 02:45:24, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/20 02:45:24, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/20 02:45:24, 0] lib/util_sock.c:write_socket_data(411)
+  write_socket_data: write failure. Error = Connection reset by peer
+[2012/04/20 02:45:24, 0] lib/util_sock.c:write_socket(436)
+  write_socket: Error writing 4 bytes to socket 5: ERRNO = Connection reset by peer
+[2012/04/20 02:45:24, 0] lib/util_sock.c:send_smb(628)
+  Error writing 4 bytes to client. -1. (Connection reset by peer)
+[2012/04/20 02:54:12, 0] rpc_parse/parse_prs.c:prs_grow(239)
+  prs_grow: Buffer overflow - unable to expand buffer by 2 bytes.
+[2012/04/20 02:54:12, 0] rpc_server/srv_spoolss.c:api_spoolss_addprinterex(885)
+  spoolss_io_q_addprinterex: unable to unmarshall SPOOL_Q_ADDPRINTEREX.
+[2012/04/20 02:54:12, 0] rpc_server/srv_pipe.c:api_rpcTNP(1531)
+  api_rpcTNP: spoolss: SPOOLSS_ADDPRINTEREX failed.
+[2012/04/20 02:54:24, 0] lib/util_sock.c:read_socket_data(365)
+  read_socket_data: recv failure for 4. Error = Connection reset by peer
+[2012/04/20 03:17:25, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/20 03:17:25, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/20 03:17:25, 0] lib/util_sock.c:write_socket_data(411)
+  write_socket_data: write failure. Error = Connection reset by peer
+[2012/04/20 03:17:25, 0] lib/util_sock.c:write_socket(436)
+  write_socket: Error writing 4 bytes to socket 22: ERRNO = Connection reset by peer
+[2012/04/20 03:17:25, 0] lib/util_sock.c:send_smb(628)
+  Error writing 4 bytes to client. -1. (Connection reset by peer)
+[2012/04/20 03:26:17, 0] rpc_parse/parse_prs.c:prs_grow(239)
+  prs_grow: Buffer overflow - unable to expand buffer by 2 bytes.
+[2012/04/20 03:26:17, 0] rpc_server/srv_spoolss.c:api_spoolss_addprinterex(885)
+  spoolss_io_q_addprinterex: unable to unmarshall SPOOL_Q_ADDPRINTEREX.
+[2012/04/20 03:26:17, 0] rpc_server/srv_pipe.c:api_rpcTNP(1531)
+  api_rpcTNP: spoolss: SPOOLSS_ADDPRINTEREX failed.
+[2012/04/20 03:26:30, 0] lib/util_sock.c:read_socket_data(365)
+  read_socket_data: recv failure for 4. Error = Connection reset by peer
+[2012/04/20 03:49:29, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/20 03:49:29, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/20 03:49:29, 0] lib/util_sock.c:write_socket_data(411)
+  write_socket_data: write failure. Error = Connection reset by peer
+[2012/04/20 03:49:29, 0] lib/util_sock.c:write_socket(436)
+  write_socket: Error writing 4 bytes to socket 22: ERRNO = Connection reset by peer
+[2012/04/20 03:49:29, 0] lib/util_sock.c:send_smb(628)
+  Error writing 4 bytes to client. -1. (Connection reset by peer)
+[2012/04/20 03:58:27, 0] rpc_parse/parse_prs.c:prs_grow(239)
+  prs_grow: Buffer overflow - unable to expand buffer by 2 bytes.
+[2012/04/20 03:58:27, 0] rpc_server/srv_spoolss.c:api_spoolss_addprinterex(885)
+  spoolss_io_q_addprinterex: unable to unmarshall SPOOL_Q_ADDPRINTEREX.
+[2012/04/20 03:58:27, 0] rpc_server/srv_pipe.c:api_rpcTNP(1531)
+  api_rpcTNP: spoolss: SPOOLSS_ADDPRINTEREX failed.
+[2012/04/20 03:58:42, 0] lib/util_sock.c:read_socket_data(365)
+  read_socket_data: recv failure for 4. Error = Connection reset by peer
+[2012/04/20 04:21:34, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/20 04:21:34, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/20 04:21:34, 0] lib/util_sock.c:write_socket_data(411)
+  write_socket_data: write failure. Error = Connection reset by peer
+[2012/04/20 04:21:34, 0] lib/util_sock.c:write_socket(436)
+  write_socket: Error writing 4 bytes to socket 22: ERRNO = Connection reset by peer
+[2012/04/20 04:21:34, 0] lib/util_sock.c:send_smb(628)
+  Error writing 4 bytes to client. -1. (Connection reset by peer)
+[2012/04/20 04:30:31, 0] rpc_parse/parse_prs.c:prs_grow(239)
+  prs_grow: Buffer overflow - unable to expand buffer by 2 bytes.
+[2012/04/20 04:30:31, 0] rpc_server/srv_spoolss.c:api_spoolss_addprinterex(885)
+  spoolss_io_q_addprinterex: unable to unmarshall SPOOL_Q_ADDPRINTEREX.
+[2012/04/20 04:30:31, 0] rpc_server/srv_pipe.c:api_rpcTNP(1531)
+  api_rpcTNP: spoolss: SPOOLSS_ADDPRINTEREX failed.
+[2012/04/20 04:30:42, 0] lib/util_sock.c:read_socket_data(365)
+  read_socket_data: recv failure for 4. Error = Connection reset by peer
+[2012/04/20 04:53:36, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/20 04:53:36, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/20 04:53:36, 0] lib/util_sock.c:write_socket_data(411)
+  write_socket_data: write failure. Error = Connection reset by peer
+[2012/04/20 04:53:36, 0] lib/util_sock.c:write_socket(436)
+  write_socket: Error writing 4 bytes to socket 22: ERRNO = Connection reset by peer
+[2012/04/20 04:53:36, 0] lib/util_sock.c:send_smb(628)
+  Error writing 4 bytes to client. -1. (Connection reset by peer)
+[2012/04/20 05:02:45, 0] rpc_parse/parse_prs.c:prs_grow(239)
+  prs_grow: Buffer overflow - unable to expand buffer by 2 bytes.
+[2012/04/20 05:02:45, 0] rpc_server/srv_spoolss.c:api_spoolss_addprinterex(885)
+  spoolss_io_q_addprinterex: unable to unmarshall SPOOL_Q_ADDPRINTEREX.
+[2012/04/20 05:02:45, 0] rpc_server/srv_pipe.c:api_rpcTNP(1531)
+  api_rpcTNP: spoolss: SPOOLSS_ADDPRINTEREX failed.
+[2012/04/20 05:03:00, 0] lib/util_sock.c:read_socket_data(365)
+  read_socket_data: recv failure for 4. Error = Connection reset by peer
+[2012/04/20 05:57:42, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/20 05:57:42, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/20 05:57:42, 0] lib/util_sock.c:write_socket_data(411)
+  write_socket_data: write failure. Error = Connection reset by peer
+[2012/04/20 05:57:42, 0] lib/util_sock.c:write_socket(436)
+  write_socket: Error writing 4 bytes to socket 5: ERRNO = Connection reset by peer
+[2012/04/20 05:57:42, 0] lib/util_sock.c:send_smb(628)
+  Error writing 4 bytes to client. -1. (Connection reset by peer)
+[2012/04/20 06:29:42, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/20 06:29:42, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/20 06:29:42, 0] lib/util_sock.c:write_socket_data(411)
+  write_socket_data: write failure. Error = Connection reset by peer
+[2012/04/20 06:29:42, 0] lib/util_sock.c:write_socket(436)
+  write_socket: Error writing 4 bytes to socket 22: ERRNO = Connection reset by peer
+[2012/04/20 06:29:42, 0] lib/util_sock.c:send_smb(628)
+  Error writing 4 bytes to client. -1. (Connection reset by peer)
+[2012/04/20 07:01:42, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/20 07:01:42, 0] lib/util_sock.c:write_socket_data(411)
+  write_socket_data: write failure. Error = Connection reset by peer
+[2012/04/20 07:01:42, 0] lib/util_sock.c:write_socket(436)
+  write_socket: Error writing 4 bytes to socket 5: ERRNO = Connection reset by peer
+[2012/04/20 07:01:42, 0] lib/util_sock.c:send_smb(628)
+  Error writing 4 bytes to client. -1. (Connection reset by peer)
+[2000/01/01 00:00:21, 0] lib/interface.c:load_interfaces(195)
+  ERROR: Could not determine network interfaces, you must use a interfaces config line
+[2012/04/20 07:32:26, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/20 07:32:26, 0] lib/util_sock.c:write_socket_data(411)
+  write_socket_data: write failure. Error = Connection reset by peer
+[2012/04/20 07:32:26, 0] lib/util_sock.c:write_socket(436)
+  write_socket: Error writing 4 bytes to socket 22: ERRNO = Connection reset by peer
+[2012/04/20 07:32:26, 0] lib/util_sock.c:send_smb(628)
+  Error writing 4 bytes to client. -1. (Connection reset by peer)
+[2000/01/01 00:00:21, 0] lib/interface.c:load_interfaces(195)
+  ERROR: Could not determine network interfaces, you must use a interfaces config line
+[2012/04/20 08:04:41, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/20 08:04:41, 0] lib/util_sock.c:write_socket_data(411)
+  write_socket_data: write failure. Error = Connection reset by peer
+[2012/04/20 08:04:41, 0] lib/util_sock.c:write_socket(436)
+  write_socket: Error writing 4 bytes to socket 22: ERRNO = Connection reset by peer
+[2012/04/20 08:04:41, 0] lib/util_sock.c:send_smb(628)
+  Error writing 4 bytes to client. -1. (Connection reset by peer)
+[2012/04/20 08:05:45, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/20 08:05:45, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/20 08:05:45, 0] lib/util_sock.c:write_socket_data(411)
+  write_socket_data: write failure. Error = Connection reset by peer
+[2012/04/20 08:05:45, 0] lib/util_sock.c:write_socket(436)
+  write_socket: Error writing 4 bytes to socket 22: ERRNO = Connection reset by peer
+[2012/04/20 08:05:45, 0] lib/util_sock.c:send_smb(628)
+  Error writing 4 bytes to client. -1. (Connection reset by peer)
+[2012/04/20 08:37:45, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/20 08:37:45, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/20 08:37:45, 0] lib/util_sock.c:write_socket_data(411)
+  write_socket_data: write failure. Error = Connection reset by peer
+[2012/04/20 08:37:45, 0] lib/util_sock.c:write_socket(436)
+  write_socket: Error writing 4 bytes to socket 5: ERRNO = Connection reset by peer
+[2012/04/20 08:37:45, 0] lib/util_sock.c:send_smb(628)
+  Error writing 4 bytes to client. -1. (Connection reset by peer)
+[2012/04/20 09:09:46, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/20 09:09:46, 0] lib/util_sock.c:get_peer_addr(975)
+  getpeername failed. Error was Transport endpoint is not connected
+[2012/04/20 09:09:46, 0] lib/util_sock.c:write_socket_data(411)
+  write_socket_data: write failure. Error = Connection reset by peer
+[2012/04/20 09:09:46, 0] lib/util_sock.c:write_socket(436)
+  write_socket: Error writing 4 bytes to socket 22: ERRNO = Connection reset by peer
+[2012/04/20 09:09:46, 0] lib/util_sock.c:send_smb(628)
+  Error writing 4 bytes to client. -1. (Connection reset by peer)

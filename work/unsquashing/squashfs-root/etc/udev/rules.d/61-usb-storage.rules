@@ -1,0 +1,6 @@
+ACTION=="add", KERNEL=="sd[a-z]", RUN+="/etc/udev/script/add_usb_storage.sh %k"
+ACTION=="add", KERNEL=="sd[a-z]1", RUN+="/etc/udev/script/add_usb_storage.sh %k"
+ACTION=="remove", KERNEL=="sd?", RUN+="/etc/udev/script/remove_usb_storage.sh"
+ACTION=="add", KERNEL=="mmcblk[0-9]", RUN+="/etc/udev/script/add_usb_storage.sh %k"
+ACTION=="add", KERNEL=="mmcblk[0-9]p1", RUN+="/etc/udev/script/add_usb_storage.sh %k"
+ACTION=="remove", KERNEL=="mmcblk?", RUN+="/etc/udev/script/remove_usb_storage.sh"

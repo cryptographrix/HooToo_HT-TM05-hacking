@@ -1,0 +1,26 @@
+#!/bin/sh
+. /etc/init.d/vstfunc
+
+if [ -f $1 ]; then
+    mtd_write erase mtd6 > /dev/null 2>&1
+    mtd_write erase mtd7 > /dev/null 2>&1
+    rm -rf /etc/rc.d/rc1.d/S32smbd > /dev/null 2>&1
+    sed '1,3d' $1 > /tmp/etcrestore.tar
+    rm -f $1
+    tar xvf /tmp/etcrestore.tar -C / > /dev/null 2>&1
+    timedate_settosys 
+else
+	exit
+fi
+#/usr/sbin/etc_tools p > /dev/null 2>&1
+
+#sleep 3
+#sync
+
+#sleep 1
+/etc/init.d/etcsync
+
+shutdown r
+
+exit
+

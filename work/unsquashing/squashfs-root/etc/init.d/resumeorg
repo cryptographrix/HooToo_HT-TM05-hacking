@@ -1,0 +1,58 @@
+#!/bin/sh
+####################################################
+# Copyright (C) by IOVST
+# Descriptor:
+#     resume init set
+####################################################
+# define
+SCPPATH=/etc/init.d
+ETCPATH=/boot/tmp/etc
+MTD4PATH=/dev/mtd7
+MTD3PATH=/dev/mtd6
+USER=/usr/sbin/chgpwdall
+
+. /etc/init.d/vstfunc
+
+echo "Enter restore default"
+
+# offled
+/usr/sbin/pioctl wifi 1 
+/usr/sbin/pioctl wifi 3
+# on led
+/usr/sbin/pioctl wifi 0
+
+# Refresh time
+#timedate_save
+
+#Shutdown the serivces
+if [ -f /etc/init.d/service ]; then
+        /etc/init.d/service poweroff
+fi
+
+# Change the user
+#$USER admin admin
+
+#Backup the etc files
+backup_etc resume
+sleep 1
+
+# second, clean /etc.
+sleep 3
+echo "Erase ccnfig parameters"
+/bin/mtd_write erase $MTD4PATH
+/bin/mtd_write erase $MTD3PATH
+#if [ -f "/boot/tmp/etcbackup.tar.gz" ];then
+#    /usr/sbin/etc_tools p 7 /boot/tmp/etcbackup.tar
+#fi
+sync
+sleep 3
+sync
+sleep 1
+
+
+# offled
+/usr/sbin/pioctl wifi 1
+
+# reboot
+reboot -f
+

@@ -1,0 +1,209 @@
+#!/bin/sh
+. /etc/init.d/vstfunc
+
+DOWNLOADPATH=/data
+MOUNTPATH=""
+SWFLAG=""
+
+# Get the USB device name
+USB_RM_DEV=${1:0:3}
+USB_RM_DEV_NUM=${1:3:4}
+USB_DLNA=""
+USB_RM_DEVNAME=""
+
+if [ $USB_RM_DEV = "mmc" ]; then
+        USB_RM_DEVNAME=${1:0:7}
+fi
+
+if [ -f /etc/f_dir/wifidg_led -a $internet -eq 0 ]; then
+        touch /var/lock/wifidg
+        /usr/sbin/pioctl internet 1
+fi
+
+#umount
+check_mount() {
+	echo $1
+	while read device mountpoint fstype remainder; do
+		if [ "$device" == "$1" ];then
+			return 1
+		fi
+     	done < /proc/mounts
+        return 0
+}
+
+disk_umount() {
+	trynum=0
+	while [ $trynum -lt 3 ]; do
+		echo /bin/umount -f $1 >> /tmp/usb_remove_info
+		sync
+		/bin/umount -f $1
+		sync
+		check_mount $1
+		if [ $? -eq 0 ]; then
+			# create a USB event			
+			/usr/sbin/mkusbevent $2 0
+			echo rmdir $2 >> /tmp/usb_remove_info
+			rmdir $2
+			USB_DLNA=$2
+			#umount successful
+			return 0
+		else
+			let trynum=$trynum+1
+		fi
+	done
+	#umount failed
+	return 1
+}
+
+disk_umount_all() {
+	while true; do
+                mountflag=0
+		while read fdevice fmountpoint fstype fremainder; do
+			devname=${fdevice:0:8}
+			if [ "$devname" == "/dev/$1" ];then
+				echo "umount: $device $fmountpoint" >> /tmp/usb_remove_info
+				disk_umount $fdevice $fmountpoint
+				if [ $? -eq 1 ]; then
+					return 1
+				fi
+				mountflag=1
+				break
+			fi
+		done < /proc/mounts
+		if [ $mountflag -eq 0 ]; then
+			return 0
+		fi
+	done
+
+}
+
+check_swap() {
+	while read SWPATH SWTYPE SWSIZE SWUSED SWPRI;do
+        if [ $SWPATH == "Filename" ]; then
+		continue
+        fi
+        if [ $SWPATH == "" ]; then
+                echo "no swap"
+		return 0
+        else
+                echo $SWPATH
+                echo "have swap"
+		return 1
+        fi
+        break
+done < /proc/swaps	
+}
+
+remove_dir(){
+        str_func_strstr "$1" "UsbDisk1"
+        if [ $? -eq 1 ]; then
+                rm -rf /data/UsbDisk1/
+        fi
+        str_func_strstr "$1" "UsbDisk2"
+        if [ $? -eq 1 ]; then
+                rm -rf /data/UsbDisk2/
+        fi
+}
+# Main
+##Wink status LED
+#protype=`cat /etc/firmware | grep PRODUCTLINE | cut -d "=" -f2`
+internet=`cat /proc/vsintled`
+#if [ $protype == "WiFiDG" -a $internet -eq 0 ]; then
+if [ -f /etc/f_dir/wifidg_led -a $internet -eq 0 ]; then
+        touch /var/lock/wifidg
+       	/usr/sbin/pioctl internet 1
+fi
+                
+/usr/sbin/pioctl status 2
+#STOP dlna
+if [ -e /etc/init.d/minidlna.sh ]; then
+	/etc/init.d/minidlna.sh stop 
+fi
+#confirm samba is on or off
+if [ -e /etc/rc.d/rc1.d/S32smbd ];then
+        echo touch /tmp/samba_flag >> /tmp/usb_remove_info
+        touch /tmp/samba_flag
+fi
+
+#close the samba service
+/etc/init.d/smb.sh stop
+
+# remove .vst folder
+#while read device mountpoint fstype remainder; do
+#	str_func_strstr "$device" "$USB_RM_DEV"
+#	if [ $? -eq 1 ];then
+#		echo rm -rf $mountpoint/.vst >> /tmp/usb_remove_info
+#		rm -rf $mountpoint/.vst/
+#	fi
+#done < /proc/mounts
+
+#Umount all volume in the device
+echo "disk_umount $USB_RM_DEV" >> /tmp/usb_remove_info
+disk_umount_all $USB_RM_DEV
+#check umount failed or successful
+if [ $? -eq 1 ];then
+        echo disk_umount error >> /tmp/usb_remove_info
+        if [ -e /tmp/samba_flag ]; then
+                /etc/init.d/smb.sh restart
+                rm /tmp/samba_flag
+        fi
+	if [ -e /etc/init.d/minidlna.sh ]; then
+		/etc/init.d/minidlna.sh start 
+	fi
+        /usr/sbin/pioctl status 3
+        /usr/sbin/pioctl status 0
+        if [ -e /var/lock/wifidg ]; then
+        	rm -fr /var/lock/wifidg
+        	/usr/sbin/pioctl internet 0
+        fi
+        echo touch /tmp/"$USB_RM_DEV"_plugflag >> /tmp/usb_remove_info
+        touch /tmp/"$USB_RM_DEV"_plugflag
+        touch /tmp/usb_remove_error
+	if [ -e /var/lock/wifidg ]; then
+		rm -fr /var/lock/wifidg
+		/usr/sbin/pioctl internet 0
+	fi
+        exit 1
+fi
+#Remove usb_dev_$USB_RM_DEV
+rm -rf /tmp/usb_dev_$USB_RM_DEV
+#remove usbdisk1 for dlna
+if [ "$USB_DLNA" != "" ]; then
+	remove_dir "$USB_DLNA"
+fi
+#Restart the samba and swapon
+#if [ "$1" == "$USB_RM_DEV" ]; then
+	if [ -e /tmp/samba_flag ]; then
+		/etc/init.d/smb.sh restart
+		rm -fr /tmp/samba_flag
+	else
+		/usr/sbin/update_smb /etc/samba/smb.conf
+	fi
+	if [ -e /etc/init.d/minidlna.sh ]; then
+		/etc/init.d/minidlna.sh start 
+	fi
+	#remove the disk mount flag
+	if [ -n $USB_RM_DEVNAME ]; then
+		rm -fr /tmp/"${1:0:7}"_plugflag
+	else
+		rm -rf /tmp/"$USB_RM_DEV"_plugflag
+	fi
+	#rm -fr /tmp/"$USB_RM_DEV"_type
+	#spindown disk
+        echo "sg_ioctl_disk /dev/$1 0" >> /tmp/usb_remove_info
+        sg_ioctl_disk /dev/$1 0
+	rm -f /dev/$1*
+#fi
+
+#Stop wink status LED
+/usr/sbin/pioctl status 3
+/usr/sbin/pioctl status 0
+if [ -e /var/lock/wifidg ]; then
+	rm -fr /var/lock/wifidg
+	/usr/sbin/pioctl internet 0
+fi
+
+echo "$1 exit: normal" >> /tmp/usb_remove_info
+exit 0
+
+

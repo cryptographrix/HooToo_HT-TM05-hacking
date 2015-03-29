@@ -1,0 +1,125 @@
+#!/bin/sh
+##########################################################
+# Copyright (C) by IOVST
+# Descriptor: 
+#     the system init shell
+##########################################################
+export PATH=/bin:/sbin:/usr/bin:/usr/sbin
+##########################################################
+echo "Start rootfs"
+# Mount tmpfs for var
+mount -n -t ramfs ramfs /var > /dev/null 2>&1
+for DIR in lib lock tmp run log state mail cache
+do
+        if [ -d /var ]; then
+		mkdir -p /var/$DIR > /dev/null 2>&1
+		chmod 777 /var/$DIR > /dev/null 2>&1
+        fi
+done
+
+if [ ! -d /www/firmware ]; then
+	mkdir -p /www/firmware
+fi
+mount -n -t ramfs ramfs /www/firmware
+##########################################################
+#build resume, diskumount, dismount
+for F in resumeorg diskumount diskmount usbled etcbackup etcrestore
+do
+        if [ -e /etc/init.d/$F ]; then
+                cp -f /etc/init.d/$F /var/tmp
+        fi
+done
+        echo "mounted"
+	mount -n -t ramfs ramfs /boot/tmp > /dev/null 2>&1
+	mount -n -t ramfs ramfs /usr/local/samba/var/ > /dev/null 2>&1
+	#Build update firmware
+	if [ ! -d /boot/tmp/firmware ]; then
+	        mkdir -p /boot/tmp/firmware
+	fi
+	mount -n -t ramfs ramfs /data > /dev/null 2>&1
+	mount -n -t ramfs ramfs /opt > /dev/null 2>&1
+	mount -n -t ramfs ramfs /dev > /dev/null 2>&1
+	mount -n -t ramfs ramfs /tmp > /dev/null 2>&1
+	mount -n -t proc /proc /proc  > /dev/null 2>&1
+	mount -n -t sysfs /sys /sys > /dev/null 2>&1
+	mount -n -t usbfs none /proc/bus/usb > /dev/null 2>&1
+        mount -t ramfs ramfs /dev
+	#modify zhangwei
+	tar xvf /usr/dev.tar -C /dev/  > /dev/null 2>&1
+    #    mkdir /dev/pts
+        mount -t devpts devpts /dev/pts
+#	mkdir -p /dev/shm
+	mount -t ramfs ramfs /dev/shm
+#	mkdir -p /dev/mapper
+	mount -t ramfs ramfs /dev/mapper
+ 
+     #   mknod   /dev/vs_led       c       100      0
+#	mknod   /dev/video0      c       81      0
+#        mknod   /dev/spiS0       c       217     0
+#        mknod   /dev/i2cM0       c       218     0
+#        mknod   /dev/flash0      c       200     0
+#        mknod   /dev/swnat0      c       210     0
+#        mknod   /dev/hwnat0      c       220     0
+#        mknod   /dev/acl0        c       230     0
+#        mknod   /dev/ac0         c       240     0
+#        mknod   /dev/mtr0        c       250     0
+#        mknod   /dev/nvram       c       251     0
+#        mknod   /dev/gpio        c       252     0
+#        mknod   /dev/rdm0        c       253     0
+#        mknod   /dev/pcm0        c       233     0
+#        mknod   /dev/i2s0        c       234     0
+#        mknod   /dev/cls0        c       235     0
+#        mknod   /dev/ttyS0       c       4       64
+#        mknod   /dev/ttyS1       c       4       65
+#        mknod   /dev/tty0       c        4       0
+#	mknod   /dev/console     c       5       1
+#	
+#	mknod	/dev/mtd0	c	90	0
+#	mknod	/dev/mtd0ro	c	90	1
+#	mknod	/dev/mtd1	c	90	2
+#	mknod	/dev/mtd1ro	c	90	3
+#	mknod	/dev/mtd2	c	90	4
+#	mknod	/dev/mtd2ro	c	90	5
+#	mknod	/dev/mtd3	c	90	6
+#	mknod	/dev/mtd3ro	c	90	7
+#	mknod	/dev/mtd4	c	90	8
+#	mknod	/dev/mtd4ro	c	90	9
+#	mknod	/dev/mtd5	c	90	10
+#	mknod	/dev/mtd5ro	c	90	11
+#	mknod	/dev/mtd6	c	90	12
+#	mknod	/dev/mtd6ro	c	90	13
+#	mknod	/dev/mtd7	c	90	14
+#	mknod	/dev/mtd7ro	c	90	15
+#	mknod	/dev/mtd8	c	90	16
+#	mknod	/dev/mtd8ro	c	90	17
+#	mknod	/dev/mtdblock0	b	31	0
+#	mknod	/dev/mtdblock1	b	31	1
+#	mknod	/dev/mtdblock2	b	31	2
+#	mknod	/dev/mtdblock3	b	31	3
+#	mknod	/dev/mtdblock4	b	31	4
+#	mknod	/dev/mtdblock5	b	31	5
+#	mknod	/dev/mtdblock6	b	31	6
+#	mknod	/dev/mtdblock7	b	31	7
+#	mknod	/dev/mtdblock8	b	31	8
+echo "echo 7 > /proc/sys/kernel/printk"
+echo 7 > /proc/sys/kernel/printk
+if [ -f lib/modules/2.6.21/kernel/drivers/tuxera/tntfs.ko ]; then
+        insmod lib/modules/2.6.21/kernel/drivers/tuxera/tntfs.ko
+fi
+if [ -f lib/modules/2.6.21/kernel/drivers/tuxera/texfat.ko ]; then
+       insmod lib/modules/2.6.21/kernel/drivers/tuxera/texfat.ko
+fi
+if [ -f lib/modules/2.6.21/kernel/drivers/tuxera/thfsplus.ko ]; then
+       insmod lib/modules/2.6.21/kernel/drivers/tuxera/thfsplus.ko
+fi
+if [ -f lib/modules/2.6.21/kernel/drivers/tuxera/tfat.ko ]; then
+       insmod lib/modules/2.6.21/kernel/drivers/tuxera/tfat.ko
+fi
+if [ -f lib/modules/2.6.21/kernel/drivers/net/MT7610_ap.ko ]; then
+       insmod lib/modules/2.6.21/kernel/drivers/net/MT7610_ap.ko
+fi
+echo 1 > /proc/sys/vm/drop_caches
+echo "init dev files"
+
+echo "mounted end"
+exit 0

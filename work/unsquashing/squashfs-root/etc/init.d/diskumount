@@ -1,0 +1,69 @@
+#!/bin/sh
+# define 
+DLDPATH="/data"
+SCPPATH="/etc/init.d"
+EXTPATH="/extern/etc/init.d"
+# include
+. /etc/init.d/vstfunc
+
+####################################################################
+# first, run the START scripts.
+for i in $SCPPATH/*.sh ; do
+        if [ $i !=  "$SCPPATH/teld.sh" -a $i != "$SCPPATH/upnpd.sh" ];then
+                $i stop > /dev/null 2>&1
+        fi
+done
+# second, run the START scripts.
+if [ -e $EXTPATH ];then
+	for i in $EXTPATH/*.sh ; do
+        	if [ $i !=  "$EXTPATH/startup.sh" ];then
+                	$i stop > /dev/null 2>&1
+        	fi
+	done
+fi
+killproc /usr/sbin/au
+####################################################################
+# swapoff swap
+if [ "$1" != "format" ];then
+	while read SWPATH SWTYPE SWSIZE SWUSED SWPRI;do
+                if [ $SWPATH == "Filename" ]; then
+                        continue
+                fi
+		echo swapoff $SWPATH
+        	swapoff $SWPATH > /dev/null 2>&1
+	done < /proc/swaps
+fi
+####################################################################
+# close udev scripts.
+udevdpid=`pidof udevd`
+kill -9 $udevdpid > /dev/null 2>&1
+
+#####################################################################
+# uninstall module
+modulename="iovst_file_storage"
+flag=`lsmod | grep $modulename | wc -l`
+if [ $flag -ne 0 ];then
+        /sbin/rmmod $modulename
+fi
+####################################################################
+# umount extern
+umount /extern > /dev/null 2>&1
+#####################################################################
+# umount know dir
+undir=`cat /proc/mounts | grep /data/ | cut -d' ' -f1`
+for i in $undir ; do
+        if [ -e $i ];then
+                devname=`echo $i | cut -d'/' -f3`
+
+                mntpoint=`cat /proc/mounts | grep $i | cut -d' ' -f2`
+                umount -f $i > /dev/null 2>&1
+		devname=${i:5:3}
+		rm -rf /tmp/"$devname"_plugflag
+               
+                # Remove the mountpoint
+                rmdir $mntpoint
+        fi
+done
+
+exit
+

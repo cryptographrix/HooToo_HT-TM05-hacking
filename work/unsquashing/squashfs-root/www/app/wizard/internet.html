@@ -1,0 +1,420 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1; minimum-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+	<script type="text/javascript" src="../../script/config.js" js="./network/internet.js"></script>
+</head>
+<body>
+<div class="MHeader">
+	<div class="MHeader_l">
+		<a href="javascript:void(history.back());" class="MHeader_back"><span Lge="Prompt_back"></span></a>
+	</div>
+	<div class="MHeader_r">
+		<a href="javascript:void($.vhref('main.html'));" class="MHeader_btn2"></a>
+	</div>
+	<b class="MHeader_txt1"><span Lge="NWizard_Title_2"></span></b>
+</div>
+<div class="MContent"><div class="MMCenter MNetworkInternet">
+    <div class="iBox_C2" id="switch" style="display:none">
+        <div class="iItem_P3">
+            <div class="iItem_P3_swicth1">
+                <div id="internetView" class="iSwitch_1-0"></div><span lge="Setting_Network_Internet_OFFON">Internet Access OFF/ON</span>
+            </div>
+        </div>
+    </div>
+    <div id="showInternet" style="margin-top:20px;display:none">
+	<div class="iBox_C2" id="S0">
+		<!-- MBox_L4_elect -->
+		<div class="iRadio_2" id="S0_1">
+			<span Lge="Setting_Network_Internet_WiFi"></span>
+		</div>
+		<div class="iItem_line1"></div>
+		<div class="iRadio_2" id="S0_2" style="display: none;">
+			<span Lge="Setting_Network_Internet_WAN"></span>
+		</div>
+        <div class="iItem_line1"></div>
+		<div class="iRadio_2" id="S0_3" style="display: none;">
+			<span Lge="Setting_Network_Internet_3G"></span>
+		</div>
+		<!--div class="MBox_L4_swicth2">
+			<span> 以后有 3G 现在可以删除这个节点</span>
+		</div-->
+	</div>
+	<!-- 对应第一个开关 无线 -->
+	<div class="MNetworkInternetCon" style=" display: none;" id="S0_1c">
+		<!-- IP -->
+		<div class="iBox_C2">
+			<div class="iRadio_1" id="S1_1">
+				<span Lge="Setting_Network_Internet_DHCP"></span>
+			</div>
+			<div class="iItem_line1"></div>
+			<div class="iRadio_1" id="S1_0">
+				<span Lge="Setting_Network_Internet_manual"></span>
+			</div>
+		</div>
+		<div class="">
+         	<a href="javascript:void(0);" id="ap_rescan" hidefocus="true" class="iBtn3" style=" *bottom:-5px;">
+				<b class="iBtn3_l"></b>
+				<b class="iBtn3_r"></b>
+				<span lge="Setting_Network_Internet_rescan"></span>
+			</a>
+		</div>
+		<div class="iItem_k2 MNetworkInternetCon">
+				<span Lge="Setting_Network_Internet_SSID"></span>		
+		</div>
+		<div class="iBox_C2">	
+			<div class="NCOpt_rs" id="SSIDs_rs"></div>
+			<div id="SSIDs"></div>
+		</div>
+		<div class="iItem_k2"><span Lge="Setting_Network_Internet_pwd"></span></div>
+		<div class="iBox_C2 MNetworkInternetIpt"><input type="text" id="s1_0_passwd" /></div>
+		<!-- 动态IP，下面div显示 -->
+		<div class="MNetworkInternetCon" id="S1_1c" style="display: none;"></div>
+		<!-- 静态IP，下面div显示 -->
+		<div class="MNetwork MNetworkInternetCon" style="display: none;" id="S1_0c">
+			<div class="iBox_C2">
+				<div class="iItem_k2">
+					<span lge="Setting_Network_Internet_ip"></span>
+				</div>
+				<div class="iIpt3">
+					<div class="iIpt3_l"></div>
+					<div class="iIpt3_r"></div>
+					<div class="iIpt3_c">
+						<input type="text" class="ipt_v" id="s1_0_ip" />
+					</div>
+				</div>
+				<div class="iItem_k2">
+					<span lge="Setting_Network_Internet_mask"></span>
+				</div>
+				<div class="iIpt3">
+					<div class="iIpt3_l"></div>
+					<div class="iIpt3_r"></div>
+					<div class="iIpt3_c">
+						<input type="text" class="ipt_v" id="s1_0_mask" />
+					</div>
+				</div>
+				<div class="iItem_k2">
+					<span lge="Setting_Network_Internet_gateway"></span>
+				</div>
+				<div class="iIpt3">
+					<div class="iIpt3_l"></div>
+					<div class="iIpt3_r"></div>
+					<div class="iIpt3_c">
+						<input type="text" class="ipt_v" id="s1_0_gateway" />
+					</div>
+				</div>
+				<div class="iItem_k2">
+					<span lge="Setting_Network_Internet_primary"></span>
+				</div>
+				<div class="iIpt3">
+					<div class="iIpt3_l"></div>
+					<div class="iIpt3_r"></div>
+					<div class="iIpt3_c">
+						<input type="text" class="ipt_v" id="s1_0_DNS1" />
+					</div>
+				</div>
+				<div class="iItem_k2">
+					<span lge="Setting_Network_Internet_second"></span>
+				</div>
+				<div class="iIpt3">
+					<div class="iIpt3_l"></div>
+					<div class="iIpt3_r"></div>
+					<div class="iIpt3_c">
+						<input type="text" class="ipt_v" id="s1_0_DNS2" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 对应第二个开关 有线 -->
+	<div class="MNetworkInternetCon" style=" display: none;" id="S0_2c">
+		<div class="iItem_k2 MNetworkInternetCon"><span Lge="Setting_Network_Internet_mode"></span></div>
+		<div class="iBox_C2">
+			<div class="iRadio_1" id="S2_2" style=" display: none;">
+				<span Lge="Setting_Network_Internet_mode2"></span>
+			</div>
+			<div class="iItem_line1"></div>
+			<div class="iRadio_1" id="S2_0">
+				<span Lge="Setting_Network_Internet_mode0"></span>
+			</div>
+			<div class="iItem_line1"></div>
+			<div class="iRadio_1" id="S2_1">
+				<span Lge="Setting_Network_Internet_mode1"></span>
+			</div>
+		</div>
+		<!-- 静态 -->
+		<div class="MNetwork MNetworkInternetCon" id="S2_0c" style=" display: none;">
+			<div class="iBox_C2">
+				<div class="iItem_k2">
+					<span lge="Setting_Network_Internet_ip"></span>
+				</div>
+				<div class="iIpt3">
+					<div class="iIpt3_l"></div>
+					<div class="iIpt3_r"></div>
+					<div class="iIpt3_c">
+						<input type="text" class="ipt_v" id="s2_0_ip" />
+					</div>
+				</div>
+				<div class="iItem_k2">
+					<span lge="Setting_Network_Internet_mask"></span>
+				</div>
+				<div class="iIpt3">
+					<div class="iIpt3_l"></div>
+					<div class="iIpt3_r"></div>
+					<div class="iIpt3_c">
+						<input type="text" class="ipt_v" id="s2_0_mask" />
+					</div>
+				</div>
+				<div class="iItem_k2">
+					<span lge="Setting_Network_Internet_gateway"></span>
+				</div>
+				<div class="iIpt3">
+					<div class="iIpt3_l"></div>
+					<div class="iIpt3_r"></div>
+					<div class="iIpt3_c">
+						<input type="text" class="ipt_v" id="s2_0_gateway" />
+					</div>
+				</div>
+				<div class="iItem_k2">
+					<span lge="Setting_Network_Internet_primary"></span>
+				</div>
+				<div class="iIpt3">
+					<div class="iIpt3_l"></div>
+					<div class="iIpt3_r"></div>
+					<div class="iIpt3_c">
+						<input type="text" class="ipt_v" id="s2_0_DNS1" />
+					</div>
+				</div>
+				<div class="iItem_k2">
+					<span lge="Setting_Network_Internet_second"></span>
+				</div>
+				<div class="iIpt3">
+					<div class="iIpt3_l"></div>
+					<div class="iIpt3_r"></div>
+					<div class="iIpt3_c">
+						<input type="text" class="ipt_v" id="s2_0_DNS2" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 动态 -->
+		<div id="S2_1c" class="MNetwork MNetworkInternetCon" style=" display: none;">		
+			<div class="iBox_C2">
+				<div class="iItem_k2">
+					<span lge="Setting_Network_Internet_ip"></span>
+				</div>
+				<div class="iIpt3_0">
+					<div class="iIpt3_l"></div>
+					<div class="iIpt3_r"></div>
+					<div class="iIpt3_c">
+						<input type="text" class="ipt_v" id="s2_1_ip" disabled="disabled"   />
+					</div>
+				</div>
+				<div class="iItem_k2">
+					<span lge="Setting_Network_Internet_mask"></span>
+				</div>
+				<div class="iIpt3_0">
+					<div class="iIpt3_l"></div>
+					<div class="iIpt3_r"></div>
+					<div class="iIpt3_c">
+						<input type="text" class="ipt_v" id="s2_1_mask"  disabled="disabled" />
+					</div>
+				</div>
+				<div class="iItem_k2">
+					<span lge="Setting_Network_Internet_gateway"></span>
+				</div>
+				<div class="iIpt3_0">
+					<div class="iIpt3_l"></div>
+					<div class="iIpt3_r"></div>
+					<div class="iIpt3_c">
+						<input type="text" class="ipt_v" id="s2_1_gateway" disabled="disabled" />
+					</div>
+				</div>
+				<div class="iItem_k2">
+					<span lge="Setting_Network_Internet_primary"></span>
+				</div>
+				<div class="iIpt3_0">
+					<div class="iIpt3_l"></div>
+					<div class="iIpt3_r"></div>
+					<div class="iIpt3_c">
+						<input type="text" class="ipt_v" id="s2_1_DNS1" disabled="disabled"  />
+					</div>
+				</div>
+				<div class="iItem_k2">
+					<span lge="Setting_Network_Internet_second"></span>
+				</div>
+				<div class="iIpt3_0">
+					<div class="iIpt3_l"></div>
+					<div class="iIpt3_r"></div>
+					<div class="iIpt3_c">
+						<input type="text" class="ipt_v" id="s2_1_DNS2" disabled="disabled"   />
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- PPPoE -->
+		<div class="MNetwork MNetworkInternetCon" id="S2_2c" style=" display: none;">
+			<div class="iBox_C2">
+				<div class="iItem_k2">
+					<span lge="Setting_Network_Internet_user"></span>
+				</div>
+				<div class="iIpt3">
+					<div class="iIpt3_l"></div>
+					<div class="iIpt3_r"></div>
+					<div class="iIpt3_c">
+						<input type="text" class="ipt_v" id="s2_2_user" />
+					</div>
+				</div>
+				<div class="iItem_k2">
+					<span lge="Setting_Network_Internet_pwd"></span>
+				</div>
+				<div class="iIpt3">
+					<div class="iIpt3_l"></div>
+					<div class="iIpt3_r"></div>
+					<div class="iIpt3_c">
+						<input type="text" class="ipt_v" id="s2_2_passwd" />
+					</div>
+				</div>
+				<div class="iItem_k2">
+					<span lge="Setting_Network_Internet_M2_server"></span>
+				</div>
+				<div class="iIpt3">
+					<div class="iIpt3_l"></div>
+					<div class="iIpt3_r"></div>
+					<div class="iIpt3_c">
+						<input type="text" class="ipt_v" id="s2_2_servername" />
+					</div>
+				</div>
+				<div class="iItem_k2">
+					<span lge="Setting_Network_Internet_primary"></span>
+				</div>
+				<div class="iIpt3_0">
+					<div class="iIpt3_l"></div>
+					<div class="iIpt3_r"></div>
+					<div class="iIpt3_c">
+						<input type="text" class="ipt_v" readonly="readonly" id="s2_2_DNS1" />
+					</div>
+				</div>
+				<div class="iItem_k2">
+					<span lge="Setting_Network_Internet_second"></span>
+				</div>
+				<div class="iIpt3_0">
+					<div class="iIpt3_l"></div>
+					<div class="iIpt3_r"></div>
+					<div class="iIpt3_c">
+						<input type="text" class="ipt_v" readonly="readonly" id="s2_2_DNS2" />
+					</div>
+				</div>
+				<div class="iItem_k2">
+					<span lge="Setting_Network_Internet_ip"></span>
+				</div>
+				<div class="iIpt3_0">
+					<div class="iIpt3_l"></div>
+					<div class="iIpt3_r"></div>
+					<div class="iIpt3_c">
+						<input type="text" class="ipt_v" readonly="readonly" id="s2_2_ip" />
+					</div>
+				</div>
+				<div class="iItem_k2">
+					<span lge="Setting_Network_Internet_mask"></span>
+				</div>
+				<div class="iIpt3_0">
+					<div class="iIpt3_l"></div>
+					<div class="iIpt3_r"></div>
+					<div class="iIpt3_c">
+						<input type="text" class="ipt_v" readonly="readonly" id="s2_2_mask" />
+					</div>
+				</div>
+				<div class="iItem_k2">
+					<span lge="Setting_Network_Internet_gateway"></span>
+				</div>
+				<div class="iIpt3_0">
+					<div class="iIpt3_l"></div>
+					<div class="iIpt3_r"></div>
+					<div class="iIpt3_c">
+						<input type="text" class="ipt_v" readonly="readonly" id="s2_2_gateway" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+ <!-- 3G  -->   
+    <div class="MNetworkInternetCon" style=" display: none;" id="S0_3c">
+    	<div class="MNetwork MNetworkInternetCon">
+       
+		<div class="iBox_C2"> <!--
+				<div class="iItem_k2">
+					<span lge="Setting_Network_Internet_3G_APN"></span>
+				</div>
+				<div class="iIpt3">
+					<div class="iIpt3_l"></div>
+					<div class="iIpt3_r"></div>
+					<div class="iIpt3_c">
+						<input type="text" id="3g-apn" class="ipt_v">
+					</div>
+				</div>
+				<div class="iItem_k2">
+					<span lge="Setting_Network_Internet_3G_PIN"></span>
+				</div>
+				<div class="iIpt3">
+					<div class="iIpt3_l"></div>
+					<div class="iIpt3_r"></div>
+					<div class="iIpt3_c">
+						<input type="text" id="3g-pin" class="ipt_v">
+					</div>
+				</div>
+				<div class="iItem_k2">
+					<span lge="Setting_Network_Internet_3G_Number"></span>
+				</div>
+				<div class="iIpt3">
+					<div class="iIpt3_l"></div>
+					<div class="iIpt3_r"></div>
+					<div class="iIpt3_c">
+						<input type="text" id="3g-number" class="ipt_v">
+					</div>
+				</div>
+				<div class="iItem_k2">
+					<span lge="Setting_Network_Internet_3G_User"></span>
+				</div>
+				<div class="iIpt3">
+					<div class="iIpt3_l"></div>
+					<div class="iIpt3_r"></div>
+					<div class="iIpt3_c">
+						<input type="text" id="3g-user" class="ipt_v">
+					</div>
+				</div>
+				<div class="iItem_k2">
+					<span lge="Setting_Network_Internet_3G_Password"></span>
+				</div>
+				<div class="iIpt3">
+					<div class="iIpt3_l"></div>
+					<div class="iIpt3_r"></div>
+					<div class="iIpt3_c">
+						<input type="text" id="3g-passwd" class="ipt_v">
+					</div>
+				</div><br />
+				-->
+                <div class="iItem_k2"><b>	
+						<span Lge="Setting_Network_Internet_3G_Status"></span>:
+                    <label class="iItem_k2" id="3g-status"></label></b>	
+				</div>
+			</div>
+          </div>  
+     </div>   
+	<div class="MWizardBtn2">
+		<a href="javascript:void(0)" id="submit" hidefocus="true" class="iBtn1">
+			<b class="iBtn1_l"></b>
+			<b class="iBtn1_r"></b>
+			<span class="iBtn1_c" Lge="Guide_next_value"></span>
+		</a>
+		<a href="wifi.html" id="wizard_skip" hidefocus="true" class="iBtn1">
+			<b class="iBtn1_l"></b>
+			<b class="iBtn1_r"></b>
+			<span class="iBtn1_c" Lge="Guide_skip_value"></span>
+		</a>
+	</div>
+    </div>
+</div></div>
+</body>
+</html>

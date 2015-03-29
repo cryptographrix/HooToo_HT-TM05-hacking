@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1; minimum-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+	<script type="text/template">
+		<!--^li-->
+		<div class="MExplorer_li" id="ln_{#id}" vid="{#id}">
+			<!-- 选中显示文件操作 -->
+			{#downs}
+			<!-- 文件夹后面的箭头 -->
+			<div class="MExplorer_point" vid="{#id}" elect="1" id="open_{#id}" style="display:{#openflag}"></div>
+			<!-- 显示区域 tp_mp3 mp3为文件格式 -->
+			<div class="MExplorer_lix tp_{#type}" id="lnv_{#id}">
+				<div class="MExplorer_name"  filetype="{#filetype}">{#name}</div>
+				<div class="MExplorer_desc">
+					{#attr}
+				</div>
+			</div>
+		</div>
+		<!--li$-->
+		<!--^down-->
+		<div class="MExplorer_dos" id="down_{#id}"><div class="MExplorer_dos_c">
+			<span class="x do1" type="1" >{#1|applyLge(Explorer_Copy)}</span>
+			<span class="x do2" type="2" >{#2|applyLge(Explorer_Cut)}</span>
+			<span class="x do3" type="3" >{#3|applyLge(Explorer_Rename)}</span>
+			<span class="x do4" type="4" >{#4|applyLge(Explorer_Delete)}</span>
+			<!--<span class="x do5" type="5" >{#5|applyLge(Explorer_Down)}</span>-->
+		</div></div>
+		<!--down$-->
+		<!--^volume-->
+		<b class="iItem_L1" id="volum_{#id}" vid="{#id}"><b class="iItem_L1_x">{#img}{#name}</b></b>
+		<!--volume$-->
+		<!--^upload-->
+		<div class="MUpload_L" id="upload_{#id}">
+			<div class="MUpload_del" id="upload_del_{#id}" vid="{#id}"></div>
+			<div class="MUpload_name MUpload_tp_{#type}">{#name}</div>
+			<div class="MUpload_press_img"><div class="MUpload_press_imgc" id="upload_press_{#id}"></div></div>
+			<div class="MUpload_press_txt" id="upload_ptxt_{#id}">...</div>
+		</div>
+		<!--upload$-->
+        <!--^mc-->
+        <div class="MUpload_del" id="paste_del_{#id}" vid_del="{#id}"></div>
+        <div class="MUpload_name MUpload_tp_{#type}">{#name}</div>
+        <div class="MUpload_press_img"><div class="MUpload_press_imgc" id="paste_press_{#id}"></div></div>
+        <div class="MUpload_press_txt" id="paste_ptxt_{#id}">...</div>
+        <!--mc$-->
+	</script>
+	<script type="text/javascript" src="../../script/config.js"></script>
+</head>
+<body>
+<div class="MPadList" id="pad_ui_con">
+	<div class="MHeader">
+		<div class="MHeader_r">
+			<a href="javascript:void($.systemOut());" class="MHeader_btn1"></a>
+		</div>
+		<b class="MHeader_txt0" id="pad_ui_title"></b>
+	</div>
+	<div class="MPadIcons" id="pad_ui_icons">
+		<div class="MPadIconsView">
+			<a class="ico view" href="../explorer/explorer.html"><span Lge="[img_main]explporer.png"></span><span Lge="Explorer"></span></a>
+			<a class="ico" id="explorer_to_user" style=" display: none;" href="../user/guest.html"><span Lge="[img_main]user.png"></span><span Lge="Setting_Nav_User"></span></a>
+		</div>
+	</div>
+</div>
+
+<div class="MHeader">
+	<!--<div class="MHeader_l">
+		<a href="javascript:void(0);" class="MHeader_back" id="h_back"><span Lge="Prompt_back"></span></a>
+	</div>-->
+    	<div class="MHeader_l">
+			<a class="MHeader_back" id="b_back" href="javascript:void(0);" style="display:none"><span Lge="Prompt_back"></span></a>
+		</div>
+	  <div class="MHeader_r" id="admin_back" style="display:none">
+		<a href="javascript:void($.vhref('main.html'));" class="MHeader_btn2"></a>
+	</div>
+	<b class="MHeader_txt1"><span Lge="Explorer"></span></b>
+</div>
+
+<div class="MContent">
+    <div id="NExIcons_c">
+        <!-- 头部操作按钮 -->
+        <div class="MExplorer_Exe" id="NExIcons" style=" display: none;">
+            <div class="MExplorer_Exe_fixed">
+                <span class="exe10" type="10"></span>
+                <span class="exe0" type="0" id="uploadFileCot" Lge="Explorer_Upload:title"></span>
+                <span class="exe9" type="9"></span>
+            </div>
+        </div>
+        <div class="MExplorer_Exe_down" style=" display: none;" id="exe9_c"><div class="MExplorer_Exe_downc">
+            <div class="MExplorer_Exe_pt"></div>
+			<span class="exe1" type="1" id="NexIcons_1" Lge="Explorer_Refresh"></span>
+            <span class="exe2" type="2" id="NExIcons_2" Lge="Explorer_Paste" style=" display: none;"></span>
+            <span class="exe3" type="3" id="NExIcons_3" Lge="Setting_Folder_Create"></span>
+            <span class="exe4" type="4" id="NExIcons_4" style=" display: none;" Lge="Explorer_Copy"></span>
+            <span class="exe5" type="5" id="NExIcons_5" style=" display: none;" Lge="Explorer_Cut"></span>
+            <span class="exe6" type="6" id="NExIcons_6" style=" display: none;" Lge="Explorer_Rename"></span>
+            <span class="exe7" type="7" id="NExIcons_7" style=" display: none;" Lge="Explorer_Delete"></span>
+            <span class="exe8" type="8" id="NExIcons_8" style=" display: none;" Lge="Explorer_Down"></span>
+        </div></div>
+    </div>
+
+	<div class="MMCenter MExplorer">
+
+		<!-- 文件操作 -->
+		<div class="MExplorer_Con" id="NExList"></div>
+	</div>
+</div>
+
+<!--复制剪切-->
+<div class="MUpload_Mask" id="paste_Mask" style=" display: none;">
+    <div class="MUpload_C">
+        <div class="MUpload_delAll" id="paste_del_all"></div>
+        <div class="MUpload_C_C">
+            <div class="NCOpt_rs" id="paste_C_rs"></div>
+            <div id="paste_C_c">
+                <div id="paste_C"></div>
+                <div class="MUpload_btn" style=" display: none;" id="paste_btn">
+                    <a href="javascript:void(0)" id="paste_btn_ok" hidefocus="true" class="iBtn2">
+                        <span class="btnc2" Lge="Prompt_OK_value"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--上传-->
+<div class="MUpload_Mask" style=" display: none;" id="MUpload_Mask">
+	<div class="MUpload_C">
+        <div class="MUpload_delAll" id="MUpload_del_all"></div>
+        <div class="MUpload_C_C">
+            <div class="NCOpt_rs" id="MUpload_C_rs"></div>
+            <div id="MUpload_C_c">
+                <div id="MUpload_C"></div>
+                <div class="MUpload_btn" style=" display: none;" id="MUpload_btn">
+                    <a href="javascript:void(0)" id="MUpload_btn_ok" hidefocus="true" class="iBtn2">
+                        <span class="btnc2" Lge="Prompt_OK_value"></span>
+                    </a>
+                </div>
+            </div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

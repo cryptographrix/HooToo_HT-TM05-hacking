@@ -1,0 +1,27 @@
+#!/bin/sh
+# const
+sysfs_dir=/sys
+# check require
+[ -d $sysfs_dir/class ] || exit 1
+[ -r /proc/mounts ] || exit 1
+[ -x /usr/sbin/udevd ] || exit 1
+[ -f /etc/udev/udev.conf ] || exit 1
+
+. /etc/init.d/vstfunc
+
+# mknod /dev/null /dev/console
+if [ ! -e /dev/null ];then
+	mknod /dev/null c 1 3
+fi
+if [ ! -e /dev/console ];then
+	mknod /dev/console c 5 1
+fi
+if [ ! -e dev/vs_led ];then
+	mknod dev/vs_led c 100 0
+fi
+# start server
+/usr/sbin/udevd -d  
+#/usr/sbin/udevtrigger
+#add zhangwei
+/usr/sbin/udev_add
+exit	

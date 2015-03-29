@@ -1,0 +1,635 @@
+﻿html{ padding: 45px 0 0 0; margin: 0; _height: 100%; _overflow: hidden;}
+body{ padding: 0; margin: 0; font-size: 14px; color: #353535; text-shadow: 0 1px #DDD; font-family: Arial, sans-serif; background-color: #D0D0D0; _height: 100%; _overflow: hidden;}
+.MContent{ _height: 100%;  _overflow-x: hidden; _position: relative; _overflow-y: auto;}
+input{ font-size: 14px;}
+input,input:focus{ outline: none;}
+a:focus{ outline: none;}
+
+.iPNGIE6{ display: inline-block;}
+.iLeft{ float: left;}
+.iRight{ float: right; position:relative; }
+
+/* 提示等 */
+html.PadUI .NKite{ _padding-left: 300px;}
+.NKite{ position:fixed; _position: absolute; _height: 100%; _padding-bottom:45px; z-index: 999; width: 100%; filter:progid:DXImageTransform.Microsoft.gradient(startColorStr=#40000000,endColorStr=#40000000);background-color:rgba(0,0,0,0.3); _background:url(css_lan/alpha.png); top:0; bottom: 0; left:0; right: 0;}
+.NKite_C1{ position:fixed; _position: absolute; top: 40%; left:50%; width: 280px; padding: 6px 19px 20px 19px; margin:-100px 0 0 -160px; border: 1px solid #3E3E3E; border-radius: 8px; background-color:#FFFFFF; box-shadow: 0 0 12px #333;}
+.NKite_C1_header{ height: 22px; line-height: 22px; background: url(css_lan/kite_header.png) no-repeat; padding-left: 24px; font-weight: 600; font-size: 16px; padding-bottom: 10px;}
+.NKite_C1_content{ font-size: 18px; padding-bottom: 10px;}
+.NKite_C1 .OverwirteBig{cursor:pointer;padding: 20px 0;font-size: 12px;}
+.NKite_C1 .OverwirteBig .OverwirteIcon{cursor:pointer;height: 15px;width: 15px;float: left;border: 2px solid #666;font-family: -webkit-body;font-size: 0px;font-weight: bold;text-align: center;line-height: 18px;color: #666;}
+.NKite_C1 .OverwirteBig .OverwirteIconActive{font-size:13px;}
+.NKite_C1 .OverwirteBig .OverwirteSpan{float: left;margin-left: 5px; width:90%}
+.NKite_C1 .iBtn2,.NKite_C1 .iBtn2_0{ display: block; margin: 10px 0 0 0;}
+html.PadUI .NTip1{ _margin-left: -150px;}
+.NTip1{ position: fixed; _position: absolute; top:100px; width: 100%; padding: 0 20px; text-align: center; -webkit-box-sizing: border-box; box-sizing: border-box; -moz-box-sizing: border-box;}
+.NTip1 strike{ display: inline-block; line-height: 24px; background-color: #FFF; border: 1px solid #F25213; box-shadow: 0 0 10px #666; border-radius: 6px; padding: 0 10px; text-decoration: none;}
+.NLoading{position: absolute; z-index: 50000; _width: 100%; _height: 100%; filter:progid:DXImageTransform.Microsoft.gradient(startColorStr=#20000000,endColorStr=#20000000); background-color: rgba(0,0,0,0.2); top:0; bottom: 0; left:0; right: 0;}
+.NLoading a{position: absolute; background: url(css_lan/ajax_loader.gif) center no-repeat; display: block;  top:0; bottom: 0; _width: 100%; _height: 100%; left:0; right: 0;}
+/* 选择框 */
+.NMOpt{position:fixed; _position: absolute; z-index: 600; width: 100%; _height: 100%; filter:alpha(Opacity=50); opacity:0.5; background-color: #000; top:0; left:0;}
+.NCOpt{ position: absolute; top:0; left:0; z-index: 701; max-height: 198px; _height: 198px; width: 300px; border: 2px solid #D5D4D2; background-color: #FFFFFF; border-radius: 6px; overflow: hidden;}
+.NCOpt_c{ margin-bottom: -2px;}
+.NCOpt_rs{position:absolute; right: 0; z-index: 2; display: none; margin: 2px 1px 2px -5px; width: 10px; height: 20px; background: #666; opacity: 0.6; filter:alpha(Opacity=60); border-radius: 3px;}
+.NCOpt .line,.NCOpt .linese{cursor:pointer; display: block; border-bottom: 2px solid #D5D4D2;  height: 38px; line-height: 38px; padding:0 40px 0 12px; background-image: url(css_lan/swicth2.png); background-repeat: no-repeat; background-position: right 100px;}
+.NCOpt .linese{ background-position: right center;}
+.NCOpt b{ font-weight: normal;}
+
+/* 输入框 */
+.iIpt1,.iIpt1_l,.iIpt1_r,.iIpt1_rd{ background: url(css_lan/comm_ipt1.png) no-repeat 0 -50px;}
+.iIpt1_0,.iIpt1_0 .iIpt1_l,.iIpt1_0 .iIpt1_r,.iIpt1_0 .iIpt1_rd{ background: url(css_lan/comm_ipt1_0.png) no-repeat 0 -50px;}
+.iIpt1,.iIpt1_0{ position: relative; background-repeat: repeat-x; width: 100%; background-color: #FFF;}
+.iIpt1_0{ background-color: #D3D3D1;}
+.iIpt1_l{ position: absolute; background-position: left top; left:0; top:0; height: 43px; width: 20px;}
+.iIpt1_0 .iIpt1_r, .iIpt1_r,.iIpt1_0 .iIpt1_rd,.iIpt1_rd{ position: absolute; right:0; _right:-2px; height: 43px; width: 20px; background-position: 0 -100px;}
+.iIpt1_0 .iIpt1_rd,.iIpt1_rd{ background-position: 0 -150px;}
+.iIpt1_tip{ display: block; position: absolute; left:10px; height: 43px; line-height: 43px; color: #838383;}
+.iIpt1_c{ display: block; position: relative; z-index: 2; padding: 10px;  height: 23px; overflow:hidden;}
+.iIpt1_c input{ padding:0; margin: 0; border: 0; width: 100%; height: 23px; line-height: 23px; background: transparent;}
+.iIpt1_c input.ipt_v{width:97%; background: #FFFFFF;}
+.iIpt1_0 .iIpt1_c input.ipt_v{ background: #D3D3D1;}
+
+.iIpt3,.iIpt3_1,.iIpt3_l,.iIpt3_r,.iIpt3_rd{ background: url(css_lan/comm_ipt3.png) no-repeat 0 -40px;}
+.iIpt3_0,.iIpt3_0 .iIpt3_l,.iIpt3_0 .iIpt3_r{ background: url(css_lan/comm_ipt3_0.png) no-repeat 0 -40px;}
+.iIpt3,.iIpt3_0{ position: relative; background-repeat: repeat-x; height: 34px; display: block;}
+.iIpt3_l,.iIpt3_0 .iIpt3_l{ position: absolute; background-position: left top; left:0; top:0; height: 34px; width: 12px;}
+.iIpt3_r,.iIpt3_0 .iIpt3_r{ position: absolute; right:-1px; _right:-2px; top:0; height: 34px; width: 15px; background-position: right -80px; z-index: 2; overflow: hidden;}
+.iIpt3_rd{ position: absolute; right:-1px; _right:-2px; top:0; height: 34px; width: 25px; background-position: left -120px; z-index: 2;}
+.iIpt3_tip{ display: block; position: absolute; left:10px; height: 34px; line-height: 34px; color: #838383;}
+.iIpt3_c,.iIpt3_cd{ display: block; position: relative; z-index: 2; padding: 7px 10px;  height: 20px; line-height: 20px; color: #CB7A7C; overflow:hidden;}
+.iIpt3_cd{ padding-right: 27px;}
+.iIpt3_c input,.iIpt3_cd input{ padding:0; margin: 0; border: 0; width: 100%; height: 20px; line-height: 18px; background: transparent; color: #CB7A7C;}
+.iIpt3_c input.ipt_v,.iIpt3_cd input.ipt_v{ background: #FFF;}
+.iIpt3_0 .iIpt3_c input.ipt_v{ background: #D3D3D1;}
+.iIpt3_1 .iIpt3_rd{background-image: url(css_lan/comm_ipt3_1.png); z-index: 3;}
+
+/* 按钮 */
+.iBtn1,.iBtn1_l,.iBtn1_r{ background: url(css_lan/comm_btn1.png) repeat-x; display: block; cursor: pointer;}
+.iBtn1{ position: relative; height: 44px; text-decoration: none; color: #FFF; white-space: nowrap;}
+.iBtn1_l{background-repeat:no-repeat; position: absolute; top:0; left:-3px; height: 100%; width: 12px; background-position: 0 -51px; _margin-left:1px;}
+.iBtn1_r{background-repeat:no-repeat; position: absolute; top:0; right:0; _right:-2px; height: 100%; width: 12px; background-position: 0 -101px;_margin-right:1px;}
+.iBtn1:hover{ background-position: 0 -151px;}
+.iBtn1:hover .iBtn1_l{ background-position: 0 -201px;}
+.iBtn1:hover .iBtn1_r{ background-position: 0 -250px;}
+.iBtn1_c{ display: block; text-align: center; font-size: 18px; font-weight: 900; line-height: 44px; text-shadow: 1px 1px 2px #000;_padding-right:1px;}
+
+.iBtn2{ height: 32px; padding-left: 4px; background: url(css_lan/btn_2.png) no-repeat; display: block; text-decoration: none; box-shadow: 0 0 6px #333; text-shadow: 0 1px #333; border-radius: 6px; cursor:pointer; text-decoration: none;}
+.iBtn2 .btnc2{ height: 32px; line-height: 32px; display: block; background: url(css_lan/btn_2.png) no-repeat right -80px; color: #FFF; padding-right: 23px; padding-left: 19px; text-align: center; font-size: 18px;/* text-shadow: 1px 1px 2px #C9060D;*/}
+.iBtn2:active{ background-position: 0 -160px;}
+.iBtn2:active .btnc2{ background-position: right -200px;}
+.iBtn2_0{ height: 32px; padding-left: 4px; background: url(css_lan/btn_2.png) no-repeat 0 -40px; display: inline-block; box-shadow: 0 0 6px #333; text-shadow: 0 1px #333; border-radius: 6px; text-decoration: none; cursor:pointer;}
+.iBtn2_0 .btnc2{ height: 32px; line-height: 32px; display: block; background: url(css_lan/btn_2.png) no-repeat right -120px; color: #FFF; padding-right: 23px; padding-left: 19px; text-align: center;}
+
+/*同步时间和重新获取AP列表*/
+.iBtn3_top1{margin-top:20px;_position:relative;*display:block!important; margin-bottom:-18px;}/*同步时间*/
+.iBtn3_top2{margin-top:20px; margin-bottom:-100px;float:right;width:120px;_position:relative;}/*刷新ap*/
+.iBtn3,.iBtn3_l,.iBtn3_r{ background: url(css_lan/comm_btn1.png) repeat-x;display:inline-block; cursor: pointer;height: 44px; }
+.iBtn3{display:inline-block;font-weight:800; right:20px; height:40px;text-shadow:0 0 #FCFFFF;font-size: 13px;line-height: 40px;position: relative;text-decoration: none;color: #FFF;white-space: nowrap;float:right;background-position:0 -3px;bottom:-3px; text-align:center; width:120px;}
+.iBtn3_l{ position: absolute; top:0; left:-5px;*left:-5px!important;  _left:-5px; height: 100%; width: 15px; background-position: 0px -54px; _margin-left:1px; background-repeat:no-repeat;}
+.iBtn3_r{ position: absolute; top:0; right:-8px; _right:-8px;*right:-8px!important; height: 100%; width: 15px; background-position: 0px -104px;_margin-right:1px;background-repeat:no-repeat;}
+.iBtn3:hover{ background-position: 0 -153px; }
+.iBtn3:hover .iBtn3_l{ background-position: 0px -203px;}
+.iBtn3:hover .iBtn3_r{ background-position: 0px -252px;}
+
+/* 开关 */
+.iSwitch_1,.iSwitch_1-0{ cursor:pointer;display:block; float: right; width:70px; height: 30px; overflow: hidden; background: url(css_lan/switch_1.png) no-repeat 0 -40px; _position: relative;}
+.iSwitch_1-0{ background-position: 0 0;}
+
+/* 单选 */
+.iRadio_1{margin-right:10px;cursor: pointer; display: block; height: 40px; line-height: 40px; padding-left:10px; font-size: 16px; background: url(css_lan/comm_radio1.png) right 0 no-repeat; border-radius: 6px;}
+.iRadio_2{cursor: pointer; display: block; height: 40px; line-height: 40px; padding-left:10px; font-size: 16px; font-weight: 600; background: url(css_lan/comm_radio2.png) right 0 no-repeat; border-radius: 6px;}
+.iRadio_elect{ background-position: right -50px;}
+.iRadio_wait{background:url(css_lan/wait.gif) no-repeat right 5px;margin-right:10px;cursor:wait;}
+.iRadio_error{background:url(css_lan/wl_check_error.png) no-repeat right 10px;margin-right:10px;cursor:pointer;}
+/* 线条 */
+.iItem_C1{ border-top: 1px solid #B3B3B3;}
+.iItem_L1,.iItem_L2,.iItem_L3{ height: 45px; background: url(css_lan/item_1.png) repeat-x; padding: 0 15px; display: block; color: #353535; text-decoration: none;}
+.iItem_L1_x{ height: 45px; line-height:45px; background: url(css_lan/item_1.png) right -50px no-repeat; display: block; font-weight: 600; cursor: pointer;}
+.iItem_L2 .iItem_L1_x{ background-position: right -100px;}
+.iItem_LL1{ border-bottom:1px solid #B3B3B3; padding: 15px 0;}
+.iItem_LL1:last-child{ border-bottom: none;}
+.iItem_L3{display:none;}
+
+.iItem_P1{ height: 30px; line-height: 30px;}
+.iItem_k1{ position: absolute; color: #131313; font-size: 14px; font-weight: 600;padding-left:40px;}
+.iItem_k2{ padding: 4px 0 10px 4px; font-size: 14px;}
+.iItem_v1{ float:right; color: #686868;padding-right:40px}
+.iItem_P3{}
+.iItem_P3_swicth1{ min-height: 30px; line-height: 30px; font-size: 14px; font-weight: 600; padding: 8px 0;}
+.iItem_t1{ padding: 5px 8px;}
+
+.iItem_line1{ height: 1px; overflow: hidden; background-color: #B2B1B1;}
+
+/* 展示框 */
+.iBox_C1{ margin: 0 15px; border: 1px solid #828282; border-radius: 8px; box-shadow: 0 0 8px #656565; background-color: #FFF;}
+.iBox_C2{ border: 2px solid #B6B5B5; background-color: #FFFFFF;border-radius: 6px; }
+
+.iBox_C3{ margin: 0 5px; border: 2px solid #B6B5B5; border-radius: 6px; background-color: #F7F7F7;}
+.iBox_C3 table{ width: 100%;}
+.iBox_C3 thead td{ padding: 5px 0; background: url(css_lan/header_list1.png) repeat-x #B41A20; overflow: hidden; color: #FFFFFF; text-shadow: 1px 1px 2px #88090E;}
+.iBox_C3 thead td:first-child{ border-top-left-radius: 4px;}
+.iBox_C3 thead td:last-child{ border-top-right-radius: 4px;}
+.iBox_C3 thead td b{ display: block; background: url(css_lan/header_list2.png) no-repeat right center;}
+.iBox_C3 thead td:last-child b{ background: none;}
+.iBox_C3 tbody td{ padding: 10px 0; border-top: 2px solid #B5B4B4;}
+
+/* 目录选择器 */
+.iElectDir{ max-height: none; height: auto; top:40px; border-width: 1px; overflow: hidden;}
+.iElectDir_header{ height:35px; padding: 10px 10px 0 10px;background:url(css_lan/header_x.png); border-radius: 6px 6px 0 0;}
+.iElectDir_btn{ display: block; cursor: pointer; border:2px solid #077AA7; color: #FFF; background:url(css_lan/header_x.png); text-shadow: 1px 1px 2px #000; float: right; border-radius: 6px; padding: 4px 8px; min-width: 40px; text-align: center; font-weight: 900; box-shadow: 0 1px 0 rgba(255, 255, 255, .2) inset,0 0 3px #999;}
+.iElectDir_title{ display: block; color: #FFF; text-shadow: 1px 1px 2px #000; padding-top: 6px;}
+.iElectDir_li{ padding-left: 10px; position: relative;}
+.iElectDir_li:nth-child(2n){ background-color: #E9E9E9;}
+.iElectDir_liview{padding-left: 40px; background: url(css_lan/swicth2.png) 10px center no-repeat;}
+.iElectDir_li_txt{ display: block; padding: 4px 0; height: 26px;line-height:26px;max-width:230px;overflow: hidden; text-overflow: ellipsis;}
+.iElectDir_li_point{ display: block; position: absolute; right: 0; height:34px; width: 40px; background: url(css_lan/ipt_ico_1.png) no-repeat center;}
+.iElectDir_con{ max-height: 320px; _height:250px; overflow: hidden; position: relative;}
+.iElectDir_con .NCOpt_rs{ position: absolute; z-index: 2; right: 0; float: none;}
+
+/* 头部 */
+.MHeader{ height: 44px; _width: 100%; background: url(css_lan/header_x.png) repeat-x; position: fixed; _position: absolute; top:0; left:0; right: 0; z-index: 12; /*box-shadow: 0 1px 3px #000; border-bottom: 1px solid #222;*/}
+.MHeader_c{ position: relative;}
+.MHeader_r{ position: absolute; right:0; top:0;z-index:10;}
+.MHeader_l{ position: absolute; left:0; top:0;z-index:10;}
+
+.MHeader_txt0{ background: url(entry_img.png) no-repeat scroll 0px -2px transparent;font-size:0;line-height: 44px;  color: #FFF; display: block; text-align: center; text-shadow: 1px 1px 2px #000;}/**/
+.MHeader_txt1{ line-height: 44px; font-size: 22px; color: #FFF; display: block; text-align: center; text-shadow: 1px 1px 2px #000; position:relative;}
+.MHeader_btn1{ display: block; text-decoration: none; width: 45px; height: 28px; background: url(css_lan/header_btn.png) no-repeat; margin: 8px 8px 0 0;}
+.MHeader_btn2{ display: block; text-decoration: none; width: 45px; height: 28px; background: url(css_lan/header_btn.png) no-repeat 0 -30px; margin: 8px 8px 0 0;}
+.MHeader_back{ display: inline-block; text-decoration: none; width: 48px; padding-left: 6px; height: 28px; margin: 8px 0 0 8px; color: #FFF; line-height: 28px; background: url(css_lan/header_back.png) no-repeat; text-align: center; /*text-shadow: 0 1px #B70E14;*/}
+.MMCenter{ min-width: 300px; _position: relative;}
+
+/* 登录 */
+.MEntry{ max-width: 400px; _width:400px; margin: 8% auto; position: relative;}
+.MEntry_img{ height: 46px;background: url(entry_img.png) no-repeat;/*所有浏览器*/_background: url(css_lan/entry_img.png) no-repeat;/*IE6*/margin-top: 3px; margin-left: 11px;}
+.MEntry_box{ padding:20px; margin: 0 10px; border:1px solid #B1B1B1; background-color: #FFFFFF; border-radius: 8px; box-shadow: 1px 2px 8px #000;}
+.MEntry_box .iIpt1{ margin-top: 10px;}
+.MEntry_box .iIpt1_l{ background: url(css_lan/entry_ipt.png); width: 41px;}
+.MEntry_box .iIpt1_c{ padding-left: 50px;}
+.MEntry_box .iIpt1_tip{ left:50px;}
+.MEntry_box .ipt_account{ background-position: 0 0;}
+.MEntry_box .ipt_password{ background-position:0 -50px;}
+.MEntry_box .ipt_language{ background-position: 0 -100px;}
+.MEntry_box .ipt_language img{ display: none;}
+.MEntry_btns{ padding-top: 30px; margin: 0 10px;}
+
+/* 视频播放 */
+.MDLNAVideo{ height: 100%; overflow: hidden; padding: 44px 0 101px 0; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;}
+.MDLNAVideo body{ height: 100%; overflow: hidden;}
+.MDLNAVideo .MHeader_txt1{ padding-left: 48px; padding-right: 68px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.MHeader_btn2x{ display: block; text-decoration: none; width: 48px; height: 28px; background: url(css_lan/header_btn2.png) no-repeat; margin: 8px 8px 0 0;}
+.MDLNAVideoFoot{ height: 101px; width: 100%; border-radius: 0 0 3px 3px; position: absolute; bottom: 0; background: url(css_lan/dlna_video_bg.png) repeat-x;}
+.MDLNAVideoCon{height: 100%; background-color: #808080; position: relative;text-shadow:none;color:#FFFFFF;}
+.MDLNAVideoNoBox{ width: 260px; overflow: hidden; position: absolute; left:50%; top:50%; margin: -80px 0 0 -150px; text-align: center;}
+.MDLNAVideoNoBox i{ display: block; height: 146px; background: url(css_lan/dlna_box_no.png) no-repeat #808080 center;}
+.MDLNAVideoNoBox span{ display: block; line-height: 20px; height: 20px; font-size: 16px; color: #D3D3D3; font-weight: 600; text-shadow: none;}
+.MDLNAVolume{ position: absolute; width: 47px; height: 235px; background: url(css_lan/dlna_volume_bg.png) no-repeat; right: 0; top: 50%; margin-top: -120px;z-index:20; border-radius: 12px; overflow: hidden;}
+.MDLNAVolume var{ display: block; position: relative; height: 140px; width: 17px; _overflow: hidden; padding-top: 32px; margin-left: 15px;}
+.MDLNAVolume em{ display: block; height: 0; width: 9px; position: absolute; bottom: 0; left:5px;}
+.MDLNAVolume i{ display: block; width: 17px; height: 18px; position: absolute; background: url(css_lan/dlna_volume_icon1.png) no-repeat; margin-left: -5px; margin-top: -18px; cursor: pointer;}
+.MDLNAVolume span{ display: block; height: 100%; position:relative;background:url(css_lan/progress1.png);}
+/*.MDLNAVolume span img{ margin: 0; padding: 0; border: 0; position: absolute; top:0; width: 100%; height: 100%;}*/
+.MDLNAVideoProgress{ padding-top: 16px; height: 16px; +overflow: hidden;}
+.MDLNAVideoProgressLeft{ width: 100px; text-align: center; float: left; height: 16px; *margin-right:-10px; overflow: hidden; background: url(css_lan/dlna_video_progress2.png) no-repeat right 3px;}
+.MDLNAVideoProgressRight{ width: 100px; text-align: center; float: right; height: 16px; *margin-left:-10px; overflow: hidden; background: url(css_lan/dlna_video_progress2.png) no-repeat left -17px;}
+.MDLNAVideoProgressCon{ margin:0 100px; *margin:0 95px; height: 16px; background: url(css_lan/dlna_video_progress2.png) repeat-x 0 -37px; cursor: pointer;}
+.MDLNAVideoProgressCon var{ display: block; position: relative; height: 16px; width: 0px; background: url(css_lan/dlna_video_progress2.png) repeat-x 0 -57px;}
+.MDLNAVideoProgressCon i{ display: block; position: absolute; right: -17px; top:-2px; width: 17px; height: 20px; background: url(css_lan/dlna_video_progress2.png) no-repeat 0 -77px; cursor: pointer;}
+.MDLNAVideoPlay{ width: 50px; height: 50px; margin: 4px auto 0 auto;}
+.MDLNAVideoPlay var{ display: block; width: 50px; height: 50px; overflow: hidden; background: url(css_lan/dlna_video_play.png) no-repeat; cursor: pointer;}
+.MDLNAVideoPlay var.press{ background-position: 0 -60px;}
+.MDLNADevice{border-bottom:2px solid #CCCCCC;cursor:pointer;height:35px;background-color: #ADACAD;}
+.MDLNADevice:hover{background-color:#848484;}
+.MDLNASelctClose{background:url(css_lan/dlna_device_close.png) no-repeat; width:20px; height:20px; float:right; margin:4px; _margin-right: 2px; cursor:pointer;}
+.MDLNARefresh{background:url(css_lan/dlna_device_refresh.png) no-repeat; width:20px; height:20px; margin:4px; _margin-left: 2px; float:left; cursor:pointer;}
+.MDLNADeviceCon{ margin: 20px; border-radius: 5px; background-color: #FFFFFF; overflow: hidden;}
+.MDLNADeviceCon a{ display: block; height: 30px; line-height: 30px; border-bottom: 1px solid #CCCCCC; text-align: center; color: #323733; font-size: 16px; text-decoration: none;}
+.MDLNADeviceCon a:hover{ background-color: #C1C0BC;}
+.MDLNADeviceCon a.see,.MDLNADeviceCon a.see:hover{ background-color: #9B080E; color: #FFFFFF; text-shadow:none;}
+.MDLNATitle{font-size: 17px;height: 25px; padding-top: 5px;text-align: center;text-shadow: none;color:#FFFFFF;}
+.MDLNADeviceList{background-color: #FFFFFF; border: 2px solid #CCCCCC;border-radius: 8px 8px 8px 8px; color: #000000;overflow:hidden; font-size: 18px; font-weight: bold; height: 250px;line-height: 33px; margin: 0 auto; width: 260px;}
+.MDlNASel{display:none; background-color: #333333;border-radius: 5px 5px 5px 5px; height:300px; overflow:hidden; width: 300px; z-index: 21; position: absolute; left:50%; top:50%; margin: -150px 0 0 -150px;}
+.MDLNANotSel{/*display:none;*/}
+
+/* MMetro界面 main.html */
+.MMetro{ +padding: 44px 0 56px 0; +height: 100%; +overflow: hidden;}
+.MMetro body{ +height: 100%; +overflow: hidden;}
+/*  background:url(css_lan/entry_img.png) repeat-x 0 -50px; */
+.MMetro_header,.MMetro_bottom{width: 100%; height:46px;position:absolute; +position: absolute;z-index:2; box-shadow: 0 0 6px #333; +width: 100%;}
+.MMetro_header{top:0;overflow: hidden;}
+.MMetro_header b{ display: block; height: 100%; background:url(entry_img.png) no-repeat 5px 0px; width: 180px; float: left;}
+
+.MMetro_bottom{ margin-top: 10px; bottom:-55px; background: url(css_lan/metro_bottom.png) repeat-x; }
+.MMetro_bottom_SD,.MMetro_bottom_SD-0,.MMetro_bottom_DISK,.MMetro_bottom_DISK-0{ height: 46px; background: url(css_lan/metro_bottom.png) no-repeat; width: 32px; margin: 0 0 0 10px; float: left;}
+.MMetro_bottom_SD{ background-position: 0 -50px;}
+.MMetro_bottom_DISK{ background-position: 0 -100px;}
+.MMetro_bottom_SD-0{ background-position: 0 -150px;}
+.MMetro_bottom_DISK-0{ background-position: 0 -200px;}
+.MMetro_bottom_Internet_OFF,.MMetro_bottom_Internet_ON{height: 46px; width: 32px; margin: 0 20px; float: right; background: url(css_lan/network.png) no-repeat;}
+.MMetro_bottom_Internet_OFF{background-position: 0 -7px;}
+.MMetro_bottom_Internet_ON{background-position: 0 -59px;}
+.MMetro_bottom_Power,.MMetro_bottom_Power1,.MMetro_bottom_Power2,.MMetro_bottom_Power3{height: 46px; width: 50px; float: right;background: url(css_lan/power.png) no-repeat; }
+.MMetro_bottom_Power{background-position: 0 -3px;}
+.MMetro_bottom_Power1{background-position:0 -52px}
+.MMetro_bottom_Power2{background-position:0 -99px;}
+.MMetro_bottom_Power3{background-position:0 -146px;}
+
+.MMetro_con_1, .MMetro_con_2, .MMetro_con_3{float:left;}
+.MMetro_con{ +height: 100%; position: absolute; +position: relative; top:44px; +top:0; bottom: 56px; +bottom: 0; left:0; right:0; min-height: 400px; +min-height:0;}
+.MMetro_con_c{ height: 100%; +position: relative; +overflow: hidden;}
+.MMetro_con_1{ height: 68%;width:60%; *width:59.99%!important;}/*对IE7的兼容*/
+.MMetro_con_1_1{ float: left; width: 100%; height: 100%; position: relative; overflow: hidden;}
+.MMetro_con_1_2{ float: left; width: 40%; height: 100%;}
+.MMetro_con_1_2_1,.MMetro_con_1_2_2{ height: 50%; position: relative; overflow: hidden;}
+.MMetro_con_2{ height: 68%;width:40%;}
+.MMetro_con_2_1,.MMetro_con_2_2{ width: 99%; height: 50%; float: left; position: relative; overflow: hidden;}
+.MMetro_con_2_3{width:33.4%; margin-right: -30px;}
+.MMetro_box{ width: 100%; height: 100%; cursor: pointer;}
+.MMetro_box_c{ display: block; margin: 5px 5px 5px 5px; height: 100%; position: relative; overflow: hidden; text-decoration: none; color: #FFF; background-color: /*#2DA0CD;*/#1A96D5}
+.MMetro_con_2_1 .MMetro_box_c,.MMetro_con_2_2 .MMetro_box_c,.MMetro_con_1_1 .MMetro_box_c{ margin-right: 0;}
+.MMetro_con_3{width:100%;height:32%;}
+.MMetro_con_3_1,.MMetro_con_3_2,.MMetro_con_3_3{width: 33.3%; height: 100%; float: left; position: relative; overflow: hidden;}
+.MMetro_con_3 .MMetro_con_3_2 .MMetro_box .MMetro_box_c{margin:5px 0px;}
+
+.MMetro_box_c:hover{ background-color: #1d90bd;}
+.MMetro_box{ width: 100%; height: 100%; cursor: pointer;}
+.MMetro_box_c *{ cursor: pointer;}
+.MMetro_box_txt{ /*background: url(css_lan/metro_box.png)*/;position: absolute; display: block; bottom: 5px; height: 40px; width: 100%; text-align: center; font-size: 18px; line-height: 40px; text-shadow: 1px 1px 2px #333; border-top:1px solid #46b9e6;}
+.MMetro_con_1 .MMetro_box_txt{ /*background: url(css_lan/metro_box.png);*/ height: 39px; line-height: 39px; border-top: 1px solid 1px solid #46b9e6; text-align: left; padding-left: 20px; /*box-shadow:0 -2px 6px #333;*/}
+.MMetro_box_img{ display: block; text-align: center; height: 100%; *height: auto; line-height: 100%;}
+.MMetro_box_img img,.MMetro_box_img .iPNGIE6{ vertical-align: middle; border: 0; margin-top: -50px; height:75px; width: 75px;}
+.MMetro_box_img b{ display: inline-block; width: 0; height:100%; overflow: hidden; vertical-align: middle; content: " ";}
+
+/* main */
+.MMain{}
+.MMain_C{ padding: 40px 0 0 0; text-align: center;}
+.MMain_CC{ display: inline-block;}
+.MMain_C .ico{ display: block; float: left; width: 90px; padding: 0 5px; height: 120px; text-align: center; color: #333333; font-size: 16px;}
+.MMain_C .ico span{ display: block;}
+.MMain_C .ico img{ border-radius: 12px;}
+.MMain_C .ico img:active{ box-shadow: 0 0 15px #333;}
+
+/* 用户 */
+.MUser{ padding: 25px 15px;}
+.MUser .iBox_C2{ padding: 15px;}
+.MUser .iIpt1{ margin-top: 10px;}
+.MUser .iBtn1{ margin: 10px 0 0 0;}
+.MUser .iIpt1_l{ background: url(css_lan/user_ipt.png) no-repeat; width: 35px;}
+.MUser .iIpt1_c{ padding-left: 35px;}
+.MUser .iIpt1_tip{ left:35px;}
+.MUser .ipt_account{ background-position: 0 0;}
+.MUser .ipt_password{ background-position:0 -50px;}
+.MUser .ipt_cpassword{ background-position: 0 -100px;}
+
+/* 信息 */
+.MInfo{ padding: 25px 10px;}
+.MInfo .iBox_C1{ padding: 15px;}
+.MStorage .MBox_C1{ padding-top: 10px;}
+.MStorage_L{ padding: 15px 0; height: 70px;}
+.MStorage_S{ height: 1px; background-color: #989898; overflow: hidden;}
+.MStorage_L_x{ width: 33.3%; height: 81px; float: left; position: relative;}
+.MStorage_L_txt{ font-size: 14px; font-weight: 900; padding-left: 8px; padding-top: 18px; text-align: center;}
+.MStorage_L_img{ width: 82px; height: 81px; margin: 0 auto;}
+.MStorage_L_img img,.MStorage_L_img .iPNGIE6{ margin: 0; padding: 0; border: none; display: inline-block; width: 82px; height: 81px;}
+.MStorage_L_per{ position: absolute;width: 100%; text-align: center; padding-top: 34px; font-weight: 600;*width:83px;}
+
+/* 服务 */
+.MServices{ padding: 25px 10px;}
+.MServices .iBox_C2{ padding: 15px; margin-bottom: 20px;}
+.MServices .right_btn3{
+    height: 8px; padding-top: 10px;
+}
+.MServices .right_btn3 .iBtn2{
+    float: right;
+}
+.MServices .scan_list .iIpt3_1{
+    margin-top: 6px;
+}
+
+/* 网络 */
+.MNetwork{ padding: 25px 10px;}
+.MNetwork .iBox_C2{ padding: 15px; margin-bottom: 20px;}
+.MNetworkIPT .iIpt3{ margin-bottom: 10px;}
+.MNetworkBtn2{ text-align: center;}
+.MNetworkBtn2 .iBtn1{ display: inline-block; width: 49%;  _width:46%;}
+.MNetworkClient{ padding: 7px 0;}
+.MNetworkClient table{min-width: 300px; _width: 300px;}
+.MNetworkClient thead .MNetworkDHCP_mac{min-width: 115px; _width: 115px;}
+.MNetworkClient thead .MNetworkDHCP_ip{min-width: 70px; _width: 70px;}
+.MNetworkClient thead .MNetworkDHCP_time{min-width: 70px; _width: 70px;}
+.MNetworkInternet{ padding: 25px 10px;}
+.MNetworkInternet .iItem_k2{ padding-left: 8px; font-weight: 800; *height:20px;}
+.MNetworkInternet .MNetwork{ padding: 0;}
+.MNetworkInternet .MNetwork .iItem_k2{ padding-left: 4px; font-weight: normal;}
+.MNetworkInternet .MNetworkInternetCon{padding-top: 15px; _overflow: hidden;margin-bottom:5px;}
+.MNetworkInternet .iBtn1{ margin-top: 15px;}
+.MNetworkInternet .NCOpt_rs{right:11px;}
+.MNetworkInternet .iRadio_1{border-radius:0;}
+.MNetworkInternetIpt{ padding: 5px 10px;}
+.MNetworkInternetIpt input{ border: 0; margin:0; padding: 0; width: 100%; _width:94%; height: 22px; line-height: 22px; background-color: #FFF;}
+/* WPS 连接*/
+.MWPS{}
+.MWPS .Progress{border-radius:8px;background:url(css_lan/per.png);height: 25px; margin-top: 20px;overflow:hidden;}
+.MWPS .Progress_time{height:100%;background:url(css_lan/per.png) 0 26px;}
+.MWPS .iBtn3_top2{margin-top:7px;}
+/* 向导 */
+.MWizard{ padding: 25px 10px;}
+.MWizard .iBox_C2{ margin-bottom: 20px;}
+.MWizardDesc{ padding: 23px; font-weight: 900;}
+.MWizardBtn2{ text-align: center;}
+.MWizardBtn2 .iBtn1{ display: inline-block; width: 49%;_width:46%; }
+
+/* 资源管理器 */
+.MExplorer{ padding-bottom: 70px;}
+.MExplorer_Con{ position: relative; padding-bottom: 20px;}
+.MExplorer .iItem_L1{ height: 70px; background-position: 0 25px; background-color: #EEEEEE;}
+.MExplorer .iItem_L1_x{ height: 70px; line-height: 70px; background: url(css_lan/ipt_ico_1.png) right center no-repeat; font-size: 14px;}
+.MExplorer .iItem_L1 img{ width: 50px; height: 50px; vertical-align: middle; margin: 0; padding: 0 15px 0 0;}
+.MExplorer_Exe{ height: 50px; position: relative;z-index:13;}
+.MExplorer_Exe .exe0,
+.MExplorer_Exe_down .exe1,
+.MExplorer_Exe_down .exe2,
+.MExplorer_Exe_down .exe3,
+.MExplorer_Exe_down .exe4,
+.MExplorer_Exe_down .exe5,
+.MExplorer_Exe_down .exe6,
+.MExplorer_Exe_down .exe7,
+.MExplorer_Exe_down .exe8,
+.MExplorer_Exe .exe9,
+.MExplorer_Exe .exe10{ display: block; width: 30px; height: 30px; float: right; background: url(css_lan/explorer_ex.png) no-repeat; margin-right: 4px; cursor:pointer;}
+.MExplorer_Exe .exe0{ background-position: 0 -150px; }/*去掉visibility: hidden;*/
+.MExplorer_Exe .exe0 input{ width: 30px; height: 30px; overflow: hidden; opacity: 0; filter:alpha(opacity=0);}
+.MExplorer_Exe_down .exe1{ background-position: 4px 4px;}
+.MExplorer_Exe_down .exe2{ background-position: 4px -46px;}
+.MExplorer_Exe_down .exe3{ background-position: 4px -96px;}
+.MExplorer_Exe_down .exe4{ background-position: 4px -196px;}
+.MExplorer_Exe_down .exe5{ background-position: 4px -246px;}
+.MExplorer_Exe_down .exe6{ background-position: 4px -296px;}
+.MExplorer_Exe_down .exe7{ background-position: 4px -346px;}
+.MExplorer_Exe_down .exe8{ background-position: 4px -396px;}
+.MExplorer_Exe .exe9{ background-position: 0 -450px;}
+.MExplorer_Exe .exe10{ background-position: 0 -500px; margin-right: 14px; _margin-right: 7px;}
+.MExplorer_Exe_fixed{ position: fixed; padding: 10px 0; height: 30px; top:44px; left:0; right:0; z-index: 13; background: url(css_lan/explorer_ex_bg.png) repeat-x;}
+html.PadUI .MExplorer_Exe_fixed{ left:300px;}
+.MExplorer_Exe_down{
+    position: fixed; top:97px; right: 6px; z-index: 14; background-color: #FFFFFF; border: 1px solid #377C92; border-bottom: none;
+    background: url(css_lan/explorer_ex_line.png) repeat;
+}
+.MExplorer_Exe_downc{
+    position: relative; z-index: 14;
+}
+.MExplorer_Exe_down .MExplorer_Exe_downc span{
+    display: block; float:none; width: auto; padding: 4px 10px 4px 40px; margin-bottom: 1px; margin-right: 0; line-height: 30px; height: 30px; overflow: hidden;
+}
+.MExplorer_Exe_pt{
+    width: 24px; height: 12px; position: absolute; right: 70px; margin-top:-12px;
+    background: url(css_lan/explorer_ex.png) no-repeat -2px -550px;
+    z-index: 14;
+}
+
+.MExplorer_dos{ z-index:4; display: none;margin:40px 10px -95px 0; position: absolute; right: 0;}
+.MExplorer_dos_c{ min-height: 63px; max-height: 65px; _height: 65px; max-width: 300px; min-width: 240px; _width:300px; padding-top: 4px; z-index:5; background-color: #FFF; position: relative; +position: static; border-radius: 8px;border: 1px solid #414141; box-shadow: 0 0 6px #333;background-color: #FFF;cursor:pointer; }
+.MExplorer_dos span.x{margin:0 4px;min-height:15px;max-height:25px;line-height:10px;word-break: break-all;background-image: url(css_lan/explorer_do.png);background-repeat:no-repeat; float: left; display: block; padding-top: 40px;width: 50px; _width: 50px; overflow: hidden; _overflow: visible;  text-align: center;font-size:13px;}
+.MExplorer_dos .do1{ background-position:center  -2px;}
+.MExplorer_dos .do2{ background-position:center  -107px}
+.MExplorer_dos .do3{ background-position:center  -208px;}
+.MExplorer_dos .do4{ background-position:center  -306px;}
+.MExplorer_dos .do5{ background-position:center  -405px;}
+
+.MExplorer_li{ display: block; text-decoration: none; color: #353535; height: 50px; border-bottom: 1px solid #828282; background-color: #FFFFFF; position: relative; +position: static; }
+.MExplorer_li:nth-child(2n){ background-color: #E9E9E9;}
+.MExplorer_name{ height: 20px; padding-top:5px; margin-right: 40px; font-size: 14px; font-weight: 600; overflow: hidden; text-overflow: clip; white-space: nowrap;}
+.MExplorer_desc{ height: 20px; padding-top: 5px; color: #888888; position:absolute;  _position:static;}
+.MExplorer_desc span{ display: inline-block;}
+.MExplorer_desc span.s1{ width: 80px;}
+.MExplorer_point,.MExplorer_point_down{ height: 50px; width: 60px; float: right; z-index: 2; background: url(css_lan/explorer_elect.png) no-repeat center 10px;}
+.MExplorer_point_down{ background-position: center -40px;}
+
+.MExplorer_lix{ height: 50px; padding-left: 70px; background: url(css_lan/explorer_icons.png) no-repeat;}
+.MExplorer_lix_view{ width: 40px; height: 40px; position: absolute; margin: 5px 0 0 15px; overflow: hidden;}
+.MExplorer_lix_view img{ padding: 0; margin: 0; display: block; border: none; width: 40px; height: 40px; border-radius: 6px;}
+.MExplorer_li .tp_directory{ background-position: 0 -100px;}
+.MExplorer_li .tp_updirectory{ background-position: 0 -600px;}
+/* 图片格式  */
+.MExplorer_li .tp_jpg,
+.MExplorer_li .tp_png,
+.MExplorer_li .tp_bmp,
+.MExplorer_li .tp_gif,
+.MExplorer_li .tp_tif,
+.MExplorer_li .tp_tiff,
+.MExplorer_li .tp_jpeg{background-position: 0 -400px;}
+/* 视频格式  */
+.MExplorer_li .tp_mp4,
+.MExplorer_li .tp_rmvb,
+.MExplorer_li .tp_avi,
+.MExplorer_li .tp_flv,
+.MExplorer_li .tp_wmv,
+.MExplorer_li .tp_mkv,
+.MExplorer_li .tp_mov,
+.MExplorer_li .tp_m2ts,
+.MExplorer_li .tp_m4v,
+.MExplorer_li .tp_mpeg,
+.MExplorer_li .tp_mpg,
+.MExplorer_li .tp_vob,
+.MExplorer_li .tp_vcf,
+.MExplorer_li .tp_3gp{background-position: 0 -500px;}
+/* 音乐格式  */
+.MExplorer_li .tp_mp3,
+.MExplorer_li .tp_wma,
+.MExplorer_li .tp_aif,
+.MExplorer_li .tp_aiff,
+.MExplorer_li .tp_aac,
+.MExplorer_li .tp_m4a,
+.MExplorer_li .tp_ogg,
+.MExplorer_li .tp_flac,
+.MExplorer_li .tp_alac,
+.MExplorer_li .tp_wmal,
+.MExplorer_li .tp_wav{background-position: 0 -300px;}
+/* 文档格式  */
+.MExplorer_li .tp_xsl,
+.MExplorer_li .tp_xslx,
+.MExplorer_li .tp_docx,
+.MExplorer_li .tp_txt,
+.MExplorer_li .tp_php,
+.MExplorer_li .tp_asp,
+.MExplorer_li .tp_jsp,
+.MExplorer_li .tp_key,
+.MExplorer_li .tp_numbers,
+.MExplorer_li .tp_pages,
+.MExplorer_li .tp_pdf,
+.MExplorer_li .tp_ppt,
+.MExplorer_li .tp_pptx,
+.MExplorer_li .tp_xls,
+.MExplorer_li .tp_xlsx,
+.MExplorer_li .tp_doc{background-position: 0 -200px;}
+
+.MExplore_ipt1{ padding: 2px 10px; border: 2px solid #B6B5B5; border-radius: 6px; box-shadow: inset 0 0 2px #333; overflow: hidden;}
+.MExplore_ipt1 input{ color:#CB7A7C; border: 0; display: block; margin: 0; width: 256px; height: 28px; line-height: 28px; outline: none; background-color: #FFFFFF;}
+
+/* dlna cast 推送 */
+.MExplorer_tui{
+    width: 50px; height: 40px; background: url(css_lan/tui.png) no-repeat 10px 10px; position: absolute; right: 10px; top:4px;
+}
+.MExplorer_tui_c{
+    position: absolute; right: 10px; top:23px; z-index: 3; display: none;
+}
+.MExplorer_tui_cc{
+    position: relative; background-color: #FFFFFF; border:1px solid #D4D4D4; border-radius: 4px;
+}
+.MExplorer_tui_point{
+    width: 20px; height: 6px; position: absolute; right: 10px; top:-6px; z-index: 2; background: url(css_lan/tui_point.png) no-repeat;
+}
+.MExplorer_tui_dlna{
+    height: 34px; line-height: 34px; background: url(css_lan/dlna_icon_1.png) no-repeat 10px center; padding-left: 50px; padding-right: 10px;
+}
+.MExplorer_tui_line{
+    height: 1px; overflow: hidden; background-color: #D4D4D4;
+}
+.MExplorer_tui_cast{
+    height: 34px; line-height: 34px; background: url(css_lan/cast_icon_1.png) no-repeat 10px center; padding-left: 50px; padding-right: 10px;
+}
+.MExplorer_tui_cast:hover{background-color:#D0D0D0;}
+.MExplorer_tui_dlna:hover{background-color:#D0D0D0;}
+/* 通用上传 */
+.MUpload_Mask{ position:fixed; _position: absolute; z-index: 300; _width: 100%; _height: 100%; background-color: rgba(0,0,0,0.5); filter:progid:DXImageTransform.Microsoft.gradient(startColorStr=#20000000,endColorStr=#20000000); background: rgba(0,0,0,0.2); background:url(css_lan/alpha.png)\9; top:0; left:0; bottom: 0; right: 0;}
+html.PadUI .MUpload_Mask{_padding-left:300px;}
+.MUpload_C{width: 90%; min-width: 300px;  max-width: 460px; _width:460px; overflow: visible; margin: 5% auto 0 auto; /*border: 1px solid #3E3E3E;*/border-top:32px solid #2699C6; border-radius: 8px; background-color: #FFF; position: relative;}
+.MUpload_C_C{ position: relative; max-height:270px; _height: 150px; overflow: hidden;}
+.MUpload_L{ padding: 9px 50px; position: relative; background: url(css_lan/upload_type.png) no-repeat 10px center; border-bottom: 1px solid #3E3E3E;border-top: 1px solid #3E3E3E;}
+.MUpload_L:last-child{ border-bottom: none;}
+.paste_copy{ background: url(css_lan/t_copy.png) no-repeat 10px center;}
+.paste_move{ background: url(css_lan/t_move.png) no-repeat 10px center;}
+.MUpload_btn{ border-top: 1px solid #3E3E3E; text-align: center; padding: 10px 50px;}
+.MUpload_btn .iBtn2{ display: block;}
+.MUpload_del{ width: 30px; height: 30px; background: url(css_lan/upload_close.png) no-repeat; position: absolute; right: 13px; top: 32px;z-index:45;}
+.MUpload_dell{ width: 30px; height: 30px; background: url(css_lan/cancel.png) no-repeat; position: absolute; right: 13px; top: 32px;z-index:45;}
+
+.MUpload_del:hover,.MUpload_del:active{ background-position: 0 -40px;}
+.MUpload_delAll{
+    right: 0px; top:-31px;
+	background:url(css_lan/cancel.png) no-repeat;
+	width: 30px;
+    z-index: 45;
+	 height: 30px;
+	 cursor:pointer;
+    position: absolute;
+}
+.MUpload_name{ height: 24px; line-height: 26px; padding:0 0 0 42px; background: url(css_lan/upload_types.png) no-repeat; margin-bottom: 8px; overflow: hidden; white-space: nowrap;}
+.MUpload_tp_xsl,
+.MUpload_tp_xslx,
+.MUpload_tp_docx,
+.MUpload_tp_txt,
+.MUpload_tp_php,
+.MUpload_tp_asp,
+.MUpload_tp_jsp,
+.MUpload_tp_doc{background-position: 0 -30px;}
+.MUpload_tp_mp3,
+.MUpload_tp_wma,
+.MUpload_tp_wav{background-position: 0 -60px;}
+.MUpload_tp_mp4,
+.MUpload_tp_rmvb,
+.MUpload_tp_avi,
+.MUpload_tp_flv,
+.MUpload_tp_wmv,
+.MUpload_tp_mkv,
+.MUpload_tp_mov,
+.MUpload_tp_3gp{background-position: 0 -90px;}
+.MUpload_tp_jpg,
+.MUpload_tp_png,
+.MUpload_tp_bmp,
+.MUpload_tp_gif{background-position: 0 -120px;}
+.MUpload_press_img{ height: 14px; background: url(css_lan/upload_press.png) repeat-x 0 -20px; border: 1px solid #1F1F1F; border-radius: 7px; box-shadow: 0 0 8px #000; overflow: hidden;}
+.MUpload_press_imgc{ height: 14px; border: 1px solid #1F1F1F; border-radius: 7px; margin: -1px; background: url(css_lan/upload_press.png) repeat-x; width: 0;}
+.MUpload_press_txt{ margin-top: 6px; color: #898989; text-shadow: none;}
+
+.MDLNABtn{ width: 50px; height: 40px; background: url(css_lan/dlna_icon.png) no-repeat center #FFFFFF; float:right; margin-right:20px; _margin-right:10px; margin-top: 4px;border:1px solid #888C88; border-radius:8px;}
+.MDLNABtn:hover{box-shadow:0 0 1px; border:1px solid #888C88;}
+
+.MCASTBtn{display:none; width: 50px; height: 40px; background: url(css_lan/cast_icon.png) no-repeat center #FFFFFF; float:right; margin-right:20px; _margin-right:10px; margin-top: 4px;border:1px solid #888C88; border-radius:8px;}
+.MCASTBtn:hover{box-shadow:0 0 1px; border:1px solid #888C88;}
+
+/* 固件下载 */
+.MDownLoad{ width: 260px; background-color: #FFF; border: 1px solid #C40000; margin: 30px auto 0 auto; background-image: url(css_lan/download_firmware.png);}
+.MDownLoad:last-child{ border-bottom: 1px solid #C40000;}
+.MDownLoad .MUpload_del{ margin-top: -22px;}
+
+/* 图片查看 */
+.MPhotoView{ background-color: rgba(51,51,51,1.0);background-color:#333\9;position: fixed; _position: absolute; top:0; bottom: 0; left:0; right:0;}
+.MPhotoView_left{ position: fixed; height: 100%; cursor: pointer; background: url(css_lan/viewpoing.png) no-repeat 2px 50%;left:0;width:60px;z-index:40;} /*update*/
+.MPhotoView_right{position: fixed; height: 100%; cursor: pointer; background: url(css_lan/viewpoing.png) no-repeat -100px 50%; width:62px;z-index:40;right:0;top:0;}/*update*/
+.MPhotoView_right:hover{-moz-opacity: 0.5; /* FF 3.5以下 */ opacity: 0.5; /* FF 3.5及以上 */ filter: alpha(opacity=50); /* IE6及以上 */ background-color:rgba(0,0,0,0.1);}
+.MPhotoView_left:hover{-moz-opacity: 0.5; /* FF 3.5以下 */ opacity: 0.5; /* FF 3.5及以上 */ filter: alpha(opacity=50); /* IE6及以上 */ background-color:rgba(0,0,0,0.1); }
+.MPhotoView_right:active{-moz-opacity: 0.3; /* FF 3.5以下 */ opacity: 0.3; /* FF 3.5及以上 */ filter: alpha(opacity=30); /* IE6及以上 */  } 	/*不要和下面样式合并，否则前一个样式不透明*/
+.MPhotoView_left:active{ -moz-opacity: 0.3; /* FF 3.5以下 */ opacity: 0.3; /* FF 3.5及以上 */ filter: alpha(opacity=30); /* IE6及以上 */  }
+.MPhotoView_con{ position: relative; border-radius: 10px;} /*-moz-transition:all .4s linear; -webkit-transition:all .8s linear; transition:all .8s linear;*/
+.MPhotoView_con img{ padding: 0; border-radius: 10px; margin: 0; border:none;}
+.MPhotoView .MUpload_del{ border-radius: 16px; top:10px; right:10px; box-shadow: 0 0 3px #999;}
+.MPhotoView_NLoading{_position:absolute; position: fixed; _width: 100%; _height: 100%; background: url(css_lan/ajax_loader.gif) center no-repeat; filter:progid:DXImageTransform.Microsoft.gradient(startColorStr=#20000000,endColorStr=#20000000); top:0; bottom: 0; left:0; right: 0;}
+.MPhotoViewHide .MPhotoView_left,.MPhotoViewHide .MPhotoView_right,.MPhotoViewHide .MDlna_del{ visibility: hidden;}
+.MDlna_del{ width: 65px; height: 53px; background: url(css_lan/dlna_close.png) no-repeat 10px 0px;; position: absolute; right: 0px; top: 0px;z-index:45;}
+.MDlna_del:hover,.MDlna_del:active{ background-position: 10px -55px;}
+
+/* 系统设置 */
+.MSystem,.MSystemTime{padding: 25px 20px;}
+.MSystem .iBox_C2{ margin-bottom: 20px; padding: 10px;}
+.MSystemTime .iBox_C2{ margin-bottom: 20px;}
+.MSystem_tip{ border: 3px solid #3D749A; border-radius: 12px; margin: 30px 0 0 0; padding: 18px; font-size: 18px; font-weight: 600;}
+.MSystem_tip_h{  margin-top: -40px; position: absolute; z-index: 2; width: 36px; height: 36px; background: url(css_lan/system_tip.png) no-repeat; font-size: 24px; font-weight: 900; text-align: center; line-height: 36px;}
+.MSystemTime .line{ padding: 10px;}
+.MSystemTime .iRight{ padding-right: 0px; color: #7F0000; margin-top:-20px; }
+.MSystemTime_L{ height: 44px; padding-left: 5px;}
+.MSystemTime_t{ width: 67px; float: left; padding-left: 15px;}
+.MSystemTime_t input{ display: block; border: none; background: url(css_lan/ipt_time.png) no-repeat; width: 67px; height: 28px; line-height: 28px; text-align: center;}
+.MSystemTime_t span{ display: block; text-align: center; color: #B62D30;}
+.MSystemNoIpt input{ color: #999;}
+
+.MSystemZoneOpt{height: 278px;}
+.MSystemTimeOpt{ position: absolute; width: 61px; height: 130px; padding: 3px 4px 4px 4px; border: none; border-radius: 0; background: url(css_lan/ipt_time_select.png) no-repeat 0 0;}
+.MSystemTimeOpt1{}
+.MSystemTimeOpt2{}
+.MSystemTimeOpt3{}
+.MSystemTimeOpt4{}
+.MSystemTimeOpt5{}
+.MSystemTimeOpt6{}
+.MSystemTimeOpt .line,.MSystemTimeOpt .linese{ height: 25px; line-height: 25px; background: none; padding: 0; text-align: center;}
+.MSystemIntervalOpt{ max-height: none;}
+
+.MSystemBack{ margin-top: 30px;}
+
+.MSystemFile{ padding-top: 8px;}
+.MSystemFile form{ padding:0; margin:0; border:none;}
+.MSystemFile .iIpt3_r{ width: 140px; background: url(css_lan/btn_upload.png); text-align: center; z-index: 10;}
+.MSystemFile .file{ position: relative; height: 34px; width: 140px; overflow: hidden;}
+.MSystemFile #file{ _position: relative; _width: 100%;}
+.MSystemFile .file span{ position: absolute; right: 0; line-height: 34px; width: 100%; text-align: center; color: #FFF; box-shadow:1px 1px 1px #333; cursor:pointer;}
+.MSystemFile .file var{ display: block; width: 140px; height: 34px; overflow: hidden; cursor:pointer; position: relative;}
+.MSystemFile .file input{ width: 280px; height: 34px; opacity: 0; filter:alpha(opacity=0); color: #98080D; overflow:hidden; cursor:pointer; margin-left:-80px; margin-left:-130px\9; font-size:50px;}
+
+/* PadUI 左部界面 */
+html.PadUI{ padding-left: 300px; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -o-box-sizing: border-box;}
+html.PadUI .NMOpt{_padding-left:300px;}
+html.PadUI .NCOpt{margin-top:40px;}
+html.PadUI .MSystemTimeOpt{ margin-left: 0;}
+.MPadList{ width: 300px; left:0; top:45px; bottom: 0; +height: 100%; position: fixed; _position: absolute; box-shadow: 4px 0 8px #999; display: none;}
+html.PadUI .MHeader{ left:300px;}
+html.PadUI .MPadList{ display: block;}
+.MPadIcons{ height: 100%; top:0; bottom: 0; position: relative; border-right: 1px solid #797979;}
+.MPadIconsView{ position: absolute; width: 100%; +padding-bottom: 45px; _padding-bottom: 0;}
+.MPadList .NCOpt_rs{ position: absolute; z-index: 2; float: none; right: 2px;}
+html.PadUI .MPadList .MHeader{ width: 299px; border-right: 1px solid #797979; _top: -45px; left:0;}
+.MPadList .ico{ display: block; margin: 8px 0 8px 8px; padding: 8px 0 8px 8px; font-size: 14px; text-decoration: none; color: #353535; cursor: pointer;}
+.MPadList .view{ background-color: #FFFFFF; border-radius: 8px 0 0 8px; border-top: 1px solid #797979; border-left: 1px solid #797979; border-bottom: 1px solid #797979; box-shadow: 0 0 8px #666;}
+.MPadList img,.MPadList .iPNGIE6{ width: 58px; height: 58px; vertical-align: middle; margin-right: 8px;border:none;}
+html.PadUI .NLoading{ padding-left: 300px; position: fixed;_position: absolute;}
+html.PadUI .NLoading a{ padding-left: 300px;}
+.iAbsolute{ position: absolute;}
+
+
+
+/*竖屏*/
+@media screen and (orientation:portrait) {
+
+}
+/*横屏*/
+@media screen and (orientation:landscape) {
+
+}

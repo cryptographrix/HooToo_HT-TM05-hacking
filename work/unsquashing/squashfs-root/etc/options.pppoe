@@ -1,0 +1,17 @@
+noauth
+user '075507464614@163.gd'
+password 'TTGMNANG'
+hide-password
+noipdefault
+defaultroute
+nodetach
+usepeerdns
+persist
+ipcp-accept-remote
+ipcp-accept-local
+lcp-echo-failure 10
+lcp-echo-interval 30
+ktune
+default-asyncmap nopcomp noaccomp
+novj nobsdcomp nodeflate
+plugin /usr/lib/ppp/rp-pppoe.so eth2.2

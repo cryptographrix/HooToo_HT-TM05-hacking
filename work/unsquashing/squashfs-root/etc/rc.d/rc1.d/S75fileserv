@@ -1,0 +1,100 @@
+#! /bin/sh
+# Const
+PIDPATH=/var/run
+PRGNAME=fileserv
+SRVNAME=fileserv
+# Source function library.
+. /etc/init.d/vstfunc
+
+# Lock the file server script
+AppScriptLock fileservscript
+if [ $? -eq 0 ];then
+	exit 0
+fi
+
+# Function
+start() {
+    	#check
+    	checkonly $PRGNAME
+    	if [ $? -eq 0 ];then
+    		AppScriptUnlock fileservscript
+        	exit 0
+    	fi
+	# Sync configure file
+	sync
+
+	if [ ! -e /var/log/lighttpd ]; then
+		mkdir -p /var/log/lighttpd
+	fi
+	if [ ! -e /var/cache/lighttpd ]; then
+		mkdir -p /var/cache/lighttpd
+	fi
+	for i in `ls /data`; do
+		for j in `ls /data/$i`; do
+	        	mkdir -p /data/$i/$j/.vst/upload
+                        mkdir -p /data/$i/$j/.vst/tmp
+			rm -f /data/$i/$j/.vst/fileserv*
+	        done
+        done
+
+#	if [ -e /data/UsbDisk1/Volume1 ]; then
+#		mkdir -p /data/UsbDisk1/Volume1/.vst/upload
+#	fi
+	#Start flash policy
+#	/usr/sbin/policyflash 843
+#	if [ $? -eq 0 ];then
+#		savesc 3 /usr/sbin/policyflash policyflash
+#	fi
+	#Start upload daemon
+#	nice -n 10 /usr/sbin/upload &
+#	if [ $? -eq 0 ];then
+#		savesc 3 /usr/sbin/upload upload
+#	fi
+
+	#Start rinetd
+#	/usr/sbin/rinetd &
+#	if [ $? -eq 0 ];then
+#		savesc 3 /usr/sbin/rinetd rinetd
+#	fi
+
+    	nice -n 10 /usr/sbin/$PRGNAME -f /etc/fileserv/lighttpd.conf -m /usr/lib/fileserv
+    	if [ $? -eq 0 ];then
+		savesc 3 /usr/sbin/$PRGNAME $SRVNAME
+    	fi
+    	return $?
+}
+stop() {
+	killproc policyflash
+#	killproc upload
+	killproc rinetd
+
+	rm -rf /var/run/lighttpd.pid
+	killproc $PRGNAME
+	killproc $PRGNAME
+	return $?
+}	
+restart() {
+	stop
+	start
+}
+# Select
+case "$1" in
+  	start)
+  		start
+		;;
+  	stop)
+  		stop
+		;;
+  	restart)
+  		restart
+		;;
+  	*)
+		echo $"Usage: $0 {start|stop|restart}"
+		AppScriptUnlock fileservscript
+		exit 1
+		;;
+esac
+
+AppScriptUnlock fileservscript
+exit $?
+

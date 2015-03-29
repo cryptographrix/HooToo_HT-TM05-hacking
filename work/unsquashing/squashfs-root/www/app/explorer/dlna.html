@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1; minimum-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+	<script type="text/template">
+		<!--^li-->
+		<a class="MExplorer_li" id="lix_{#i}" href="{#href}" target="_blank">
+			{#playview}
+			{#imgview}
+			<!-- 显示区域 tp_mp3 mp3为文件格式 -->
+			<div class="MExplorer_lix tp_{#type}" id="iThumbnail_{#i}_bg">
+				<div class="MExplorer_name">{#name}</div>
+				<div class="MExplorer_desc">
+					{#attr}
+				</div>
+			</div>
+		</a>
+		<!--li$-->
+	</script>
+	<script type="text/javascript" src="../../script/config.js"></script>
+</head>
+<body>
+<div class="MPadList" id="pad_ui_con">
+	<div class="MHeader">
+		<div class="MHeader_r">
+			<a href="javascript:void($.systemOut());" class="MHeader_btn1"></a>
+		</div>
+		<b class="MHeader_txt0" id="pad_ui_title"></b>
+	</div>
+	<div class="MPadIcons" id="pad_ui_icons">
+		<div class="NCOpt_rs" id="pad_ui_icons_rs"></div>
+		<div class="MPadIconsView" id="pad_ui_icons_view">
+			<div class="ico" id="li_videos"><span Lge="[img_metro]videos.png"></span><span Lge="Metro_videos"></span><span id="count_videos"></span></div>
+			<div class="ico" id="li_photos"><span Lge="[img_metro]photos.png"></span><span Lge="Metro_photos"></span><span id="count_photos"></span></div>
+			<div class="ico" id="li_music"><span Lge="[img_metro]music.png"></span><span Lge="Metro_music"></span><span id="count_music"></span></div>
+			<div class="ico" id="li_documents"><span Lge="[img_metro]documents.png"></span><span Lge="Metro_documents"></span><span id="count_documents"></span></div>
+		</div>
+	</div>
+</div>
+<div class="MHeader">
+	<div class="MHeader_l" id="b_back" style="display:block">
+		<a href="javascript:void(history.back());" class="MHeader_back"><span Lge="Prompt_back"></span></a>
+	</div>
+    <div class="MHeader_r" id="admin_back">
+		<a href="javascript:void($.vhref('main.html'));" class="MHeader_btn2"></a>
+	</div>
+      <!--
+       	<div class="MHeader_l">
+		<a href="javascript:void(history.back());" class="MHeader_back"><span Lge="Prompt_back"></span></a>
+	</div>
+	<div class="MHeader_r">
+		<a href="javascript:void($.vhref('main.html'));" class="MHeader_btn2"></a>
+	</div>-->
+	<b class="MHeader_txt1" id="title"></b>
+</div>
+<div class="MContent">
+	<div class="MMCenter">
+		<!-- 文件操作 -->
+		<div class="MExplorer_Con" id="con_videos" style=" display: none;"></div>
+		<div class="MExplorer_Con" id="con_photos" style=" display: none;"></div>
+		<div class="MExplorer_Con" id="con_music" style=" display: none;"></div>
+		<div class="MExplorer_Con" id="con_documents" style=" display: none;"></div>
+	</div>
+</div>
+
+<div class="NKite" style=" display: none;" id="imgview">
+	<a class="MDlna_del" id="imgview_close" href="javascript:void(0);"></a>
+	<div class="MPhotoView MPhotoViewHide" id="imgview_cot">
+		<div id="imgview_left" class="MPhotoView_left"></div>
+		<div class="MPhotoView_con" id="imgview_con"><div id="imgview_img"></div></div>
+		<div id="imgview_right" class="MPhotoView_right"></div>
+	</div>
+</div>
+</body>
+</html>

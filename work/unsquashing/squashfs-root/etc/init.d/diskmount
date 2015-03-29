@@ -1,0 +1,225 @@
+#!/bin/sh
+# set env
+export PATH=/bin:/sbin:/usr/bin:/usr/sbin
+MOUNTPATH=/data
+
+# include 
+. /etc/init.d/vstfunc
+
+# Startup flag
+. /tmp/startupflag
+if [ -z $STARTUP ]; then
+        STARTUP=0
+fi
+
+# function
+disk_fsk() {
+  case "$4" in
+    ntfs)
+        if [ $SHUTDOWN -eq 0 ];then
+            umount /dev/"$2" > /dev/null 2>&1
+            /usr/sbin/chkntfs -f /dev/"$2"
+             ntfs-3g -o uid=15,gid=0,nls=utf8,umask=0000,fmask=0000,dmask=0000,recover,noatime,force /dev/"$2" "$1/$3" > /dev/null 2>&1
+        fi
+	sleep 2
+#	perm_chk_start $2 0
+    ;;
+    vfat)
+        if [ $SHUTDOWN -eq 0 ] || [ $USBSWITCH -eq 1 ]; then
+           umount /dev/"$2" > /dev/null 2>&1
+           /usr/sbin/dosfsck -a -f -w /dev/"$2"
+           mount -t vfat -o rw,umask=0000,iocharset=utf8 "/dev/$2" "$1/$3" > /dev/null 2>&1
+        fi
+	sleep 2
+	rm -rf $1/$3/fsck0*.rec
+#	perm_chk_start $2 0 
+    ;;
+    ext3)
+        if [ $SHUTDOWN -eq 0 ];then
+            umount /dev/"$2" > /dev/null 2>&1
+            /usr/sbin/e2fsck -a -p /dev/"$2"
+            mount -t ext3 -o rw,acl "/dev/$2" "$1/$3" > /dev/null 2>&1
+        fi
+	sleep 2
+#	perm_chk_start $2 0
+    ;;
+    xfs)
+        if [ $SHUTDOWN -eq 0 ];then
+            umount /dev/"$2" > /dev/null 2>&1
+            /usr/sbin/fsck.xfs /dev/"$2"
+            mount -t xfs -o rw,noatime "/dev/$2" "$1/$3" > /dev/null 2>&1
+        fi
+	sleep 2
+#	perm_chk_start $2 0
+    ;;
+    *)
+        return 0
+  esac
+}
+
+check_dev(){
+        while read device mountpoint fstype remainder; do
+        if [ $device == "/dev/$1" ];then
+        	echo Match $device == "/dev/$1" >> /tmp/diskmount_info
+                return 1
+        fi
+        done < /proc/mounts
+        return 0
+}
+
+try_mount() {
+  nice -n 10 ntfs-3g -o uid=15,gid=0,nls=utf8,umask=0000,fmask=0000,dmask=0000,recover,noatime,force /dev/"$2" "$1/$3" > /dev/null 2>&1
+  if [ $? -ne 0 ];then
+    nice -n 10 mount -t vfat -o rw,umask=0000,iocharset=utf8 "/dev/$2" "$1/$3" > /dev/null 2>&1
+    if [ $? -ne 0 ];then
+        nice -n 10 mount.exfat-fuse -o rw,umask=000,noatime,async,iocharset=utf8 "/dev/$2" "$1/$3" > /dev/null 2>&1
+        if [ $? -ne 0 ];then
+		nice -n 10 mount -o readahead=128k -t tntfs /dev/"$2" "$1/$3" > /dev/null 2>&1
+		if [ $? -ne 0 ];then
+			nice -n 10 mount -t texfat -o umask=000,readahead=64KB "/dev/$2" "$1/$3" > /dev/null 2>&1
+			if [ $? -ne 0 ];then
+				nice -n 10 mount -t thfsplus "/dev/$2" "$1/$3" > /dev/null 2>&1
+                     		if [ $? -ne 0 ];then
+                     		   echo "Fail to Mount /dev/$2 on $1/$3" > /dev/null 2>&1
+                     		fi
+			fi
+		fi
+        fi
+    fi
+  fi
+}
+
+all_mount() {
+	case "$4" in
+	ntfs)
+		nice -n 10 ntfs-3g -o uid=15,gid=0,nls=utf8,umask=0000,fmask=0000,dmask=0000,recover,noatime,force /dev/"$2" "$1/$3" > /dev/null 2>&1
+		if [ $? -ne 0 ]; then
+			try_mount $1 $2 $3 $4
+		fi
+		;;
+
+	fat16|fat32|vfat)
+		nice -n 10 mount -t vfat -o rw,umask=0000,iocharset=utf8 "/dev/$2" "$1/$3" > /dev/null 2>&1
+		if [ $? -ne 0 ]; then
+			try_mount $1 $2 $3 $4
+		fi
+		;;
+
+	ext3)
+		nice -n 10 mount -t ext3 -o rw "/dev/$2" "$1/$3" > /dev/null 2>&1
+		if [ $? -ne 0 ]; then
+			try_mount $1 $2 $3 $4
+		fi
+		;;
+	xfs)
+		nice -n 10 mount -t xfs -o rw,noatime "/dev/$2" "$1/$3" > /dev/null 2>&1
+		if [ $? -ne 0 ]; then
+			try_mount $1 $2 $3 $4
+		fi
+		;;
+	*)
+		return 0
+	esac
+}
+
+mkdir_mount() {
+	if [ "$5" == "HardDisk" ]; then
+		mkdir -m 777 -p "$1/$3" > /dev/null 2>&1
+	else
+		mkdir -m 777 -p "$1/$3" > /dev/null 2>&1
+	fi
+	all_mount $1 $2 $3 $4
+	if [ "$5" == "HardDisk" ]; then
+		chmod 775 "$1/$3" > /dev/null 2>&1
+	else
+		chmod 777 "$1/$3" > /dev/null 2>&1
+	fi
+}
+
+check_mount(){
+	while read device mountpoint fstype remainder;do
+        	if [ "$mountpoint" == "$1/$2" ];then
+			return 1
+        	fi
+        done < /proc/mounts
+
+	return 0
+}
+
+# Mount disk partition
+/usr/sbin/diskck > /dev/null 2>&1
+mkdir -p -m 777 $MOUNTPATH > /dev/null 2>&1
+while read pname filesystem volume; do
+	echo $pname >> /tmp/diskmount_info
+	# check
+	if [ -z $pname ];then
+		echo pname is empty >> /tmp/diskmount_info
+                continue
+        fi
+	if [ ! -e "/dev/$pname" ];then
+		echo miss $pname device >> /tmp/diskmount_info
+                continue
+        fi
+ 
+        trynum=0
+        while [ $trynum -lt 3 ]; do
+                check_dev $pname
+                if [ $? -eq 0 ]; then
+                      break
+                else
+                      trynum=$[$trynum+1]
+                fi
+                sleep 1
+        done        
+	if [ $trynum -eq 3 ];then
+		echo fail check $pname >> /tmp/diskmount_info
+		cat /proc/mounts >> /tmp/diskmount_info
+        	continue
+	fi
+	
+        nordev=`echo $pname | cut -c -3`
+        s_str=`ls -l /sys/block/$nordev/device`
+        while read DEVTAG HDTAG HDNUM;do
+        	str_func_strstr "$s_str" "$DEVTAG"
+                if [ $? -eq 1 ]; then
+                        mkdir_mount "$MOUNTPATH/$HDTAG$HDNUM" "$pname" "$volume" "$filesystem" "$HDTAG"
+			sleep 1
+                        check_mount "$MOUNTPATH/$HDTAG$HDNUM" "$volume"
+                        if [ $? -eq 0 ]; then
+                        	rmdir "$MOUNTPATH/$HDTAG$HDNUM/$volume"
+			else
+        			# mkdir .vst and create usb event
+        			mkdir -p $MOUNTPATH/$HDTAG$HDNUM/$volume/.vst
+        			mkdir -p $MOUNTPATH/$HDTAG$HDNUM/$volume/.vst/upgrade
+        			/usr/sbin/mkusbevent $1/$2 1
+
+        			# on led
+#        			/usr/sbin/usbledck 0 $nordev
+				break
+                        fi
+		fi
+        done < /etc/init.d/disktag
+	touch /tmp/"$nordev"_plugflag #add by zhangwei 2012-10-15
+done < /tmp/diskpartinfo
+
+#check /data/UsbDisk1/Volume1 add by zhangwei 20121026
+if [ ! -e /data/UsbDisk1/Volume1 ];then 
+#	check_mount /data/UsbDisk2/ Volume1 
+	if [ -e /data/UsbDisk2/Volume1 ];then
+		echo mkdir -p /data/UsbDisk1
+		mkdir -p /data/UsbDisk1
+		ln -fs /data/UsbDisk2/Volume1 /data/UsbDisk1/Volume1
+	fi
+fi
+#
+# Set disk shutdown flag, and sync flash
+#
+if [ -e /etc/rc.d/rc1.d/S32smbd ] && [ $STARTUP -eq 0 ]; then
+        /etc/init.d/smb.sh restart
+fi
+
+#add by zhangwei
+/usr/sbin/update_smb /etc/samba/smb.conf
+
+exit
+

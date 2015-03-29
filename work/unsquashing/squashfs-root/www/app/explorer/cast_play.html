@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html ui_type="noPadUI" class="MDLNAVideo">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1; minimum-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+	<script type="text/javascript" src="../../script/config.js"></script>
+</head>
+<body>
+<!-- 头 -->
+<div class="MHeader">
+	<div class="MHeader_l" id="b_back" style="display:block">
+		<a href="javascript:void(history.back());" class="MHeader_back"><span lge="Prompt_back"></span></a>
+	</div>
+	<div class="MHeader_r" id="admin_back">
+		<a href="javascript:void(0);" id="show_DlnaDevice" class="MHeader_btn2x"></a>
+	</div>
+	<b class="MHeader_txt1" id="title"></b>
+</div>
+
+<!-- 尾部 -->
+<div class="MDLNAVideoFoot">
+	<div class="MDLNAVideoProgress">
+		<div class="MDLNAVideoProgressRight"><span id="play_0">00:00:00</span></div>
+		<div class="MDLNAVideoProgressLeft"><span id="play_1">00:00:00</span></div>
+		<div class="MDLNAVideoProgressCon" id="play_progress_cot">
+			<var id="play_progress"><i id="play_progress_ico"></i></var>
+		</div>
+	</div>
+	<div class="MDLNAVideoPlay">
+		<var class="play" id="play_status"></var>
+	</div>
+</div>
+
+<div class="MDLNAVolume">
+	<var id="volume_c">
+		<em id="volume_h">
+			<i id="volume_y"></i>
+			<span><!--<img src="/themes/default/img/progress1.png" />--></span>
+		</em>
+	</var>
+</div>
+
+<div id="sel_dlna" class="MDlNASel">
+	<div id="sel_dlnaClose"   class="MDLNASelctClose"></div>
+	<div id="sel_dlnaRefresh" class="MDLNARefresh"></div>
+	<div id="sel_dlnaTitle"   class="MDLNATitle"><span lge="DLNAPLAY_Elect"></span></div>
+	<div id="sel_dlnaDeviceList" class="MDLNADeviceList"></div>
+</div>
+
+<!-- 中部 -->
+<div class="MDLNAVideoCon">
+	<div class="MDLNAVideoNoBox">
+		<div id="not_dlna" class="MDLNANotSel">
+			<i></i>
+			<span id="dlna_info"></span>
+		</div>
+	</div>
+</div>
+</div>
+</body>
+</html>

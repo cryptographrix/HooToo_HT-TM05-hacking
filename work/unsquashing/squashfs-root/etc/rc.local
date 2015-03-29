@@ -1,0 +1,50 @@
+#!/bin/sh
+# call extern shell
+
+STARTFLAG=0
+
+if [ -e /data/HardDisk1/Volume1 ]; then
+        EXTERN_DIR=/data/UsbDisk1/Volume1
+	if [ -e $EXTERN_DIR/extern_package ]; then
+		mount -o loop $EXTERN_DIR/extern_package /extern
+		/extern/etc/init.d/startup.sh
+		STARTFLAG=1
+	fi
+fi
+
+if [ $STARTFLAG -eq 0 ] && [ -e /data/UsbDisk1/Volume1 ]; then
+        EXTERN_DIR=/data/UsbDisk1/Volume1
+        if [ -e $EXTERN_DIR/extern_package ]; then
+                mount -o loop $EXTERN_DIR/extern_package /extern
+                /extern/etc/init.d/startup.sh
+		STARTFLAG=1
+        fi
+fi
+
+if [ $STARTFLAG -eq 0 ] && [ -e /data/UsbDisk1/Volume2 ]; then
+        EXTERN_DIR=/data/UsbDisk1/Volume2
+        if [ -e $EXTERN_DIR/extern_package ]; then
+                mount -o loop $EXTERN_DIR/extern_package /extern
+                /extern/etc/init.d/startup.sh
+                STARTFLAG=1
+        fi
+fi
+
+if [ $STARTFLAG -eq 0 ] && [ -e /data/UsbDisk2/Volume1 ]; then
+        EXTERN_DIR=/data/UsbDisk2/Volume1
+        if [ -e $EXTERN_DIR/extern_package ]; then
+                mount -o loop $EXTERN_DIR/extern_package /extern
+                /extern/etc/init.d/startup.sh
+                STARTFLAG=1
+        fi
+fi
+
+if [ $STARTFLAG -eq 0 ] && [ -e /data/UsbDisk2/Volume2 ]; then
+        EXTERN_DIR=/data/UsbDisk2/Volume2
+        if [ -e $EXTERN_DIR/extern_package ]; then
+                mount -o loop $EXTERN_DIR/extern_package /extern
+                /extern/etc/init.d/startup.sh
+                STARTFLAG=1
+        fi
+fi
+

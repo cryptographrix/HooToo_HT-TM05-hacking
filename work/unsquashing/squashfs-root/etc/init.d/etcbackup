@@ -1,0 +1,21 @@
+#!/bin/sh
+# tar etc package
+tar cvf /boot/tmp/etc1.tar /etc > /dev/null 2>&1
+echo "#!/bin/sh" > /boot/tmp/etc.tar
+echo "tar etc package" >> /boot/tmp/etc.tar
+crcsum=`cksum /boot/tmp/etc1.tar |sed -e 's/ /Z/' -e 's/   /Z/'|cut -dZ -f1`
+echo "CRCSUM=$crcsum" >> /boot/tmp/etc.tar
+cat /boot/tmp/etc1.tar >> /boot/tmp/etc.tar
+rm -f /boot/tmp/etc1.tar
+if [ "$1" == "" ]; then
+	mv /boot/tmp/etc.tar /www
+else
+	mv /boot/tmp/etc.tar $1
+fi
+
+sleep 1
+
+sync
+
+exit
+

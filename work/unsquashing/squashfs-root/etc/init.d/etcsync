@@ -1,0 +1,18 @@
+#!/bin/sh
+# tar etc package
+#/usr/sbin/etc_tools t
+. /etc/init.d/vstfunc
+
+timedate_save
+
+#rm /boot/tmp/etc.tar.gz
+#tar cvf /boot/tmp/etc.tar /etc > /dev/null 2>&1
+# write flash
+/usr/sbin/etc_tools p
+# wait 3
+#sleep 3
+# sync
+sync
+#backup_etc resume
+
+exit

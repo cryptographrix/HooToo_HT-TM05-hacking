@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1; minimum-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+	<script type="text/javascript" src="../../script/config.js"></script>
+</head>
+<body>
+<div class="MHeader">
+	<div class="MHeader_l">
+		<a href="javascript:void(history.back());" class="MHeader_back"><span Lge="Prompt_back"></span></a>
+	</div>
+	<div class="MHeader_r">
+		<a href="javascript:void($.vhref('main.html'));" class="MHeader_btn2"></a>
+	</div>
+	<b class="MHeader_txt1"><span Lge="Service_DLNA"></span></b>
+</div>
+<div class="MContent"><div class="MMCenter MServices">
+	<!-- 这个是dlna设置界面 -->
+	<div class="iBox_C2">
+		<div class="iItem_P3">
+			<div class="iItem_P3_swicth1">
+				<div class="iSwitch_1-0" id="enable"></div>
+				<!-- 开启时，把样式设置为 MSwitch_1 -->
+				<span Lge="Service_DLNA"></span>
+			</div>
+		</div>
+		<!-- 关闭时，把下面的div的属性设置为none -->
+		<div style="display:none" id="dlnasetting">
+			<div class="iItem_k2">
+				<span lge="Service_DLNA_Name"></span>
+			</div>
+			<div class="iIpt3">
+				<div class="iIpt3_l"></div>
+				<div class="iIpt3_r"></div>
+				<div class="iIpt3_c">
+					<input type="text" class="ipt_v" id="dlna_name" maxlength="50" />
+				</div>
+			</div>
+            <div style=" display: none;" id="only">
+                <div class="iItem_k2">
+                    <span lge="Service_DLNA_Dir"></span>
+                </div>
+                <div class="iIpt3" id="electScanDir_li">
+                    <div class="iIpt3_l"></div>
+                    <div class="iIpt3_rd"></div>
+                    <div class="iIpt3_cd">
+                        <input type="text" class="ipt_v" id="electScanDir" readonly="readonly" forDir="electScanDir_li" />
+                    </div>
+                </div>
+            </div>
+            <div style="display: none;" id="multiple">
+                <div class="right_btn3">
+                    <a href="javascript:void(0);" id="addScanDir" for_pos="dlna_name" class="iBtn2">
+                        <span class="btnc2" lge="Service_DLNA_Dir_Add"></span>
+                    </a>
+                </div>
+                <div class="iItem_k2">
+                    <span lge="Service_DLNA_Dir"></span>
+                </div>
+                <div id="list" class="scan_list"></div>
+            </div>
+		</div>	<!-- id=dlansetting end -->
+	</div>		<!-- class=MBox_C2 end -->
+	<a href="javascript:void(0)" id="submit" hidefocus="true" class="iBtn1">
+		<b class="iBtn1_l"></b>
+		<b class="iBtn1_r"></b>
+		<span class="iBtn1_c" Lge="Prompt_save_value"></span>
+	</a>
+</div></div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1; minimum-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+	<script type="text/javascript" src="../../script/config.js"></script>
+</head>	
+<body>
+<div class="MHeader">
+	<div class="MHeader_l">
+		<a href="javascript:void(history.back());" class="MHeader_back"><span Lge="Prompt_back"></span></a>
+	</div>
+	<div class="MHeader_r">
+		<a href="javascript:void($.vhref('main.html'));" class="MHeader_btn2"></a>
+	</div>
+	<b class="MHeader_txt1"><span Lge="Setting_Network_WPS"></span></b>
+</div>
+<div class="MContent MWPS"><div class="MMCenter MServices">
+<div class="iBox_C2">
+		<div class="iItem_P3">
+			<div class="iItem_P3_swicth1">
+				<div id="enable" class="iSwitch_1-0"></div>
+				<!-- 开启时，把样式设置为 MSwitch_1 -->
+				<span lge="Setting_Network_WPS">WPS</span>
+			</div>
+		</div>
+	</div>
+
+		<div id="wpssetting" style="display:none">
+			<div id="S0" class="iBox_C2" style="margin:0px;padding:0px;">
+		<!-- MBox_L4_elect -->
+		<div id="S0_1" class="iRadio_2">
+			<span lge="Setting_Network_WPS_1">连接WPS</span>
+		</div>
+		<div class="iItem_line1"></div>
+		<div style="display: block;" id="S0_2" class="iRadio_2">
+			<span lge="Setting_Network_WPS_2">WPS PIN 输入</span>
+		</div>
+	</div>
+	<br/>
+		</div>	<!-- id=dlansetting end -->
+		<!-- content S0_1C  -->
+		<div id="S0_1c" style=" display: none;" class="MNetworkInternetCon">
+			<div class="iBox_C2">
+				<div id = "S0_1m">
+					<span id="wps_msg_1">请按下WLAN接入点的WPS保护设置按钮</span><br/>
+					<div class="Progress" id="Progress">
+						<div id="Progress_time" style="width:0%" class="Progress_time"></div>
+					</div>
+				</div>
+				<div id = "S0_2m" style="display:none">
+					<span id="wps_msg_2">WPS 未能成功启动，请重试。</span><br/>
+				</div>
+			</div>
+		</div>
+		<!-- content S0_2C-->
+		<div id="S0_2c" style=" display: none;" class="MNetworkInternetCon">
+			<div class="iBox_C2">
+			<div class="iItem_k2 iBtn3_top2">
+         	<a style=" *bottom:22px;" class="iBtn3" hidefocus="true" id="wps_rescan" href="javascript:void(0);">
+						<b class="iBtn3_l"></b>
+						<b class="iBtn3_r"></b>
+						<span lge="Setting_Network_WPS_GetPin">更新</span></a>
+			</div>
+			<div class="iItem_k2">
+					<span lge="Setting_Network_WPS_WapPin">WAP PIN:</span>
+				</div>
+				<div class="iIpt3_0">
+					<div class="iIpt3_l"></div>
+					<div class="iIpt3_r"></div>
+					<div class="iIpt3_c">
+						<input type="text" id="wap_pin" class="ipt_v" readonly="readonly">
+					</div>
+				</div>
+				<div class="iItem_k2">
+					<span lge="Setting_Network_WPS_Pin">PIN:</span>
+				</div>
+				<div class="iIpt3">
+					<div class="iIpt3_l"></div>
+					<div class="iIpt3_r"></div>
+					<div class="iIpt3_c">
+						<input type="text" id="pin" class="ipt_v">
+					</div>
+				</div>
+			</div>
+		</div>
+	<a class="iBtn1" hidefocus="true" id="confirm_0" style="display:none" href="javascript:void(0)">
+		<b class="iBtn1_l"></b>
+		<b class="iBtn1_r"></b>
+		<span lge="Prompt_OK_value" class="iBtn1_c">确定</span>
+	</a>
+	<a class="iBtn1" hidefocus="true" id="cancel_0" style="display:none" href="javascript:void(0)">
+		<b class="iBtn1_l"></b>
+		<b class="iBtn1_r"></b>
+		<span lge="Prompt_cancel_value" class="iBtn1_c">取消</span>
+	</a>
+	<div class="MWizardBtn2" id="Error" style="display:none">
+		<a class="iBtn1" hidefocus="true" id="retry" href="javascript:void(0)">
+			<b class="iBtn1_l"></b>
+			<b class="iBtn1_r"></b>
+			<span lge="System_Reset_Setting" class="iBtn1_c">重新设置</span>
+		</a>
+		<a class="iBtn1" hidefocus="true" id="cancel_1" href="javascript:void(0)">
+			<b class="iBtn1_l"></b>
+			<b class="iBtn1_r"></b>
+			<span lge="Prompt_cancel_value" class="iBtn1_c">取消</span>
+		</a>
+	</div>	
+		
+	<div class="MSystem_tip">
+		<div class="MSystem_tip_h">!</div>
+		<span lge="Setting_Network_WPS_Msg_0">请确认无线路由器支持并开启WPS</span>
+	</div>
+	
+</div></div>
+</body>
+</html>

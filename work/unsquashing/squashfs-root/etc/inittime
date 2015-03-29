@@ -1,0 +1,39 @@
+#!/bin/sh
+#########################################################
+# Copyright (C) by IOVST
+# Descriptor: 
+#     the system init shell
+#########################################################
+export PATH=/bin:/sbin:/usr/bin:/usr/sbin
+# include 
+. /etc/init.d/vstfunc
+
+##########################################################
+# Set the system time
+TZFLAG=`cat /etc/tzflag`
+if [ $TZFLAG -eq 1 ]; then
+        /etc/init.d/timezone set
+fi
+timedate_settosys
+
+time_zone=`ls -l /etc/localtime | awk '{print $11}'`
+time_zone=`echo "${time_zone#..}"`
+time_zone=`echo $time_zone | cut -c 22-30`
+set_kernel_zone $time_zone
+
+if [ `echo "$time_zone"|grep '+'` ];
+then
+        time_zone=`echo $time_zone|sed -n 's/+/-/pg'`
+else
+        time_zone=`echo $time_zone|sed -n 's/-/+/pg'`
+fi
+
+echo "$time_zone"
+if [ -f /etc/daylight ]; then
+        flag=`cat /etc/daylight`
+        if [ $flag -eq 1 ];then
+                set_timezone.sh $time_zone yes
+        fi
+else
+        set_timezone.sh $time_zone
+fi

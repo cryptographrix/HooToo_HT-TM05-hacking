@@ -1,0 +1,61 @@
+#!/bin/sh
+# description: Starts and stops the web manager daemons \
+#	       used to provide web manager services.
+#
+# pidfile: /var/run/webd.pid
+# config:  /etc/webmg/webmg.conf
+
+# Const
+PRGNAME=ioos
+SRVNAME=ioos
+# Source function library.
+. /etc/init.d/vstfunc
+# Set umask
+umask 0000
+# Check that webmg.conf exists.
+[ -f /etc/webmg/webmg.conf ] || exit 0
+# Function
+start() {
+    	#check program
+        checkonly $PRGNAME
+    	if [ $? -eq 0 ];then
+	    exit 0
+	fi
+	cd /www
+    	/usr/sbin/$PRGNAME 
+	if [ $? -eq 0 ];then
+                savesc 3 /usr/sbin/$PRGNAME $SRVNAME
+        else
+                echo "$SRVNAME service start failure"
+        fi   
+	cd /
+	
+	return $?
+}	
+stop() {
+    	killproc $PRGNAME
+#	rm /var/run/webd.pid
+    	return $?
+}	
+restart() {
+    	stop
+    	start 
+}
+# Select	
+case "$1" in
+  	start)
+  		start
+	;;
+	stop)
+		stop
+	;;
+  	restart)
+  		restart
+	;;
+  	*)
+		echo $"Usage: $0 {start|restart}"
+		exit 1
+	;;
+esac
+
+exit $?

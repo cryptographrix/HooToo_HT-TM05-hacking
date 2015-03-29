@@ -1,0 +1,39 @@
+#!/bin/sh
+#########################################################
+# Copyright (C) by IOVST
+# Descriptor: 
+#     the system init shell
+#########################################################
+export PATH=/bin:/sbin:/usr/bin:/usr/sbin
+# include 
+. /etc/init.d/vstfunc
+
+#depend disk volume
+#restore_etc /boot/tmp/etc
+
+#add by mengqingyong 
+#if [ -f /boot/tmp/etcbackup/passwd ]; then
+#    /etc/init.d/etcsync
+#fi
+    
+#if [ -d /boot/tmp/etcbackup ]; then
+#	for i in `ls /boot/tmp/etcbackup`; do
+#		if [ $i != "hostname" ]; then
+#			/etc/init.d/etcsync
+#			break
+#	 	fi
+#	done
+#fi
+hname=`cat /etc/hostname`
+hostname $hname > /dev/null 2>&1
+hosts="127.0.0.1 localhost.localdomain localhost "`cat /etc/hostname`
+
+echo $hosts > /etc/hosts
+
+if [ -e /proc/vstinfo ];then
+	cat /etc/firmware > /proc/vstinfo
+fi
+cp /etc/upnp/upnpd.conf /tmp
+echo "product="`/usr/sbin/get_mtd_param` >> /tmp/upnpd.conf
+echo "uuid="`/usr/sbin/get_mtd_sn` >> /tmp/upnpd.conf
+

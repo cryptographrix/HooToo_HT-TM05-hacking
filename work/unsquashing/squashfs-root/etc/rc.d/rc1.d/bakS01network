@@ -1,0 +1,96 @@
+#!/bin/sh
+#########################################################
+# Copyright (C) by IOVST
+# Descriptor: 
+#     the network init shell
+#########################################################
+export PATH=/bin:/sbin:/usr/bin:/usr/sbin
+# Fetch all interface
+interfaces=/etc/network/ifcfg-eth0
+
+. /etc/init.d/vstfunc
+
+#Lock net operation
+echo "NETWORK SETTING"
+
+# Start loop device
+ifconfig lo 127.0.0.1 up
+# Start ethernet devices
+unset DEVNAME
+unset BOOTPROTO
+unset GATEWAY
+unset DEVICE
+unset IPADDR
+. $interfaces
+# Check dev 
+if [ -z "$DEVICE" ]; then
+	DEVICE=eth0
+fi
+if [ -z "$DEVNAME" ]; then
+	DEVNAME=eth0
+fi
+
+# Down the device core
+#ifconfig $DEVNAME down
+#sleep 1
+
+# Up the ethernet device
+echo $BOOTPROTO
+if [ "$BOOTPROTO" == "dhcp" ]; then
+	# Active ip address
+	IPADDR="192.168.1.254"
+	ifconfig $DEVNAME $IPADDR netmask 255.255.255.0 mtu 1500 up > /dev/null 2>&1
+	sleep 2
+	
+	# Start udhcpc	
+	udhcpcpid=`pidof udhcpc`
+	if [ -z $udhcpcpid ];then
+		/etc/init.d/udhcpc.sh start
+	else
+		/etc/init.d/udhcpc.sh restart
+	fi
+
+	sleep 10	
+	# wait timeout
+	IPADDR=`ifconfig $DEVNAME | grep "inet addr" | sed -e 's/^.*inet addr:\(.*\) Bcast.*$/\1/'`
+	echo $IPADDR `pidof udhcpc`
+	if [ -z $IPADDR ] || [ $IPADDR == "192.168.1.254" ];then
+		echo "Waiting DHCP server 10 second!"
+		sleep 10
+	fi
+
+	#Check
+	IPADDR=`ifconfig $DEVNAME | grep "inet addr" | sed -e 's/^.*inet addr:\(.*\) Bcast.*$/\1/'` 
+	if [ -z $IPADDR ] || [ $IPADDR == "192.168.1.254" ];then
+		IPADDR="192.168.1.254"
+		#Close udhcpc
+		/etc/init.d/udhcpc.sh stop
+		#Setup the IP address
+		ifconfig $DEVNAME $IPADDR netmask 255.255.255.0 up >/dev/null 2>&1
+		route add default gw $IPADDR >/dev/null 2>&1
+	fi
+else
+	if [ -z "$IPADDR" ]; then
+		IPADDR="192.168.1.254"
+		NETMASK="255.255.255.0"
+	fi
+	echo $DEVNAME $IPADDR $NETMASK
+	ifconfig $DEVNAME $IPADDR netmask $NETMASK up >/dev/null 2>&1
+	# Add the device getway
+	if [ -z "$GATEWAY" ]; then
+		GATEWAY=$IPADDR
+	fi
+	echo $GATEWAY
+	route add default gw $GATEWAY >/dev/null 2>&1
+fi
+
+# Sleep
+sleep 1
+
+# Set hosts file
+HOSTNAME=`hostname`
+echo "127.0.0.1 localhost.localdomain localhost" > /etc/hosts
+echo "$IPADDR $HOSTNAME" >> /etc/hosts
+
+exit
+

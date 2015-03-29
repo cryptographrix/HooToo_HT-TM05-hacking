@@ -1,0 +1,35 @@
+#!/bin/sh
+#########################################################
+# Copyright (C) by IOVST
+# Descriptor: 
+#     the system init shell
+#########################################################
+export PATH=/bin:/sbin:/usr/bin:/usr/sbin
+# include 
+. /etc/init.d/vstfunc
+#add by mengqingyong 02-25
+#nvram_set HT_BSSCoexistence 0
+
+
+ralink_init chkcrc 2860
+ret_2860=$?
+if [ $ret_2860 -ne 0 ]; then
+	echo "Fail to check CRC 2860"
+	mtd_write erase /dev/mtd2
+	cat usr/sbin/rtconfig.bin > /dev/mtd2
+	sync
+	ralink_init reload
+	sleep 1
+fi
+/usr/sbin/default_ssid_set
+ralink_init clear 2860
+ralink_init renew 2860 /etc/Wireless/RT2860/RT2860.dat
+echo "init net"
+touch /tmp/net_initing
+wanMode_restore
+netinit.sh b
+rm -rf /tmp/net_initing
+pioctl internet 1
+/usr/sbin/led_control &
+#/sbin/netinit.sh
+exit 0

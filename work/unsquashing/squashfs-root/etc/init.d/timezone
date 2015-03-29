@@ -1,0 +1,28 @@
+#/bin/sh
+STDSTR=`readlink /etc/localtime | cut -c 22-24`
+OPTSTR=`readlink /etc/localtime | cut -c 25`
+OFFSET=`readlink /etc/localtime | cut -c 26-27`
+if [ "$OPTSTR" == "+" ]; then
+	TZVAL="$STDSTR-$OFFSET"
+else
+	TZVAL="$STDSTR+$OFFSET"
+fi
+
+# Select                                   
+case "$1" in
+        set)
+		echo $TZVAL > /etc/TZ
+                echo 1 > /etc/tzflag
+                ;;
+        clear)
+		echo $TZVAL > /etc/TZ
+		echo 0 > /etc/tzflag
+                ;;
+        *)
+                echo $"Usage: $0 {start|restart}"
+                exit 1
+                ;;
+esac
+                          
+exit $?
+

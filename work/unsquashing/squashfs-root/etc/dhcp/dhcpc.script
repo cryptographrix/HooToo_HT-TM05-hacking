@@ -1,0 +1,28 @@
+#!/bin/sh
+export PATH=/bin:/sbin:/usr/bin:/usr/sbin
+
+[ -z "$1" ] && echo "Error: should be called from udhcpc" && exit 1
+[ -n "$broadcast" ] && BROADCAST="broadcast $broadcast"
+[ -n "$subnet" ] && NETMASK="netmask $subnet"
+
+case "$1" in
+	deconfig)
+		ifconfig $interface 0.0.0.0
+		;;
+	renew|bound)
+#		ifconfig $interface 0 down
+		ifconfig $interface $ip $BROADCAST $NETMASK
+		for i in $router ; do
+			route add default gw $i dev $interface
+		done
+		cat /dev/null > /etc/resolv.conf.dhcpc
+    		chmod 644 /etc/resolv.conf.dhcpc
+		[ -n "$domain" ] && echo search $domain >> /etc/resolv.conf.dhcpc
+		for i in $dns ; do
+			echo nameserver $i >> /etc/resolv.conf.dhcpc
+		done
+		mv /etc/resolv.conf.dhcpc /etc/resolv.conf
+		;;
+esac
+
+exit 0

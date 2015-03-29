@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1; minimum-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+	<script type="text/javascript" src="../../script/config.js"></script>
+</head>
+<body>
+<div class="MMCenter">
+	<div class="MHeader_Tip1">
+		<div class="MHeader_L">
+			<a href="javascript:void(history.back());" class="MHeader_back"><span Lge="Prompt_back"></span></a>
+		</div>
+		<div class="MHeader_R">
+			<a href="javascript:void($.vhref('metro.html'));" class="MHeader_btn2"></a>
+		</div>
+		<b class="txt1"><span Lge="Setting_DDNS"></span></b>
+	</div>
+	<div class="MMC MNetworkC">
+		<div class="MBox_C2">
+			<div class="MBox_L3">
+				<div class="MBox_L3_des1"><span Lge="Setting_DDNS_Title"></span></div>
+			</div>
+			<div class="MBox_L3">
+				<div class="MBox_L3_swicth1">
+					<!-- 开启时，把样式设置为 MSwitch_1 -->
+					<div class="MSwitch_1-0" id="support"></div>
+					<span Lge="Setting_DDNS_Support"></span>
+				</div>
+			</div>
+			<!-- 开启是，把下面的div的属性设置为 block -->
+			<div style="display: none;" id="iptCot">
+				<div class="MBox_L3">
+					<div class="MBox_L3_k1">
+						<span class="MBox_L3_k1_r" id="registar" Lge="Setting_DDNS_Registar"></span>
+						<span Lge="Setting_DDNS_ServerName"></span>
+					</div>
+					<div class="MBox_L3_ipt1">
+						<input type="text" class="elect" id="servcur" readonly="readonly" />
+					</div>
+				</div>
+				<div class="MBox_L3">
+					<div class="MBox_L3_k1"><span Lge="Setting_DDNS_Hostname"></span></div>
+					<div class="MBox_L3_ipt1">
+						<input type="text" id="host" />
+					</div>
+				</div>
+				<div class="MBox_L3">
+					<div class="MBox_L3_k1"><span Lge="Setting_DDNS_Username"></span></div>
+					<div class="MBox_L3_ipt1">
+						<input type="text" id="user" />
+					</div>
+				</div>
+				<div class="MBox_L3">
+					<div class="MBox_L3_k1"><span Lge="Setting_DDNS_Password"></span></div>
+					<div class="MBox_L3_ipt1">
+						<input type="password" id="pwd" />
+					</div>
+				</div>
+				<!--div class="MBox_L3">
+					<div class="MBox_L3_k1"><span Lge="Setting_DDNS_CPassword"></span></div>
+					<div class="MBox_L3_ipt1">
+						<input type="password" id="cpwd" />
+					</div>
+				</div-->
+				<div class="MBox_L3">
+					<!-- 这里根据连接状态显示 成功或者失败 -->
+					<div class="MBox_L3_des2" id="status"></div>
+				</div>
+			</div>
+		</div>
+		<div class="center">
+			<b class="MBtn_C1 MBtn_C1_l" id="submit"><span class="btnc" Lge="Prompt_save_value"></span></b>
+		</div>
+	</div>
+</div>
+</body>
+</html>

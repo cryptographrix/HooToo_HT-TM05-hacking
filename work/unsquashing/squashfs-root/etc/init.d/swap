@@ -1,0 +1,46 @@
+#!/bin/sh
+#Const
+SWAPPATH=
+#SWAPPATH="/data/UsbDisk1/Volume1"
+if [ -n "$SWAPPATH" ]; then
+	if [ "$1" != "$SWAPPATH" ]; then 
+		exit 0	
+	fi
+fi
+SWAPPATH="$1"
+# Function
+# Lock usb adding operation
+if [ -f /var/lock/swap.lock ];then
+        echo "$1: Exist swap.lock" >> /tmp/usb_add_info
+        exit 0
+else
+	touch /var/lock/swap.lock
+	echo "$1: Create swap.lock" >> /tmp/usb_add_info
+fi
+  
+if [ -e $SWAPPATH/.vst ];then
+	if [ -e $SWAPPATH/.vst/swapfile ];then
+		echo "swapfile found"
+	else
+		dd if=/dev/zero of=$SWAPPATH/.vst/swapfile bs=1M count=64 > /dev/null 2>&1
+		sync
+#		reboot -f
+	fi
+
+	#Check if exist swap file
+        while read SWPATH SWTYPE SWSIZE SWUSED SWPRI;do
+                if [ $SWPATH = "Filename" ]; then
+                        continue
+                fi
+		if [ $SWPATH = "$SWAPPATH/.vst/swapfile" ]; then
+			exit 0
+		fi
+        done < /proc/swaps
+
+	/sbin/mkswap $SWAPPATH/.vst/swapfile > /dev/null 2>&1
+	/sbin/swapon $SWAPPATH/.vst/swapfile > /dev/null 2>&1
+fi
+#rm lock
+echo "$1: rm swap.lock" >> /tmp/usb_add_info
+rm -fr /var/lock/swap.lock
+exit 0

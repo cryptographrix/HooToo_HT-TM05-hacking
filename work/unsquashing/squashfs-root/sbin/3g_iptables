@@ -1,0 +1,13 @@
+#!/bin/sh
+#if 3G dial success,then execute iptables preouting
+#this script is called in 3G_handle and 3G_handle is called in 3gup
+while read line;do
+	pd=`echo $line | grep nameserver |awk -F ' ' '{printf $2}'`
+	if [ -n $pd ]; then
+		break
+	fi
+done < /etc/resolv.conf
+
+if [ -n $pd ]; then
+	locknet "config-staticdns.sh $pd"
+fi
