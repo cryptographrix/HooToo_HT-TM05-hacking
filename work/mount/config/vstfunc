@@ -1,0 +1,113 @@
+#!/bin/sh
+#################################
+# common function
+#################################
+# function name: addfile
+# p            : $1 source dir
+#              : $2 object dir
+addfile() {
+        local sret=0
+
+        for file in $1/*
+        do
+                if [ -d $file ]; then
+                        continue
+                fi
+                local filename=${file##*/}
+                if [ -e $2/$filename ];then
+                        diff -q $file $2/$filename
+                        if [ $? -ne 0 ];then
+                                cp -arf $2/$filename $2/$filename-
+                                sret=$[sret +$?]
+                                cp -arf $file $2
+                                sret=$[sret +$?]
+                                if [ $sret -eq 0 ];then
+                                        echo "replace $filename file success"
+                                else
+                                        echo "replace $filename file failure"
+                                fi
+                        fi
+                else
+                        cp -arf $file $2
+                        sret=$[sret +$?]
+                        if [ $sret -eq 0 ];then
+                                echo "add $filename file success"
+                        else
+                                echo "add $filename file failure"
+                        fi
+                fi
+        done
+
+        return $sret
+}
+# function name: delfile
+# p            : $1 delete file path and name
+delfile() {
+        local sret=0
+
+        for file in $1
+        do
+                if [ -e $file ];then
+                        cp -arf $file $file-
+                        rm -rf $file
+                        sret=$[sret +$?]
+                        if [ $sret -eq 0 ];then
+                                echo "delete $1 file success"
+                        else
+                                echo "delete $1 file failure"
+                        fi
+                fi
+        done
+
+        return $sret
+}
+# function name: recfile
+# p            : $1 recover name of file in dir
+recfile() {
+        local sret=0
+
+        for file in $1/*
+        do
+                if [ -d $file ]; then
+                        continue
+                fi
+                local filename=${file##*/}
+                cp -arf $file- $file
+                sret=$[sret +$?]
+                rm -rf $file-
+                sret=$[sret +$?]
+                if [ $sret -eq 0 ];then
+                        echo "recover $filename file success"
+                else
+                        echo "recover $filename file failure"
+                fi
+        done
+
+        return $sret
+}
+# function name: savfile
+#                save customer file 
+savfile() {
+        local sret=0
+
+	if [ -e /mnt/mtd/custom ];then
+        	rm -rf /mnt/mtd/custom
+        else
+        	cp -arf /config/custom /mnt/mtd
+        fi
+        for file in $1/passwd $1/shadow $1/group "$1/samba" "$1/network"
+        do
+                local filename=${file##*/}
+                cp -arf $file /mnt/mtd/custom
+                sret=$[sret +$?]
+                if [ $sret -eq 0 ];then
+                        echo "save $filename file success"
+                else
+                        echo "save $filename file failure"
+                fi
+        done
+
+        return $sret
+}
+
+
